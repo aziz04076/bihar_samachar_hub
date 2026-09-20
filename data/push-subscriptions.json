@@ -1,0 +1,29 @@
+{
+  "subscriptions": [
+    {
+      "sub": {
+        "endpoint": "test-push-1",
+        "user_agent": "TestRunner"
+      },
+      "created_at": "2026-09-19T09:01:10.877930+00:00"
+    },
+    {
+      "sub": {
+        "endpoint": "https://push.example.com/sub/123"
+      },
+      "created_at": "2026-09-19T15:55:07.013289+00:00"
+    },
+    {
+      "sub": {
+        "endpoint": "https://push.example.com/sub/123"
+      },
+      "created_at": "2026-09-19T16:01:18.338404+00:00"
+    },
+    {
+      "sub": {
+        "endpoint": "https://push.example.com/sub/123"
+      },
+      "created_at": "2026-09-19T16:05:05.934728+00:00"
+    }
+  ]
+}

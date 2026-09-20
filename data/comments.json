@@ -1,0 +1,74 @@
+{
+  "comments": [
+    {
+      "id": "c-1789833897673",
+      "news_id": "test-1",
+      "author_name": "पाठक",
+      "author_district": "बिहार",
+      "content": "Jai Bihar",
+      "created_at": "2026-09-19T16:04:57.673341+00:00",
+      "likes": 1,
+      "status": "approved"
+    },
+    {
+      "id": "c-1789833670078",
+      "news_id": "test-1",
+      "author_name": "पाठक",
+      "author_district": "बिहार",
+      "content": "Jai Bihar",
+      "created_at": "2026-09-19T16:01:10.078992+00:00",
+      "likes": 1,
+      "status": "approved"
+    },
+    {
+      "id": "c-1789833298713",
+      "news_id": "test-1",
+      "author_name": "पाठक",
+      "author_district": "बिहार",
+      "content": "Jai Bihar",
+      "created_at": "2026-09-19T15:54:58.713413+00:00",
+      "likes": 1,
+      "status": "approved"
+    },
+    {
+      "id": "c-1789833092054",
+      "news_id": "test-1",
+      "author_name": "पाठक",
+      "author_district": "बिहार",
+      "content": "Jai Bihar",
+      "created_at": "2026-09-19T15:51:32.054357+00:00",
+      "likes": 1,
+      "status": "approved"
+    },
+    {
+      "id": "c-1789808460578",
+      "news_id": "bsh-news-100",
+      "author_name": "Test User",
+      "author_district": "Patna",
+      "content": "शानदार खबर!",
+      "created_at": "2026-09-19T09:01:00.578703+00:00",
+      "likes": 1,
+      "status": "approved"
+    },
+    {
+      "id": "c-1",
+      "news_id": "default",
+      "author_name": "राजेश कुमार सिंह",
+      "author_district": "पटना",
+      "content": "बिहार में विकास कार्यों की गति तेज होना बहुत सराहनीय कदम है। सभी जिलों में नियमित निगरानी होनी चाहिए।",
+      "created_at": "2026-09-19T07:30:00.000Z",
+      "likes": 14,
+      "status": "approved"
+    },
+    {
+      "id": "c-2",
+      "news_id": "default",
+      "author_name": "अमित चौधरी",
+      "author_district": "मुजफ्फरपुर",
+      "content": "शिक्षा और BPSC भर्ती को लेकर जो पारदर्शिता लाई जा रही है, उससे युवाओं में बड़ा विश्वास जागा है।",
+      "created_at": "2026-09-19T07:45:00.000Z",
+      "likes": 9,
+      "status": "approved"
+    }
+  ]
+}

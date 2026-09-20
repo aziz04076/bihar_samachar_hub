@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#DC2626">
+  <title>आप ऑफ़लाइन हैं — Bihar Samachar Hub</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #E05B1C;
+      --primary-dark: #C62828;
+      --bg-warm: #FFF9F5;
+      --card-bg: #FFFFFF;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+      background: var(--bg-warm);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    .offline-card {
+      background: var(--card-bg);
+      max-width: 520px;
+      width: 100%;
+      border-radius: 20px;
+      padding: 40px 28px;
+      box-shadow: 0 16px 36px rgba(224, 91, 28, 0.08), 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    .offline-icon-wrap {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #FEE2E2;
+      color: #DC2626;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      margin-bottom: 24px;
+      animation: pulse-icon 2s infinite;
+    }
+    @keyframes pulse-icon {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFF3E0;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+    p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @media (min-width: 480px) {
+      .btn-group { flex-direction: row; }
+    }
+    .btn {
+      flex: 1;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      border: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #FF6D00 0%, #E05B1C 100%);
+      color: white;
+      box-shadow: 0 4px 14px rgba(224, 91, 28, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(224, 91, 28, 0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--border);
+      color: var(--text-dark);
+    }
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .offline-helpline-box {
+      margin-top: 30px;
+      padding: 16px;
+      background: #F8FAFC;
+      border-radius: 12px;
+      border: 1px dashed #CBD5E1;
+      text-align: left;
+    }
+    .offline-helpline-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .helpline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .helpline-tag {
+      background: white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #0F172A;
+      text-decoration: none;
+      border: 1px solid #E2E8F0;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .helpline-tag i { color: var(--primary); font-size: 0.75rem; }
+    .status-toast {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #16A34A;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="offline-card">
+    <div class="brand-pill">
+      <i class="fas fa-newspaper"></i> बिहार समाचार हब (PWA)
+    </div>
+    <div class="offline-icon-wrap">
+      <i class="fas fa-wifi"></i>
+    </div>
+    <h1>इंटरनेट कनेक्शन नहीं मिला</h1>
+    <p>
+      आप इस समय ऑफ़लाइन हैं। जैसे ही आपका इंटरनेट फिर से जुड़ेगा, ताज़ा समाचार अपने आप लोड हो जाएँगे। आप पहले से सुरक्षित (Cached) सामग्री पढ़ सकते हैं।
+    </p>
+
+    <div class="btn-group">
+      <button class="btn btn-primary" onclick="window.location.reload()">
+        <i class="fas fa-redo"></i> पुनः प्रयास करें
+      </button>
+      <a href="index.html" class="btn btn-outline">
+        <i class="fas fa-home"></i> होम पेज
+      </a>
+    </div>
+
+    <div class="offline-helpline-box">
+      <div class="offline-helpline-title">
+        <i class="fas fa-phone-alt"></i> बिना इंटरनेट आपातकालीन फोन सेवाएं (Direct Call):
+      </div>
+      <div class="helpline-tags">
+        <a href="tel:112" class="helpline-tag"><i class="fas fa-shield-alt"></i> पुलिस/एम्बुलेंस: 112</a>
+        <a href="tel:181" class="helpline-tag"><i class="fas fa-female"></i> महिला हेल्पलाइन: 181</a>
+        <a href="tel:1070" class="helpline-tag"><i class="fas fa-house-damage"></i> आपदा राहत: 1070</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="online-toast" class="status-toast">
+    <i class="fas fa-check-circle"></i> इंटरनेट वापस आ गया! पेज रीलोड हो रहा है...
+  </div>
+
+  <script>
+    window.addEventListener('online', () => {
+      const toast = document.getElementById('online-toast');
+      if (toast) toast.style.display = 'block';
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    });
+  </script>
+  <script src="assets/js/security.js" defer></script>
+</body>
+</html>

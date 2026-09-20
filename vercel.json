@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/districts", "destination": "/districts.html" },
+    { "source": "/news", "destination": "/news.html" },
+    { "source": "/live-blog", "destination": "/live-blog.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/directory", "destination": "/directory.html" },
+    { "source": "/emergency", "destination": "/emergency.html" },
+    { "source": "/videos", "destination": "/videos.html" },
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/district", "destination": "/district/index.html" },
+    { "source": "/district/", "destination": "/district/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS, PUT, DELETE" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization, X-Requested-With" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
+        { "key": "Service-Worker-Allowed", "value": "/" }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=60, s-maxage=300" }
+      ]
+    }
+  ]
+}

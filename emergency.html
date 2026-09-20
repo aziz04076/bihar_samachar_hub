@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://pagead2.googlesyndication.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data: blob:; frame-src https://maps.google.com https://www.google.com https://googleads.g.doubleclick.net https://www.youtube.com; connect-src 'self' https://api.rss2json.com https://api.allorigins.win https://api.anthropic.com https://api.openai.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+  <title>बिहार 38 जिले आपातकालीन सेवाएं व हेल्पलाइन डायरेक्टरी | Bihar Samachar Hub</title>
+  <meta name="description" content="बिहार के सभी 38 जिलों के पुलिस, एम्बुलेंस, फायर ब्रिगेड, डीएम, एसपी व आपदा प्रबंधन के आपातकालीन हेल्पलाइन नंबर व 24x7 सहायता।">
+  <meta name="theme-color" content="#DC2626">
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar Emergency">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Accessibility Bar -->
+  <div class="top-accessibility-bar">
+    <div class="container flex justify-between items-center" style="padding:0;">
+      <div class="flex items-center gap-2">
+        <span style="color:#F97316; font-weight:800;"><i class="fas fa-phone-volume"></i> 24x7 बिहार आपातकालीन हेल्पलाइन</span>
+        <span class="hidden-mobile" style="color:#9CA3AF;">| 38 जिले, 100% सरकारी व सत्यापित हेल्पलाइन</span>
+        <span class="live-datetime-widget" id="live-datetime"><i class="far fa-calendar-alt"></i> लोड हो रहा है...</span>
+      </div>
+      <div class="a11y-controls-group">
+        <button class="a11y-btn" onclick="BSH.setFontSize(-1)" title="छोटा फॉन्ट">A-</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(0)" title="सामान्य फॉन्ट">A</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(1)" title="बड़ा फॉन्ट">A+</button>
+        <select class="dialect-dropdown-select" id="dialect-picker" onchange="BSH.setDialect(this.value)">
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mai">🌾 मैथिली (Maithili)</option>
+          <option value="bho">⚡ भोजपुरी (Bhojpuri)</option>
+          <option value="mag">🏛 मगही (Magahi)</option>
+          <option value="en">🌐 English</option>
+        </select>
+        <button class="theme-toggle-btn a11y-btn"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PWA Install Banner -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और आपातकालीन सहायता</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">होम</a>
+        <a href="districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="news.html" class="nav-link" data-i18n="nav_news">समाचार</a>
+        <a href="live-blog.html" class="nav-link" data-i18n="nav_live_blog"><span class="nav-live-dot-beacon"></span>लाइव ब्लॉग</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">संपर्क</a>
+        <button class="btn btn-sm btn-outline" onclick="NewsHub.togglePushNotifications()" title="सूचनाएं" style="margin-left:4px; padding:4px 8px;"><i class="fas fa-bell"></i></button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu">
+      <a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i> होम</a>
+      <a href="districts.html" data-i18n="nav_districts"><i class="fas fa-map-marked-alt"></i> जिले</a>
+      <a href="news.html" data-i18n="nav_news"><i class="fas fa-newspaper"></i> समाचार</a>
+      <a href="live-blog.html"><i class="fas fa-bolt"></i> लाइव ब्लॉग</a>
+      <a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> हमारे बारे में</a>
+      <a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> संपर्क</a>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker -->
+  <div class="ticker-bar portal-ticker">
+    <div class="ticker-label-badge">
+      <span class="ticker-live-beacon"></span> <span>हेल्पलाइन</span>
+    </div>
+    <div class="ticker-carousel-wrap">
+      <div id="portal-ticker-text" class="ticker-active-slide">आपातकाल में किसी भी सहायता के लिए तुरंत 112 डायल करें — बिहार पुलिस, एम्बुलेंस और फायर सर्विस एक नंबर पर उपलब्ध।</div>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <div class="container" style="margin-top: 24px; margin-bottom: 50px;">
+    
+    <!-- Hero Emergency Banner -->
+    <div class="emergency-hero-banner">
+      <h1><i class="fas fa-phone-alt"></i> बिहार राज्य आपातकालीन हेल्पलाइन डायरेक्टरी</h1>
+      <p>किसी भी संकट या आपात स्थिति में एक क्लिक पर सीधे संपर्क करें। सभी 38 जिलों के पुलिस कंट्रोल रूम, सदर अस्पताल, फायर ब्रिगेड व आपदा प्रबंधन के सत्यापित नंबर।</p>
+    </div>
+
+    <!-- Central State SOS Quick Call Grid -->
+    <h2 style="font-size: 1.25rem; font-weight: 800; color: #0F172A; margin-bottom: 14px; display:flex; align-items:center; gap:8px;">
+      <i class="fas fa-shield-alt" style="color:#DC2626;"></i> बिहार राज्य केंद्रीय आपातकालीन नंबर (24x7 Active SOS)
+    </h2>
+    <div class="state-sos-grid" id="central-sos-grid">
+      <!-- Populated dynamically from data/emergency-helplines.json -->
+    </div>
+
+    <!-- 38 District-wise Directory Section -->
+    <div class="district-helpline-container">
+      <div class="district-emergency-picker-bar">
+        <div>
+          <h2 style="font-size: 1.3rem; font-weight: 800; color: #0F172A; margin:0;">
+            <i class="fas fa-map-marked-alt" style="color:var(--primary);"></i> 38 जिलावार आधिकारिक हेल्पलाइन नंबर
+          </h2>
+          <span style="font-size:0.82rem; color:#64748B;">अपने जिले का नाम खोजें या प्रमंडल अनुसार फ़िल्टर करें</span>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <select id="division-filter-select" class="dialect-dropdown-select" style="background:#F1F5F9; color:#1E293B; border:1px solid #CBD5E1; padding:9px 12px; font-size:0.88rem;" onchange="filterEmergencyDistricts()">
+            <option value="all">सभी 9 प्रमंडल</option>
+            <option value="Patna">पटना प्रमंडल</option>
+            <option value="Tirhut">तिरहुत प्रमंडल</option>
+            <option value="Saran">सारण प्रमंडल</option>
+            <option value="Darbhanga">दरभंगा प्रमंडल</option>
+            <option value="Kosi">कोसी प्रमंडल</option>
+            <option value="Purnia">पूर्णिया प्रमंडल</option>
+            <option value="Bhagalpur">भागलपुर प्रमंडल</option>
+            <option value="Munger">मुंगेर प्रमंडल</option>
+            <option value="Magadh">मगध प्रमंडल</option>
+          </select>
+          <input type="text" id="emergency-district-search" class="district-emergency-search" placeholder="जिला या अधिकारी खोजें (उदा: पटना, गया, SP)..." oninput="filterEmergencyDistricts()">
+        </div>
+      </div>
+
+      <div class="district-emergency-cards-grid" id="district-emergency-cards-grid">
+        <!-- Populated dynamically from data/emergency-helplines.json -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="assets/images/logo-emblem.svg" alt="बिहार समाचार हब" width="40" height="40" style="filter: brightness(0) invert(1);">
+          <span style="font-weight: 800; font-size: 1.2rem; color: white;">बिहार <span style="color: #F59E0B;">समाचार</span> HUB</span>
+        </div>
+        <p style="color: #94A3B8; font-size: 0.9rem; margin-top: 10px;" data-i18n="footer_disclaimer">
+          बिहार का नंबर 1 स्वतंत्र डिजिटल न्यूज़ व जिला सूचना नेटवर्क। 38 जिलों की विश्वसनीय रिपोर्टिंग व सरकारी आपातकालीन सहायता।
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 style="color: white; margin-bottom: 12px;">महत्वपूर्ण लिंक्स</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">होमपेज</a></li>
+          <li></li>
+          <li><a href="districts.html">सभी 38 जिले</a></li>
+          <li><a href="news.html">ताज़ा समाचार</a></li>
+          <li><a href="news.html">कारोबार डायरेक्टरी</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 style="color: white; margin-bottom: 12px;">आपातकालीन नंबर</h4>
+        <ul class="footer-links">
+          <li><a href="tel:112"><i class="fas fa-phone-alt"></i> आपातकालीन सेवा: 112</a></li>
+          <li><a href="tel:108"><i class="fas fa-ambulance"></i> एम्बुलेंस सेवा: 108</a></li>
+          <li><a href="tel:1930"><i class="fas fa-user-shield"></i> साइबर हेल्पलाइन: 1930</a></li>
+          <li><a href="tel:1070"><i class="fas fa-cloud-showers-heavy"></i> आपदा प्रबंधन: 1070</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center" style="font-size: 0.85rem; color: #94A3B8;">
+        © 2026 बिहार समाचार हब। सर्वाधिकार सुरक्षित। 100% सत्यापित एवं नागरिक सुरक्षा हेतु समर्पित।
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/security.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    window.SecurityHub = window.SecurityHub || window.BSH_SECURITY || {
+      sanitizeFormInput: (str) => typeof str === 'string' ? str.replace(/[<>]/g, '').trim().slice(0, 1000) : (str || ''),
+      escapeHtml: (str) => typeof str === 'string' ? str.replace(/[&<>"'`=/]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;','/':'&#x2F;'}[s]||s)) : (str || '')
+    };
+    let emergencyData = null;
+
+    async function loadEmergencyData() {
+      try {
+        const res = await fetch('/api/emergency');
+        if (res.ok) {
+          emergencyData = await res.json();
+        } else {
+          const staticRes = await fetch('data/emergency-helplines.json');
+          emergencyData = await staticRes.json();
+        }
+      } catch (err) {
+        try {
+          const staticRes = await fetch('data/emergency-helplines.json');
+          emergencyData = await staticRes.json();
+        } catch (e) {
+          console.error('Failed to load emergency data:', e);
+        }
+      }
+
+      if (emergencyData) {
+        const central = emergencyData.state_central_helplines || emergencyData.central_helplines || emergencyData.state_central || [];
+        const districts = emergencyData.districts_helpline || emergencyData.districts || [];
+        renderCentralSOS(central);
+        renderDistrictCards(districts);
+      }
+    }
+
+    function renderCentralSOS(helplines) {
+      const container = document.getElementById('central-sos-grid');
+      if (!container) return;
+
+      container.innerHTML = helplines.map(item => `
+        <div class="state-sos-card">
+          <div class="state-sos-icon">
+            <i class="fas ${item.icon || 'fa-phone-alt'}"></i>
+          </div>
+          <div class="state-sos-info">
+            <div class="state-sos-title">${SecurityHub.sanitizeFormInput(item.service || item.name_hi || 'हेल्पलाइन')}</div>
+            <span class="state-sos-number">${SecurityHub.sanitizeFormInput(item.number || '112')}</span>
+            ${item.desc ? `<span style="font-size:0.75rem; color:#64748B; display:block; margin-top:2px;">${SecurityHub.sanitizeFormInput(item.desc)}</span>` : ''}
+          </div>
+          <a href="tel:${SecurityHub.sanitizeFormInput(item.number || '112')}" class="state-sos-call" title="कॉल करें">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      `).join('');
+    }
+
+    function renderDistrictCards(districts) {
+      const container = document.getElementById('district-emergency-cards-grid');
+      if (!container) return;
+
+      const divFilter = (document.getElementById('division-filter-select').value || 'all').toLowerCase();
+      const searchQ = (document.getElementById('emergency-district-search').value || '').toLowerCase().trim();
+
+      const filtered = districts.filter(d => {
+        const divName = (d.division || d.division_hi || '').toLowerCase();
+        const matchDiv = divFilter === 'all' || divName.includes(divFilter) || divFilter.includes(divName);
+        
+        const nameHi = (d.district_name_hi || d.district_hi || '').toLowerCase();
+        const nameEn = (d.district_id || d.district_en || '').toLowerCase();
+        const dm = (d.dm_control_room || d.dm_office || '').toLowerCase();
+        const sp = (d.sp_office || '').toLowerCase();
+        const police = (d.police_control || '').toLowerCase();
+
+        const matchSearch = !searchQ ||
+          nameHi.includes(searchQ) ||
+          nameEn.includes(searchQ) ||
+          dm.includes(searchQ) ||
+          sp.includes(searchQ) ||
+          police.includes(searchQ);
+        
+        return matchDiv && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 40px; background: #F8FAFC; border-radius: 12px; border: 1px dashed #CBD5E1;">
+            <i class="fas fa-phone-slash" style="font-size: 2rem; color: #94A3B8; margin-bottom: 8px; display:block;"></i>
+            <h4 style="color:#334155;">कोई जिला या संपर्क नंबर नहीं मिला</h4>
+            <p style="color:#64748B; font-size:0.88rem;">कृपया खोज शब्द बदलें या प्रमंडल फ़िल्टर 'सभी' पर सेट करें।</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(d => {
+        const distNameHi = d.district_name_hi || d.district_hi || 'बिहार जिला';
+        const distNameEn = d.district_id || d.district_en || '';
+        const divName = d.division_hi || d.division || 'प्रमंडल';
+        const policeNum = d.police_control || '112';
+        const spNum = d.sp_office || '0612-2219406';
+        const dmNum = d.dm_control_room || d.dm_office || '0612-2219810';
+        const hospNum = d.civil_hospital || d.sudar_hospital_ambulance || '108';
+        const fireNum = d.fire_station || '101';
+        const disasterNum = d.disaster_helpline || d.disaster_mgmt || '1070';
+
+        return `
+        <div class="dist-emergency-card">
+          <div class="dist-card-header">
+            <span class="dist-name-hi"><i class="fas fa-map-pin" style="color:var(--primary); font-size:0.9rem;"></i> ${SecurityHub.sanitizeFormInput(distNameHi)} ${distNameEn ? '(' + SecurityHub.sanitizeFormInput(distNameEn) + ')' : ''}</span>
+            <span class="dist-division-tag">${SecurityHub.sanitizeFormInput(divName)}</span>
+          </div>
+
+          <div class="contact-row-item">
+            <span class="contact-role-label"><i class="fas fa-shield-alt"></i> पुलिस कंट्रोल रूम</span>
+            <a href="tel:${SecurityHub.sanitizeFormInput(policeNum)}" class="contact-call-link">
+              <i class="fas fa-phone"></i> ${SecurityHub.sanitizeFormInput(policeNum)}
+            </a>
+          </div>
+
+          <div class="contact-row-item">
+            <span class="contact-role-label"><i class="fas fa-user-shield"></i> पुलिस अधीक्षक (SP)</span>
+            <a href="tel:${SecurityHub.sanitizeFormInput(spNum)}" class="contact-call-link">
+              <i class="fas fa-phone"></i> ${SecurityHub.sanitizeFormInput(spNum)}
+            </a>
+          </div>
+
+          <div class="contact-row-item">
+            <span class="contact-role-label"><i class="fas fa-landmark"></i> जिलाधिकारी (DM)</span>
+            <a href="tel:${SecurityHub.sanitizeFormInput(dmNum)}" class="contact-call-link">
+              <i class="fas fa-phone"></i> ${SecurityHub.sanitizeFormInput(dmNum)}
+            </a>
+          </div>
+
+          <div class="contact-row-item">
+            <span class="contact-role-label"><i class="fas fa-hospital"></i> सदर अस्पताल / एम्बुलेंस</span>
+            <a href="tel:${SecurityHub.sanitizeFormInput(hospNum)}" class="contact-call-link">
+              <i class="fas fa-phone"></i> ${SecurityHub.sanitizeFormInput(hospNum)}
+            </a>
+          </div>
+
+          <div class="contact-row-item">
+            <span class="contact-role-label"><i class="fas fa-fire-extinguisher"></i> फायर स्टेशन</span>
+            <a href="tel:${SecurityHub.sanitizeFormInput(fireNum)}" class="contact-call-link">
+              <i class="fas fa-phone"></i> ${SecurityHub.sanitizeFormInput(fireNum)}
+            </a>
+          </div>
+
+          <div class="contact-row-item">
+            <span class="contact-role-label"><i class="fas fa-cloud-meatball"></i> आपदा नियंत्रण कक्ष</span>
+            <a href="tel:${SecurityHub.sanitizeFormInput(disasterNum)}" class="contact-call-link">
+              <i class="fas fa-phone"></i> ${SecurityHub.sanitizeFormInput(disasterNum)}
+            </a>
+          </div>
+        </div>
+      `}).join('');
+    }
+
+    function filterEmergencyDistricts() {
+      if (emergencyData) {
+        const districts = emergencyData.districts_helpline || emergencyData.districts || [];
+        renderDistrictCards(districts);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadEmergencyData);
+    } else {
+      loadEmergencyData();
+    }
+  </script>
+</body>
+</html>

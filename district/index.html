@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <title>जिला विवरण - District Details | Bihar Samachar Hub</title>
+  <meta name="theme-color" content="#DC2626">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar News">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/icons/favicon.png">
+  <link rel="shortcut icon" href="../favicon.png">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/district.css">
+</head>
+<body>
+
+  <!-- PWA Install Banner (Mobile App Promotion) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और ऑफ़लाइन न्यूज़ पढ़ें</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="../assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link" data-i18n="nav_home">होम</a>
+        <a href="../districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="../news.html" class="nav-link" data-i18n="nav_news">समाचार</a>
+        <a href="../about.html" class="nav-link" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="../contact.html" class="nav-link" data-i18n="nav_contact">संपर्क</a>
+        <button class="theme-toggle-btn" id="nav-theme-toggle" aria-label="Toggle Dark Mode" title="डार्क/लाइट मोड बदलें">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="lang-toggle" id="lang-toggle">EN</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu">
+      <a href="../index.html" data-i18n="nav_home">होम</a>
+      <a href="../districts.html" data-i18n="nav_districts">जिले</a>
+      <a href="../news.html" data-i18n="nav_news">समाचार</a>
+      <a href="../about.html" data-i18n="nav_about">हमारे बारे में</a>
+      <a href="../contact.html" data-i18n="nav_contact">संपर्क</a>
+      <div style="display:flex; gap:10px; padding:10px 15px;">
+        <button class="theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle Dark Mode" style="flex:1; border-radius:8px; height:40px;">
+          <i class="fas fa-moon"></i> <span>थीम</span>
+        </button>
+        <button id="lang-toggle-mobile" onclick="BSH.toggleLang()" style="flex:1; padding:8px; border-radius:8px; background:var(--primary); color:white; font-weight:700;">
+          हिं/EN
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-label">
+      <span class="ticker-live-dot">●</span> <span>LIVE ब्रेकिंग</span>
+    </div>
+    <div class="ticker-content">
+      <div class="ticker-text" id="breaking-ticker">लोड हो रहा है...</div>
+    </div>
+  </div>
+
+  <!-- Loading state -->
+  <div id="loading-state" class="loading-full">
+    <div class="loading-spinner"></div>
+    <p>लोड हो रहा है...</p>
+  </div>
+
+  <!-- Error state -->
+  <div id="error-state" class="error-full" style="display:none">
+    <h2>जिला नहीं मिला</h2>
+    <a href="../districts.html" class="btn btn-primary mt-4">सभी जिले देखें</a>
+  </div>
+
+  <!-- District Content -->
+  <main id="district-content" style="display:none">
+    <!-- Hero -->
+    <section class="district-hero">
+      <div class="district-hero-overlay"></div>
+      <img id="district-hero-img" class="district-hero-bg" src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=1200&auto=format&fit=crop" alt="District Image" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=1200&auto=format&fit=crop'">
+      <div class="district-hero-content">
+        <a href="../districts.html" class="back-link" data-i18n="back_to_districts">← जिलों पर वापस</a>
+        <div class="district-header-badge-row">
+          <div class="district-photo-icon-badge">
+            <img id="district-icon-img" src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=300&auto=format&fit=crop" alt="District Icon" class="district-icon-thumb" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=300&auto=format&fit=crop'">
+          </div>
+          <div>
+            <h1 id="district-name" class="district-hero-name">पटना <span class="en-subname" style="font-size:0.65em; opacity:0.9; font-weight:500; color:#FFD54F;">(Patna)</span></h1>
+            <div class="district-hero-meta">
+              <span id="district-division"></span>
+              <span>•</span>
+              <span id="district-pop-quick"></span>
+              <span>•</span>
+              <span id="district-area-quick"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <div class="tabs-container">
+      <div class="container">
+        <nav class="tabs-nav">
+          <button class="tab-btn active" data-tab="overview" data-i18n="tab_overview">संक्षिप्त विवरण</button>
+          <button class="tab-btn" data-tab="administration" data-i18n="tab_administration">प्रशासन</button>
+          <button class="tab-btn" data-tab="history" data-i18n="tab_history">इतिहास</button>
+          <button class="tab-btn" data-tab="tourism" data-i18n="tab_tourism">पर्यटन</button>
+          <button class="tab-btn" data-tab="culture" data-i18n="tab_culture">संस्कृति</button>
+          <button class="tab-btn" data-tab="economy" data-i18n="tab_economy">अर्थव्यवस्था</button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Tab Panels -->
+    <div class="container">
+      
+      <!-- Overview Panel -->
+      <div class="tab-panel active" id="panel-overview">
+        <div class="info-sections-grid">
+          <div>
+            <table class="info-table">
+              <tbody id="overview-table"></tbody>
+            </table>
+            <div class="mt-4">
+              <h4>पिन कोड (PIN Codes)</h4>
+              <div class="pin-codes-list mt-2" id="pin-codes"></div>
+            </div>
+            <div class="mt-4">
+              <h4>प्रखंड (Blocks)</h4>
+              <div class="blocks-list mt-2" id="blocks-list"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px; padding-bottom:10px; border-bottom:1px solid #E2E8F0;">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div style="width:34px; height:34px; border-radius:50%; background:#E8F0FE; color:#1A73E8; display:flex; align-items:center; justify-content:center; font-size:1.1rem;">
+                  <i class="fab fa-google"></i>
+                </div>
+                <div>
+                  <h4 style="margin:0; font-size:1.1rem; color:var(--text-dark); font-weight:800;">गूगल मैप्स पर जिला स्थिति (Google Maps)</h4>
+                  <span style="font-size:0.78rem; color:var(--text-medium);">लाइव सैटेलाइट, रोडमैप व नेविगेशन</span>
+                </div>
+                <span style="background:#E8F0FE; color:#1A73E8; border:1px solid #BFDBFE; font-size:0.72rem; padding:3px 9px; border-radius:12px; font-weight:700;">● LIVE GMAPS</span>
+              </div>
+              <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+                <a id="gmaps-directions-link" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" style="font-size:0.8rem; padding:6px 12px; border-radius:20px; text-decoration:none; font-weight:600; display:inline-flex; align-items:center; gap:5px; border:1px solid #CBD5E1; color:#334155;">
+                  <i class="fas fa-route" style="color:#0284C7;"></i> दिशा निर्देश (Directions) ↗
+                </a>
+                <a id="gmaps-direct-link" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-primary" style="font-size:0.8rem; padding:6px 14px; border-radius:20px; text-decoration:none; font-weight:700; display:inline-flex; align-items:center; gap:6px; background:linear-gradient(135deg, #1A73E8, #0D47A1); color:#fff; box-shadow:0 3px 10px rgba(26,115,232,0.35);">
+                  <i class="fab fa-google"></i> Google Maps ऐप में खोलें ↗
+                </a>
+              </div>
+            </div>
+            <div class="map-container" style="position:relative; width:100%; height:440px; border-radius:14px; overflow:hidden; border:2px solid rgba(26,115,232,0.25); box-shadow:0 6px 20px rgba(0,0,0,0.08);">
+              <iframe
+                id="map-frame"
+                class="map-frame"
+                src="about:blank"
+                width="100%"
+                height="100%"
+                style="width:100%; height:100%; border:none; display:block;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div style="margin-top:10px; font-size:0.84rem; color:var(--text-medium,#555); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+              <span><i class="fas fa-location-dot" style="color:#DC2626;"></i> GPS निर्देशांक: <strong id="map-coords-text">25.5941° N, 85.1376° E</strong></span>
+              <span id="map-status-note" style="color:#16A34A; font-weight:600;"><i class="fab fa-google" style="color:#4285F4;"></i> आधिकारिक Google Maps कनेक्टेड (लाइव नेविगेशन)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Administration Panel -->
+      <div class="tab-panel" id="panel-administration">
+        <h3>सांसद (MP)</h3>
+        <div class="officials-grid" id="mp-grid"></div>
+        <h3>विधायक (MLA)</h3>
+        <div class="officials-grid" id="mla-grid"></div>
+        <h3>प्रशासनिक अधिकारी (Administration)</h3>
+        <div class="officials-grid" id="admin-grid"></div>
+      </div>
+
+      <!-- History Panel -->
+      <div class="tab-panel" id="panel-history">
+        <div class="history-content" id="history-text"></div>
+      </div>
+
+      <!-- Tourism Panel -->
+      <div class="tab-panel" id="panel-tourism">
+        <div class="tourism-grid" id="tourism-grid"></div>
+      </div>
+
+      <!-- Culture Panel -->
+      <div class="tab-panel" id="panel-culture">
+        <div class="info-sections-grid" id="culture-content"></div>
+      </div>
+
+      <!-- Economy Panel -->
+      <div class="tab-panel" id="panel-economy">
+        <div class="info-sections-grid" id="economy-content"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+            <img src="../assets/images/logo-emblem.svg" alt="बिहार समाचार हब" width="38" height="38" style="border-radius:50%; filter:drop-shadow(0 3px 8px rgba(224,91,28,0.5));">
+            <h3 style="margin:0; font-size:1.3rem; color:#FFFFFF; font-weight:800;">बिहार समाचार <span style="background:linear-gradient(135deg, #FF6F00, #DC2626); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">HUB</span></h3>
+          </div>
+          <p data-i18n="footer_desc">बिहार की खबरें और जिलेवार जानकारी का सबसे विश्वसनीय मंच।</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="quick_links">महत्वपूर्ण लिंक</h4>
+          <ul>
+            <li><a href="../index.html" data-i18n="nav_home">होम</a></li>
+            <li><a href="../districts.html" data-i18n="nav_districts">सभी जिले</a></li>
+            <li><a href="../news.html" data-i18n="nav_news">ताजा समाचार</a></li>
+            <li><a href="../about.html">हमारे बारे में (About Us)</a></li>
+            <li><a href="../contact.html">संपर्क व शिकायत (Contact Us)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 Bihar Samachar Hub. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/security.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/district-page.js"></script>
+  <!-- Scroll to top -->
+  <button id="scroll-top" title="ऊपर जाएं" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Mobile App Bottom Navigation Dock (Ultra Pro Max PWA Experience) -->
+  <nav class="app-bottom-nav" aria-label="Mobile Navigation">
+    <a href="../index.html" class="app-nav-item">
+      <i class="fas fa-home"></i>
+      <span>होम</span>
+    </a>
+    <a href="../districts.html" class="app-nav-item active">
+      <i class="fas fa-map-marked-alt"></i>
+      <span>38 जिले</span>
+    </a>
+    <a href="../news.html" class="app-nav-item">
+      <i class="fas fa-bolt"></i>
+      <span>लाइव न्यूज़</span>
+    </a>
+    <a href="javascript:void(0)" onclick="BSH.openSavedBookmarksModal()" class="app-nav-item">
+      <i class="fas fa-bookmark"></i>
+      <span>सेव्ड</span>
+    </a>
+  </nav>
+
+
+</body>
+</html>

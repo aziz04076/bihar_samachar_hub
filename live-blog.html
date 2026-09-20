@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data: blob:; frame-src https://maps.google.com https://www.google.com https://youtube.com https://www.youtube.com; connect-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+  <title>बिहार लाइव ब्लॉग | मिनट-दर-मिनट ताज़ा अपडेट | बिहार समाचार हब</title>
+  <meta name="theme-color" content="#DC2626">
+  <!-- Google AdSense: To enable real monetization, insert your approved Publisher ID below -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_PUBLISHER_ID" crossorigin="anonymous"></script> -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar News">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="top-accessibility-bar">
+    <div class="container flex justify-between items-center" style="padding:0;">
+      <div class="flex items-center gap-2">
+        <span style="color:#00E676; font-weight:800;"><i class="fas fa-circle" style="font-size:0.65rem; animation:livePulse 1.2s infinite;"></i> 24x7 लाइव ब्लॉगिंग डेस्क</span>
+        <span class="hidden-mobile" style="color:#9CA3AF;">| हर 60 सेकंड में स्वतः ताज़ा</span>
+        <span class="live-datetime-widget" id="live-datetime"><i class="far fa-calendar-alt"></i> लोड हो रहा है...</span>
+      </div>
+      <div class="a11y-controls-group">
+        <button class="a11y-btn" onclick="BSH.setFontSize(-1)" title="छोटा फॉन्ट">A-</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(0)" title="सामान्य फॉन्ट">A</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(1)" title="बड़ा फॉन्ट">A+</button>
+        <select class="dialect-dropdown-select" id="dialect-picker" onchange="BSH.setDialect(this.value)">
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mai">🌾 मैथिली (Maithili)</option>
+          <option value="bho">⚡ भोजपुरी (Bhojpuri)</option>
+          <option value="mag">🏛 मगही (Magahi)</option>
+          <option value="en">🌐 English</option>
+        </select>
+        <button class="theme-toggle-btn a11y-btn"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PWA Install Banner (Mobile App Promotion) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और ऑफ़लाइन न्यूज़ पढ़ें</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">होम</a>
+        <a href="districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="news.html" class="nav-link" data-i18n="nav_news">समाचार</a>
+        <a href="live-blog.html" class="nav-link active" data-i18n="nav_live_blog"><span class="nav-live-dot-beacon"></span>लाइव ब्लॉग</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">संपर्क</a>
+        <button class="btn btn-sm btn-outline" onclick="NewsHub.togglePushNotifications()" title="सूचनाएं" style="padding:4px 8px;"><i class="fas fa-bell"></i></button>
+        <button class="btn btn-sm btn-primary" id="nav-auth-btn" onclick="BSH.openAuthModal()" style="padding:4px 10px; font-weight:700;"><i class="fas fa-user-circle"></i> <span>लॉगिन</span></button>
+</div>
+      <button class="hamburger" id="hamburger" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html" data-i18n="nav_home">होम</a>
+      <a href="districts.html" data-i18n="nav_districts">जिले</a>
+      <a href="news.html" data-i18n="nav_news">समाचार</a>
+      <a href="about.html" data-i18n="nav_about">हमारे बारे में</a>
+      <a href="contact.html" data-i18n="nav_contact">संपर्क</a>
+      <div style="display:flex; gap:10px; padding:10px 15px;">
+        <button class="theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle Dark Mode" style="flex:1; border-radius:8px; height:40px;">
+          <i class="fas fa-moon"></i> <span>थीम</span>
+        </button>
+        <button id="lang-toggle-mobile" onclick="BSH.toggleLang()" style="flex:1; padding:8px; border-radius:8px; background:var(--primary); color:white; font-weight:700;">
+          हिं/EN
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker -->
+  
+  <section style="background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 100%); color:#FFFFFF; padding: 35px 0 25px 0;">
+    <div class="container text-center">
+      <span style="background:#EF4444; color:#FFF; font-size:0.75rem; font-weight:800; padding:4px 12px; border-radius:20px; display:inline-flex; align-items:center; gap:6px;">
+        <span style="width:8px; height:8px; background:#FFF; border-radius:50%; animation:livePulse 1s infinite;"></span> 🔴 LIVE UPDATES
+      </span>
+      <h1 style="font-size:2.2rem; font-weight:800; margin:10px 0;">बिहार ब्रेकिंग लाइव ब्लॉग (Minute-by-Minute)</h1>
+      <p style="color:#FECACA; font-size:0.98rem;">बिहार सरकार के अहम फैसले, विधानसभा, परीक्षा परिणाम और 38 जिलों की ताज़ा गतिविधियों का सीधा प्रसारण।</p>
+    </div>
+  </section>
+
+  <main class="container mt-6 mb-8">
+    <div class="grid" style="grid-template-columns: 2fr 1fr; gap:30px;">
+      <div>
+        <div class="flex justify-between items-center pb-3 mb-4" style="border-bottom:2px solid #E2E8F0;">
+          <h2 style="font-size:1.3rem; font-weight:800; color:#0F172A;"><i class="fas fa-stream" style="color:#DC2626;"></i> ताज़ा घटनाक्रम टाइमलाइन</h2>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span id="live-refresh-timer" style="font-size:0.8rem; font-weight:700; color:#DC2626;"><i class="fas fa-sync fa-spin"></i> 45s</span>
+            <button onclick="fetchLiveTimeline(true)" class="btn btn-sm btn-outline" style="padding:3px 10px; font-size:0.75rem;"><i class="fas fa-redo"></i> अभी ताज़ा करें</button>
+          </div>
+        </div>
+
+        <div class="live-blog-timeline" id="live-timeline-container">
+          <div style="text-align:center; padding:40px; color:#64748B;">
+            <i class="fas fa-spinner fa-spin" style="font-size:2rem; color:#DC2626; margin-bottom:12px;"></i>
+            <p>लाइव टाइमलाइन अपडेट लोड हो रहा है...</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:18px; margin-bottom:25px; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+          <h3 style="font-size:1rem; font-weight:800; margin-bottom:12px; color:#0F172A;"><i class="fas fa-chart-line" style="color:#0284C7;"></i> बिहार वर्षा व जलस्तर (mm)</h3>
+          <div style="height:220px; position:relative;">
+            <canvas id="chart-bihar-rainfall"></canvas>
+          </div>
+          <span style="font-size:0.72rem; color:#94A3B8; display:block; margin-top:8px;">स्रोत: मौसम विज्ञान केंद्र, पटना</span>
+        </div>
+
+        <div class="ad-slot-container ad-slot-sidebar">
+          <span class="ad-badge-tag">विज्ञापन / ADVERTISEMENT</span>
+          <div style="display:flex; align-items:center; justify-content:center; height:200px; color:#94A3B8; font-size:0.85rem; font-weight:600;">
+            <i class="fas fa-ad" style="margin-right:8px; font-size:1.2rem; color:#CBD5E1;"></i> Google AdSense (300x250)
+          </div>
+        </div>
+
+        <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:18px; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+          <h3 style="font-size:1rem; font-weight:800; margin-bottom:12px; color:#0F172A;"><i class="fas fa-chart-pie" style="color:#DC2626;"></i> बिहार बजट सेक्टर आवंटन (%)</h3>
+          <div style="height:220px; position:relative;">
+            <canvas id="chart-bihar-budget"></canvas>
+          </div>
+          <span style="font-size:0.72rem; color:#94A3B8; display:block; margin-top:8px;">स्रोत: वित्त विभाग, बिहार सरकार</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="background:#0F172A; color:#94A3B8; padding:50px 0 20px 0; margin-top:50px;">
+    <div class="container text-center" style="font-size:0.8rem;">
+      <p data-i18n="footer_copyright">© 2026 बिहार समाचार हब। सर्वाधिकार सुरक्षित।</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/security.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/ab-testing.js" defer></script>
+  <script src="assets/js/news.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="assets/js/charts-bihar.js" defer></script>
+  <script>
+    window.SecurityHub = window.SecurityHub || window.BSH_SECURITY || {
+      sanitizeFormInput: (str) => typeof str === 'string' ? str.replace(/[<>]/g, '').trim().slice(0, 1000) : (str || ''),
+      escapeHtml: (str) => typeof str === 'string' ? str.replace(/[&<>"'`=/]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;','/':'&#x2F;'}[s]||s)) : (str || '')
+    };
+    let countdownSecs = 45;
+    let countdownInterval = null;
+
+    async function fetchLiveTimeline(showToast = false) {
+      const container = document.getElementById('live-timeline-container');
+      if (!container) return;
+
+      try {
+        let events = [];
+        let res = null;
+        if (window.location.protocol.startsWith('http')) {
+          try {
+            res = await fetch('/api/live-blog');
+          } catch (_) {}
+        }
+        
+        if (!res || !res.ok) {
+          try {
+            res = await fetch('data/live-blog.json');
+          } catch (_) {}
+        }
+
+        if (res && res.ok) {
+          const data = await res.json();
+          events = data.events || data.timeline || [];
+        } else {
+          // Ultimate fallback to latest-news.json
+          const newsRes = await fetch('data/latest-news.json');
+          const newsData = await newsRes.json();
+          const rawNews = (newsData.news || []).slice(0, 15);
+          events = rawNews.map(n => ({
+            id: n.id,
+            title: n.title,
+            description: n.description,
+            time: n.pubDate,
+            district_name_hi: n.district_name_hi || 'बिहार',
+            category_label: n.category_label_hi || 'ताज़ा खबर',
+            reporter: n.reporter_name || 'विशेष संवाददाता'
+          }));
+        }
+
+        if (events.length > 0) {
+          renderTimelineEvents(events);
+          if (showToast && window.BSH && BSH.toast) {
+            BSH.toast('⚡ लाइव टाइमलाइन ताज़ा की गई!', 'info');
+          }
+        }
+      } catch (err) {
+        console.warn('Live blog fetch error:', err);
+      }
+      
+      resetCountdown();
+    }
+
+    function renderTimelineEvents(events) {
+      const container = document.getElementById('live-timeline-container');
+      if (!container) return;
+
+      container.innerHTML = events.map(ev => {
+        const timeAgo = window.BSH ? BSH.timeAgo(ev.time || ev.pubDate) : 'अभी-अभी';
+        const title = SecurityHub.sanitizeFormInput(ev.title || '');
+        const desc = SecurityHub.sanitizeFormInput(ev.description || '');
+        const dist = SecurityHub.sanitizeFormInput(ev.district_name_hi || ev.district || 'बिहार');
+        const reporter = SecurityHub.sanitizeFormInput(ev.reporter || 'ब्यूरो डेस्क');
+
+        return `
+          <div class="timeline-event-card" onclick="if(window.NewsHub && NewsHub.openNewsModal) NewsHub.openNewsModal('${ev.id}')" style="cursor:pointer;" title="विस्तृत खबर पढ़ने के लिए क्लिक करें">
+            <div class="timeline-dot"></div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+              <span class="timeline-time-badge"><i class="far fa-clock"></i> ${timeAgo}</span>
+              <span style="font-size:0.75rem; background:#FEF2F2; color:#DC2626; font-weight:700; padding:2px 8px; border-radius:10px; border:1px solid #FECACA;"><i class="fas fa-map-marker-alt"></i> ${dist}</span>
+            </div>
+            <h3 style="font-size:1.05rem; font-weight:800; color:#0F172A; margin:4px 0 8px 0; line-height:1.45;">${title}</h3>
+            <p style="font-size:0.9rem; color:#334155; line-height:1.55;">${desc}</p>
+            <div style="margin-top:10px; font-size:0.75rem; color:#64748B; display:flex; justify-content:space-between; align-items:center;">
+              <span><strong>ब्यूरो रिपोर्ट:</strong> ${reporter}</span>
+              <span style="color:var(--primary); font-weight:700;">पूरी खबर पढ़ें →</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function resetCountdown() {
+      countdownSecs = 45;
+      const el = document.getElementById('live-refresh-timer');
+      if (el) el.innerHTML = `<i class="fas fa-sync fa-spin"></i> ${countdownSecs}s`;
+    }
+
+    function startAutoPolling() {
+      clearInterval(countdownInterval);
+      countdownInterval = setInterval(() => {
+        countdownSecs--;
+        const el = document.getElementById('live-refresh-timer');
+        if (el) el.innerHTML = `<i class="fas fa-sync fa-spin"></i> ${countdownSecs}s`;
+        if (countdownSecs <= 0) {
+          fetchLiveTimeline(false);
+        }
+      }, 1000);
+    }
+
+    function initEventSource() {
+      if (window.location.protocol.startsWith('http') && 'EventSource' in window) {
+        try {
+          const es = new EventSource('/api/events');
+          es.onmessage = function (e) {
+            try {
+              const data = JSON.parse(e.data);
+              if (data && data.type === 'news_update') {
+                fetchLiveTimeline(true);
+              }
+            } catch (_) {}
+          };
+          es.onerror = function () {
+            // Close stream gracefully if running on static host (e.g. Vercel)
+            es.close();
+          };
+        } catch (_) {}
+      }
+    }
+
+    const initLiveBlog = () => {
+      fetchLiveTimeline(false);
+      startAutoPolling();
+      initEventSource();
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLiveBlog);
+    } else {
+      initLiveBlog();
+    }
+  </script>
+</body>
+</html>

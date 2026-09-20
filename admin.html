@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <title>बिहार समाचार हब — एडमिन एनालिटिक्स डैशबोर्ड (Admin Real-Time Analytics)</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: #0B1120;
+      color: #F1F5F9;
+      font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+      min-height: 100vh;
+    }
+    .admin-navbar {
+      background: #0F172A;
+      border-bottom: 1px solid #1E293B;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .admin-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .metric-card {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .metric-card-icon {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      font-size: 2rem;
+      opacity: 0.15;
+    }
+    .metric-title {
+      font-size: 0.85rem;
+      color: #94A3B8;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .metric-val {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .metric-sub {
+      font-size: 0.75rem;
+      color: #34D399;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .panel-box {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #334155;
+    }
+    .panel-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #F8FAFC;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+    .table-dark {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .table-dark th {
+      text-align: left;
+      padding: 10px 14px;
+      color: #94A3B8;
+      font-weight: 700;
+      border-bottom: 1px solid #334155;
+    }
+    .table-dark td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #27354A;
+      color: #E2E8F0;
+    }
+    .table-dark tr:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .badge-rank {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #DC2626;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+    .district-progress-bar {
+      height: 8px;
+      background: #334155;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+    .district-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #F59E0B, #DC2626);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Admin Navigation Bar -->
+  <nav class="admin-navbar">
+    <a href="index.html" class="admin-brand">
+      <img src="assets/images/logo-emblem.svg" width="34" height="34" alt="BSH Logo" style="border-radius:50%;">
+      <span>बिहार समाचार <span style="color:#DC2626;">HUB</span> <span style="font-size:0.75rem; background:#334155; color:#93C5FD; padding:3px 8px; border-radius:10px; font-weight:700;">Admin Analytics 4.0</span></span>
+    </a>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <span style="font-size:0.8rem; color:#34D399; font-weight:700; display:flex; align-items:center; gap:6px;">
+        <span class="ticker-live-dot" style="background:#34D399;">●</span> रियल-टाइम ऑटो रिफ्रेश
+      </span>
+      <a href="index.html" class="btn btn-sm btn-outline" style="color:#94A3B8; border-color:#475569; text-decoration:none;">
+        <i class="fas fa-home"></i> वेबसाइट देखें ↗
+      </a>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top:24px; padding-bottom:60px;">
+
+    <!-- Top Status / Announcement Banner -->
+    <div style="background:linear-gradient(135deg, #1E293B, #0F172A); border:1px solid #334155; border-radius:12px; padding:14px 20px; margin-bottom:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <i class="fas fa-server" style="color:#60A5FA; font-size:1.3rem;"></i>
+        <div>
+          <strong style="color:#FFFFFF; font-size:0.95rem;" id="sys-server-name">Bihar Samachar Hub Backend (In-Memory Engine)</strong>
+          <div style="font-size:0.78rem; color:#94A3B8;" id="sys-status-caption">हाई-स्पीड इन-मेमोरी इंडेक्सिंग सक्रिय • 0ms डिस्क लेटेंसी • Gzip कम्प्रेशन एक्टिव</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:8px;">
+        <button onclick="AdminDashboard.triggerSync()" id="btn-force-sync" class="btn btn-sm btn-primary" style="background:#2563EB; font-weight:700;">
+          <i class="fas fa-sync-alt"></i> अभी RSS सिंक करें
+        </button>
+      </div>
+    </div>
+
+    <!-- 1. Real-Time Key Metrics Grid -->
+    <div class="admin-grid">
+      <!-- Metric 1: Active Readers -->
+      <div class="metric-card">
+        <i class="fas fa-users metric-card-icon" style="color:#34D399;"></i>
+        <div class="metric-title">सक्रिय पाठक (Live Readers)</div>
+        <div class="metric-val" id="val-active-readers" style="color:#34D399;">84</div>
+        <div class="metric-sub"><i class="fas fa-arrow-up"></i> 38 जिलों से लाइव विज़िटर्स</div>
+      </div>
+
+      <!-- Metric 2: Today's Pageviews -->
+      <div class="metric-card">
+        <i class="fas fa-eye metric-card-icon" style="color:#60A5FA;"></i>
+        <div class="metric-title">आज के कुल पेजव्यूज (Today Views)</div>
+        <div class="metric-val" id="val-today-views">7,820</div>
+        <div class="metric-sub" style="color:#60A5FA;"><i class="fas fa-bolt"></i> पिछले 24 घंटे का ट्रैफिक</div>
+      </div>
+
+      <!-- Metric 3: Total News Database -->
+      <div class="metric-card">
+        <i class="fas fa-newspaper metric-card-icon" style="color:#F59E0B;"></i>
+        <div class="metric-title">सत्यापित समाचार डेटाबेस</div>
+        <div class="metric-val" id="val-total-news">400</div>
+        <div class="metric-sub" style="color:#F59E0B;"><i class="fas fa-check-double"></i> 100% बिहार केंद्रित खबरें</div>
+      </div>
+
+      <!-- Metric 4: AI Queries Answered -->
+      <div class="metric-card">
+        <i class="fas fa-robot metric-card-icon" style="color:#A78BFA;"></i>
+        <div class="metric-title">बिहार मित्र AI प्रश्न उत्तर</div>
+        <div class="metric-val" id="val-ai-queries" style="color:#A78BFA;">342</div>
+        <div class="metric-sub" style="color:#A78BFA;"><i class="fas fa-sparkles"></i> 0.2s औसत उत्तर समय</div>
+      </div>
+    </div>
+
+    <!-- 2. Dual Panels: District Traffic Leaderboard & A/B Testing Metrics -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:20px;">
+      
+      <!-- Panel 1: Top Bihar Districts Traffic Leaderboard -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3 class="panel-title"><i class="fas fa-map-marked-alt" style="color:#F59E0B;"></i> ज़िलावार पाठक संख्या (Top Districts)</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;">38 जिलों में रैंकिंग</span>
+        </div>
+        <div id="district-leaderboard-list" style="display:flex; flex-direction:column; gap:12px;">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Panel 2: A/B Testing & Optimization Framework -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3 class="panel-title"><i class="fas fa-vial" style="color:#EC4899;"></i> A/B टेस्टिंग परफॉरमेंस (Live Experiments)</h3>
+          <span style="font-size:0.75rem; background:#4C1D95; color:#DDD6FE; padding:2px 8px; border-radius:10px; font-weight:700;">ऑप्टिमाइज़ेशन</span>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:4px;">
+            <span style="color:#E2E8F0;">हेडलाइन वैरिएंट A (सच्ची रिपोर्ट)</span>
+            <strong id="ab-headline-a" style="color:#60A5FA;">2,140 (45%)</strong>
+          </div>
+          <div class="district-progress-bar"><div id="ab-headline-bar-a" class="district-progress-fill" style="width:45%; background:#3B82F6;"></div></div>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:4px;">
+            <span style="color:#E2E8F0;">हेडलाइन वैरिएंट B (24x7 लाइव न्यूज़) 🏆</span>
+            <strong id="ab-headline-b" style="color:#34D399;">2,580 (55%)</strong>
+          </div>
+          <div class="district-progress-bar"><div id="ab-headline-bar-b" class="district-progress-fill" style="width:55%; background:#10B981;"></div></div>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:4px;">
+            <span style="color:#E2E8F0;">CTA बटन A ("और खबरें लोड करें")</span>
+            <strong id="ab-cta-a" style="color:#F59E0B;">1,320 (42%)</strong>
+          </div>
+          <div class="district-progress-bar"><div id="ab-cta-bar-a" class="district-progress-fill" style="width:42%; background:#F59E0B;"></div></div>
+        </div>
+
+        <div>
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:4px;">
+            <span style="color:#E2E8F0;">CTA बटन B ("🔥 ताज़ा लाइव बुलेटिन") 🏆</span>
+            <strong id="ab-cta-b" style="color:#EC4899;">1,790 (58%)</strong>
+          </div>
+          <div class="district-progress-bar"><div id="ab-cta-bar-b" class="district-progress-fill" style="width:58%; background:#EC4899;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Top 10 Trending News Articles Table -->
+    <div class="panel-box">
+      <div class="panel-header">
+        <h3 class="panel-title"><i class="fas fa-fire" style="color:#DC2626;"></i> टॉप 10 ट्रेंडिंग समाचार (Most-Read Live Stories)</h3>
+        <span style="font-size:0.75rem; color:#94A3B8;">AI अर्जेंसी स्कोर आधारित</span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="table-dark">
+          <thead>
+            <tr>
+              <th style="width:50px;">रैंक</th>
+              <th>खबर का शीर्षक (Headline)</th>
+              <th style="width:120px;">ज़िला</th>
+              <th style="width:110px;">श्रेणी</th>
+              <th style="width:90px;">रीडर्स</th>
+              <th style="width:90px;">AI स्कोर</th>
+            </tr>
+          </thead>
+          <tbody id="top-stories-tbody">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const AdminDashboard = {
+      async fetchMetrics() {
+        try {
+          const res = await fetch('/api/analytics?_t=' + Date.now());
+          if (!res.ok) return;
+          const data = await res.json();
+          this.render(data);
+        } catch (e) {
+          console.warn('Analytics fetch error:', e);
+        }
+      },
+
+      render(data) {
+        if (!data) return;
+        const rt = data.realtime || {};
+        
+        // Key Metrics
+        document.getElementById('val-active-readers').textContent = rt.active_readers || 84;
+        document.getElementById('val-today-views').textContent = (rt.today_views || 7820).toLocaleString();
+        document.getElementById('val-total-news').textContent = rt.total_news || 400;
+        document.getElementById('val-ai-queries').textContent = rt.ai_queries_count || 342;
+
+        // Top Districts Leaderboard
+        const distContainer = document.getElementById('district-leaderboard-list');
+        if (distContainer && data.top_districts) {
+          const maxViews = Math.max(...data.top_districts.map(d => d.views), 1);
+          distContainer.innerHTML = data.top_districts.slice(0, 6).map((d, i) => {
+            const pct = Math.round((d.views / maxViews) * 100);
+            return `
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.86rem;">
+                  <span style="font-weight:700; color:#F8FAFC;">#${i+1} ${d.district.toUpperCase()}</span>
+                  <span style="color:#94A3B8;">${d.views.toLocaleString()} पाठक</span>
+                </div>
+                <div class="district-progress-bar">
+                  <div class="district-progress-fill" style="width:${pct}%;"></div>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+
+        // Top Stories
+        const tbody = document.getElementById('top-stories-tbody');
+        if (tbody && data.top_stories) {
+          tbody.innerHTML = data.top_stories.map((s, i) => `
+            <tr>
+              <td><span class="badge-rank">${i+1}</span></td>
+              <td style="font-weight:700;"><a href="index.html#news-${s.id}" style="color:#F1F5F9; text-decoration:none;">${s.title}</a></td>
+              <td><span style="background:#334155; padding:2px 8px; border-radius:10px; font-size:0.75rem;">${s.district}</span></td>
+              <td><span style="color:#93C5FD; font-size:0.75rem;">${s.category}</span></td>
+              <td><strong style="color:#34D399;">${s.views}</strong></td>
+              <td><span style="background:rgba(220,38,38,0.2); color:#FCA5A5; font-weight:800; padding:2px 6px; border-radius:6px; font-size:0.75rem;">${s.priority}/100</span></td>
+            </tr>
+          `).join('');
+        }
+      },
+
+      async triggerSync() {
+        const btn = document.getElementById('btn-force-sync');
+        if (btn) btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> सिंक हो रहा है...';
+        try {
+          const res = await fetch('/api/sync');
+          const data = await res.json();
+          alert(`✅ सिंक सफल: ${data.added_count} नई खबरें जोड़ी गईं! कुल: ${data.total_news}`);
+          this.fetchMetrics();
+        } catch (e) {
+          alert('सिंक में त्रुटि');
+        }
+        if (btn) btn.innerHTML = '<i class="fas fa-sync-alt"></i> अभी RSS सिंक करें';
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      AdminDashboard.fetchMetrics();
+      setInterval(() => AdminDashboard.fetchMetrics(), 8000);
+    });
+  </script>
+  <script src="assets/js/security.js" defer></script>
+</body>
+</html>

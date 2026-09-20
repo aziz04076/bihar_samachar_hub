@@ -1,0 +1,25 @@
+# Python caches & build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Scratch & temporary development scripts
+scratch/
+backups/
+*.log
+
+# Editor & OS system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Deployment local states
+.vercel/
+.netlify/

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="biharGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E05B1C"/>
+      <stop offset="100%" stop-color="#991B1B"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#biharGrad)"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#F59E0B" stroke-width="3"/>
+  <text x="50" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" text-anchor="middle">बिहार</text>
+  <text x="50" y="68" font-family="sans-serif" font-size="14" font-weight="800" fill="#FCD34D" text-anchor="middle">HUB</text>
+  <circle cx="50" cy="80" r="3" fill="#10B981"/>
+</svg>

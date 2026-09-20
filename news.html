@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data: blob:; frame-src https://maps.google.com https://www.google.com https://www.youtube.com; connect-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+  <title>ताजा बिहार समाचार | Bihar News | Bihar Samachar Hub</title>
+  <meta name="theme-color" content="#DC2626">
+  <!-- Google AdSense: To enable real monetization, insert your approved Publisher ID below -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_PUBLISHER_ID" crossorigin="anonymous"></script> -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar News">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Accessibility & 5-Dialect Localization Bar (Phase 5) -->
+  <div class="top-accessibility-bar">
+    <div class="container flex justify-between items-center" style="padding:0;">
+      <div class="flex items-center gap-2">
+        <span style="color:#F97316; font-weight:800;"><i class="fas fa-broadcast-tower"></i> 24x7 बिहार लाइव नेटवर्क</span>
+        <span class="hidden-mobile" style="color:#9CA3AF;">| 38 जिले, 9 प्रमंडल, 100% सत्यापित</span>
+        <span class="live-datetime-widget" id="live-datetime"><i class="far fa-calendar-alt"></i> लोड हो रहा है...</span>
+      </div>
+      <div class="a11y-controls-group">
+        <button class="a11y-btn" onclick="BSH.setFontSize(-1)" title="फॉन्ट छोटा करें">A-</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(0)" title="सामान्य फॉन्ट">A</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(1)" title="फॉन्ट बड़ा करें">A+</button>
+        <select class="dialect-dropdown-select" id="dialect-picker" onchange="BSH.setDialect(this.value)" title="भाषा व बोली चुनें">
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mai">🌾 मैथिली (Maithili)</option>
+          <option value="bho">⚡ भोजपुरी (Bhojpuri)</option>
+          <option value="mag">🏛 मगही (Magahi)</option>
+          <option value="en">🌐 English</option>
+        </select>
+        <button class="theme-toggle-btn a11y-btn" title="डार्क / लाइट मोड"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PWA Install Banner (Mobile App Promotion) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और ऑफ़लाइन न्यूज़ पढ़ें</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">होम</a>
+        <a href="districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="news.html" class="nav-link active" data-i18n="nav_news">समाचार</a>
+        <a href="live-blog.html" class="nav-link" data-i18n="nav_live_blog"><span class="nav-live-dot-beacon"></span>लाइव ब्लॉग</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">संपर्क</a>
+        <button class="btn btn-sm btn-outline" onclick="NewsHub.togglePushNotifications()" title="सूचनाएं" style="margin-left:4px; padding:4px 8px;"><i class="fas fa-bell"></i></button>
+        <button class="btn btn-sm btn-primary" id="nav-auth-btn" onclick="BSH.openAuthModal()" style="padding:4px 10px; font-weight:700;"><i class="fas fa-user-circle"></i> <span>लॉगिन</span></button>
+</div>
+      <button class="hamburger" id="hamburger" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i> होम</a>
+      <a href="districts.html" data-i18n="nav_districts"><i class="fas fa-map-marked-alt"></i> जिले</a>
+      <a href="news.html" data-i18n="nav_news"><i class="fas fa-newspaper"></i> समाचार</a>
+      <a href="live-blog.html"><i class="fas fa-bolt"></i> लाइव ब्लॉग</a>
+      <a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> हमारे बारे में</a>
+      <a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> संपर्क</a>
+      <div style="display:flex; gap:10px; padding:10px 15px;">
+        <button onclick="BSH.openAuthModal()" style="flex:1; padding:8px; border-radius:8px; background:var(--primary); color:white; font-weight:700; border:none;">
+          <i class="fas fa-user-circle"></i> लॉगिन / प्रोफ़ाइल
+        </button>
+      </div>
+</div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker (Top Red Banner with Pulse & Live Last Updated) -->
+  <div class="ticker-bar portal-ticker">
+    <div class="ticker-label-badge">
+      <span class="ticker-live-beacon"></span> <span>BREAKING</span>
+    </div>
+    <div class="ticker-carousel-wrap">
+      <div id="portal-ticker-text" class="ticker-active-slide">ताज़ा बुलेटिन लोड हो रहा है...</div>
+    </div>
+    <div class="ticker-controls-group">
+      <button id="portal-ticker-prev" class="ticker-ctrl-btn" title="पिछली खबर"><i class="fas fa-chevron-left"></i></button>
+      <button id="portal-ticker-pause" class="ticker-ctrl-btn" title="रोकें / चलाएं"><i class="fas fa-pause"></i></button>
+      <button id="portal-ticker-next" class="ticker-ctrl-btn" title="अगली खबर"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="ticker-last-updated-badge" id="ticker-last-updated">
+      <i class="far fa-clock"></i> <span>अंतिम अपडेट: अभी-अभी</span>
+    </div>
+  </div>
+
+  <!-- 9 Administrative Divisions Bar -->
+  <div class="divisions-quick-bar">
+    <span class="division-pill-label"><i class="fas fa-map-marked-alt"></i> 9 प्रमंडल:</span>
+    <button class="division-chip active" onclick="NewsHub.filterByDivision('all', this)">सभी प्रमंडल</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('patna', this)">पटना</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('tirhut', this)">तिरहुत</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('saran', this)">सारण</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('darbhanga', this)">दरभंगा</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('kosi', this)">कोसी</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('purnia', this)">पूर्णिया</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('bhagalpur', this)">भागलपुर</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('munger', this)">मुंगेर</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('magadh', this)">मगध</button>
+  </div>
+
+  
+  <!-- Leaderboard Responsive Ad Banner (728x90 Desktop / 320x100 Mobile) -->
+  <div class="container" style="margin-top: 12px; margin-bottom: 8px;">
+    <div class="ad-slot-container">
+      <span class="ad-badge-tag"><i class="fas fa-ad"></i> विज्ञापन / SPONSORED</span>
+      <a href="news.html" class="bsh-leaderboard-banner" title="पटना मार्गदर्शन IAS & BPSC कोचिंग">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:1.6rem; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1));">🏛️</span>
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="ad-sponsor-pill">BPSC 70वीं &amp; शिक्षक भर्ती 4.0</span>
+              <strong style="font-size:0.95rem; color:#9A3412;">पटना मार्गदर्शन IAS संस्थान</strong>
+            </div>
+            <div style="font-size:0.82rem; color:#78350F; margin-top:2px;">
+              38 जिलों के अभ्यर्थियों के लिए विशेष टेस्ट सीरीज, प्रिंटेड नोट्स व लाइव कक्षाएं उपलब्ध!
+            </div>
+          </div>
+        </div>
+        <span class="ad-main-cta-btn">दाखिला व विवरण ➔</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <h1 data-i18n="news_page_title">बिहार समाचार</h1>
+      <p data-i18n="news_page_subtitle">Latest updates from all around Bihar</p>
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="container">
+      <!-- Categories -->
+      <div class="category-tabs" id="news-categories">
+        <button class="category-tab active" data-category="all">सभी खबरें (All)</button>
+        <button class="category-tab" data-category="village_panchayat"><i class="fas fa-seedling"></i> गाँव / पंचायत (Village)</button>
+        <button class="category-tab" data-category="block"><i class="fas fa-landmark"></i> प्रखंड स्तर (Block)</button>
+        <button class="category-tab" data-category="education"><i class="fas fa-graduation-cap"></i> शिक्षा व रोजगार (Jobs)</button>
+        <button class="category-tab" data-category="politics"><i class="fas fa-vote-yea"></i> राजनीति (Politics)</button>
+        <button class="category-tab" data-category="crime"><i class="fas fa-shield-alt"></i> अपराध व पुलिस (Crime)</button>
+        <button class="category-tab" data-category="weather"><i class="fas fa-cloud-sun-rain"></i> मौसम व आपदा (Weather)</button>
+        <button class="category-tab" data-category="schemes"><i class="fas fa-hands-helping"></i> सरकारी योजनाएं (Schemes)</button>
+        <button class="category-tab" data-category="business"><i class="fas fa-chart-line"></i> उद्योग व व्यापार (Business)</button>
+        <button class="category-tab" data-category="sports"><i class="fas fa-trophy"></i> खेलकूद (Sports)</button>
+      </div>
+      
+      <!-- Sub filters -->
+      <div class="flex mt-4" style="gap:15px; flex-wrap:wrap; align-items:center;">
+        <select id="district-filter-news" style="padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border);">
+          <option value="all">सभी जिले (All Districts)</option>
+          <option value="patna">Patna / पटना</option>
+          <option value="gaya">Gaya / गया</option>
+          <option value="muzaffarpur">Muzaffarpur / मुजफ्फरपुर</option>
+          <option value="bhagalpur">Bhagalpur / भागलपुर</option>
+          <option value="darbhanga">Darbhanga / दरभंगा</option>
+          <option value="nalanda">Nalanda / नालंदा</option>
+          <option value="vaishali">Vaishali / वैशाली</option>
+          <option value="samastipur">Samastipur / समस्तीपुर</option>
+          <option value="begusarai">Begusarai / बेगूसराय</option>
+          <option value="rohtas">Rohtas / रोहतास</option>
+          <option value="saran">Saran / सारण</option>
+          <option value="siwan">Siwan / सिवान</option>
+          <option value="purnia">Purnia / पूर्णिया</option>
+          <option value="katihar">Katihar / कटिहार</option>
+          <option value="madhubani">Madhubani / मधुबनी</option>
+          <option value="sitamarhi">Sitamarhi / सीतामढ़ी</option>
+          <option value="champaran">Champaran / चंपारण</option>
+          <option value="munger">Munger / मुंगेर</option>
+        </select>
+        
+        <div class="search-box" style="flex:1; min-width:200px;">
+          <input type="text" id="news-search" placeholder="खबर खोजें... (Search news)" style="width:100%; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border);">
+        </div>
+
+        <button id="refresh-news" title="ताज़ा करें" style="background:var(--bg-light);border:1px solid var(--border);padding:8px 12px;border-radius:var(--radius-sm);">
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+
+      <!-- News count -->
+      <div id="news-loading-indicator">
+        <div class="loading-spinner" style="width:20px;height:20px;border-width:3px;margin:0"></div>
+        <span>खबरें लोड हो रही हैं...</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Content -->
+  <div class="section">
+    <div class="container">
+      
+      <p class="text-right text-light" style="font-size:0.8rem; margin-bottom:20px;" data-i18n="auto_refresh">हर 30 मिनट में स्वतः अपडेट</p>
+      
+      <div class="news-grid" id="news-grid">
+        <!-- Skeleton Loading Cards -->
+        <div class="news-card card skeleton-card">
+          <div class="skeleton skeleton-img"></div>
+          <div class="news-card-content">
+            <div class="skeleton skeleton-text" style="width:60%"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="news-card card skeleton-card">
+          <div class="skeleton skeleton-img"></div>
+          <div class="news-card-content">
+            <div class="skeleton skeleton-text" style="width:60%"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="news-card card skeleton-card">
+          <div class="skeleton skeleton-img"></div>
+          <div class="news-card-content">
+            <div class="skeleton skeleton-text" style="width:60%"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="news-card card skeleton-card">
+          <div class="skeleton skeleton-img"></div>
+          <div class="news-card-content">
+            <div class="skeleton skeleton-text" style="width:60%"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="news-card card skeleton-card">
+          <div class="skeleton skeleton-img"></div>
+          <div class="news-card-content">
+            <div class="skeleton skeleton-text" style="width:60%"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="news-card card skeleton-card">
+          <div class="skeleton skeleton-img"></div>
+          <div class="news-card-content">
+            <div class="skeleton skeleton-text" style="width:60%"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width:80%"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <button class="btn btn-primary" id="load-more-btn" data-i18n="load_more">और देखें</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+            <img src="assets/images/logo-emblem.svg" alt="बिहार समाचार हब" width="38" height="38" style="border-radius:50%; filter:drop-shadow(0 3px 8px rgba(224,91,28,0.5));">
+            <h3 style="margin:0; font-size:1.3rem; color:#FFFFFF; font-weight:800;">बिहार समाचार <span style="background:linear-gradient(135deg, #FF6F00, #DC2626); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">HUB</span></h3>
+          </div>
+          <p data-i18n="footer_desc">बिहार की खबरें और जिलेवार जानकारी का सबसे विश्वसनीय मंच।</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="quick_links">महत्वपूर्ण लिंक</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav_home">होम</a></li>
+            <li><a href="districts.html" data-i18n="nav_districts">सभी जिले</a></li>
+            <li><a href="news.html" data-i18n="nav_news">ताजा समाचार</a></li>
+            <li><a href="about.html">हमारे बारे में (About Us)</a></li>
+            <li><a href="contact.html">संपर्क व शिकायत (Contact Us)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 Bihar Samachar Hub. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/security.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/ab-testing.js" defer></script>
+  <script src="assets/js/news.js" defer></script>
+  <!-- Scroll to top -->
+  <button id="scroll-top" title="ऊपर जाएं" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Mobile Sticky Bottom Anchor Ad (320x50 Responsive Unit) -->
+  <div class="mobile-sticky-ad-anchor" id="mobile-sticky-anchor-ad">
+    <div class="mobile-anchor-ad-content">
+      <span class="mobile-anchor-badge"><i class="fas fa-ad"></i> SPONSORED</span>
+      <div class="mobile-anchor-title">BPSC 70वीं &amp; शिक्षक भर्ती: स्पेशल क्रैश कोर्स 50% छूट</div>
+      <a href="news.html" class="mobile-anchor-cta">देखें ➔</a>
+      <button class="mobile-anchor-close" onclick="document.getElementById('mobile-sticky-anchor-ad').style.display='none'" aria-label="Close Ad">✕</button>
+    </div>
+  </div>
+
+  <!-- Mobile App Bottom Navigation Dock (Ultra Pro Max PWA Experience) -->
+  <nav class="app-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="app-nav-item">
+      <i class="fas fa-home"></i>
+      <span>होम</span>
+    </a>
+    <a href="districts.html" class="app-nav-item">
+      <i class="fas fa-map-marked-alt"></i>
+      <span>38 जिले</span>
+    </a>
+    <a href="news.html" class="app-nav-item active">
+      <i class="fas fa-bolt"></i>
+      <span>लाइव न्यूज़</span>
+    </a>
+    <a href="javascript:void(0)" onclick="BSH.openSavedBookmarksModal()" class="app-nav-item">
+      <i class="fas fa-bookmark"></i>
+      <span>सेव्ड</span>
+    </a>
+    <a href="javascript:void(0)" onclick="BSH.openCitizenModal()" class="app-nav-item">
+      <i class="fas fa-bullhorn"></i>
+      <span>समस्या भेजें</span>
+    </a>
+  </nav>
+
+</body>
+</html>

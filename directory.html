@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://pagead2.googlesyndication.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data: blob:; frame-src https://maps.google.com https://www.google.com https://googleads.g.doubleclick.net https://www.youtube.com; connect-src 'self' https://api.rss2json.com https://api.allorigins.win https://api.anthropic.com https://api.openai.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+  <title>बिहार स्थानीय कारोबार डायरेक्टरी | बिहार समाचार हब</title>
+  <meta name="theme-color" content="#DC2626">
+  <!-- Google AdSense: To enable real monetization, insert your approved Publisher ID below -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_PUBLISHER_ID" crossorigin="anonymous"></script> -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar News">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="top-accessibility-bar">
+    <div class="container flex justify-between items-center" style="padding:0;">
+      <div class="flex items-center gap-2">
+        <span style="color:#F97316; font-weight:800;"><i class="fas fa-store"></i> बिहार लोकल बिजनेस हब</span>
+        <span class="hidden-mobile" style="color:#9CA3AF;">| 38 जिले, 100% सत्यापित लिस्टिंग</span>
+        <span class="live-datetime-widget" id="live-datetime"><i class="far fa-calendar-alt"></i> लोड हो रहा है...</span>
+      </div>
+      <div class="a11y-controls-group">
+        <button class="a11y-btn" onclick="BSH.setFontSize(-1)" title="छोटा फॉन्ट">A-</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(0)" title="सामान्य फॉन्ट">A</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(1)" title="बड़ा फॉन्ट">A+</button>
+        <select class="dialect-dropdown-select" id="dialect-picker" onchange="BSH.setDialect(this.value)">
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mai">🌾 मैथिली (Maithili)</option>
+          <option value="bho">⚡ भोजपुरी (Bhojpuri)</option>
+          <option value="mag">🏛 मगही (Magahi)</option>
+          <option value="en">🌐 English</option>
+        </select>
+        <button class="theme-toggle-btn a11y-btn"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PWA Install Banner (Mobile App Promotion) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और ऑफ़लाइन न्यूज़ पढ़ें</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">होम</a>
+        <a href="districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="news.html" class="nav-link" data-i18n="nav_news">समाचार</a>
+        <a href="live-blog.html" class="nav-link" data-i18n="nav_live_blog"><span class="nav-live-dot-beacon"></span>लाइव ब्लॉग</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">संपर्क</a>
+        <button class="btn btn-sm btn-primary" onclick="openAddBusinessModal()" style="padding:5px 12px; font-weight:700;"><i class="fas fa-plus-circle"></i> <span>व्यवसाय जोड़ें</span></button>
+</div>
+      <button class="hamburger" id="hamburger" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html" data-i18n="nav_home">होम</a>
+      <a href="districts.html" data-i18n="nav_districts">जिले</a>
+      <a href="news.html" data-i18n="nav_news">समाचार</a>
+      <a href="about.html" data-i18n="nav_about">हमारे बारे में</a>
+      <a href="contact.html" data-i18n="nav_contact">संपर्क</a>
+      <div style="display:flex; gap:10px; padding:10px 15px;">
+        <button class="theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle Dark Mode" style="flex:1; border-radius:8px; height:40px;">
+          <i class="fas fa-moon"></i> <span>थीम</span>
+        </button>
+        <button id="lang-toggle-mobile" onclick="BSH.toggleLang()" style="flex:1; padding:8px; border-radius:8px; background:var(--primary); color:white; font-weight:700;">
+          हिं/EN
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker -->
+  
+  <section style="background: linear-gradient(135deg, #0F766E 0%, #115E59 100%); color:#FFFFFF; padding: 40px 0 30px 0;">
+    <div class="container text-center">
+      <span style="background:#14B8A6; color:#FFF; font-size:0.8rem; padding:4px 12px; border-radius:20px; font-weight:700;"><i class="fas fa-briefcase"></i> वोकल फॉर लोकल बिहार</span>
+      <h1 style="font-size:2.3rem; font-weight:800; margin:12px 0;">बिहार स्थानीय व्यवसाय व सेवा डायरेक्टरी</h1>
+      <p style="color:#CCFBF1; font-size:1.05rem; max-width:680px; margin:0 auto;">कोचिंग, अस्पताल, होटल, पारंपरिक हस्तशिल्प और आवश्यक सेवाओं के सत्यापित पते व संपर्क नंबर।</p>
+    </div>
+  </section>
+
+  <section class="container mt-6">
+    <div class="flex justify-between items-center flex-wrap gap-4 p-4" style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+      <div class="flex-1" style="min-width:260px;">
+        <input type="text" id="dir-search" placeholder="व्यवसाय, संस्थान या सेवा खोजें..." style="width:100%; padding:10px 14px; border:1px solid #CBD5E1; border-radius:8px; font-size:0.9rem; outline:none;" oninput="renderDirectoryList()">
+      </div>
+      <div class="flex items-center gap-3 flex-wrap">
+        <select id="dir-district-filter" style="padding:10px 14px; border:1px solid #CBD5E1; border-radius:8px; font-size:0.88rem; outline:none; background:#FFF;" onchange="renderDirectoryList()">
+          <option value="all">सभी जिले (All Districts)</option>
+          <option value="patna">पटना (Patna)</option>
+          <option value="madhubani">मधुबनी (Madhubani)</option>
+          <option value="gaya">गया (Gaya)</option>
+          <option value="muzaffarpur">मुजफ्फरपुर (Muzaffarpur)</option>
+          <option value="bhagalpur">भागलपुर (Bhagalpur)</option>
+          <option value="darbhanga">दरभंगा (Darbhanga)</option>
+        </select>
+        <select id="dir-category-filter" style="padding:10px 14px; border:1px solid #CBD5E1; border-radius:8px; font-size:0.88rem; outline:none; background:#FFF;" onchange="renderDirectoryList()">
+          <option value="all">सभी श्रेणियां (All Categories)</option>
+          <option value="education">शिक्षा व कोचिंग</option>
+          <option value="healthcare">स्वास्थ्य व अस्पताल</option>
+          <option value="handicrafts">हस्तशिल्प व उद्योग</option>
+          <option value="hospitality">होटल व रेस्टोरेंट</option>
+          <option value="services">अन्य सेवाएं</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mt-6 mb-8">
+    <div class="biz-dir-grid" id="directory-grid-container"></div>
+  </main>
+
+  <div id="add-biz-modal" class="news-modal-overlay">
+    <div class="news-modal-container citizen-modal-wrap" style="max-width:550px;" role="dialog">
+      <div class="flex justify-between items-center pb-3 mb-3" style="border-bottom:1px solid #E2E8F0;">
+        <h3 style="margin:0; font-size:1.2rem;"><i class="fas fa-store" style="color:#0F766E;"></i> अपना व्यवसाय डायरेक्टरी में जोड़ें</h3>
+        <button class="tool-btn" onclick="document.getElementById('add-biz-modal').classList.remove('open')">&times;</button>
+      </div>
+      <form id="add-biz-form" onsubmit="submitBusinessForm(event)">
+        <div class="citizen-form-group">
+          <label>व्यवसाय / प्रतिष्ठान का नाम *</label>
+          <input type="text" id="biz-input-name" required placeholder="जैसे: मिथिला हैंडीक्राफ्ट्स सेंटर">
+        </div>
+        <div class="comment-form-row">
+          <div>
+            <label style="font-size:0.8rem; font-weight:700;">जिला *</label>
+            <input type="text" id="biz-input-district" required placeholder="जैसे: पटना / गया" class="comment-input">
+          </div>
+          <div>
+            <label style="font-size:0.8rem; font-weight:700;">श्रेणी *</label>
+            <select id="biz-input-category" class="comment-input" style="height:38px;">
+              <option value="education">शिक्षा व कोचिंग</option>
+              <option value="healthcare">स्वास्थ्य व अस्पताल</option>
+              <option value="handicrafts">हस्तशिल्प व उद्योग</option>
+              <option value="hospitality">होटल व रेस्टोरेंट</option>
+              <option value="services">अन्य सेवाएं</option>
+            </select>
+          </div>
+        </div>
+        <div class="citizen-form-group">
+          <label>संपर्क फोन नंबर *</label>
+          <input type="tel" id="biz-input-phone" required placeholder="10 अंकों का मोबाइल नंबर">
+        </div>
+        <div class="citizen-form-group">
+          <label>पूरा पता *</label>
+          <input type="text" id="biz-input-address" required placeholder="दुकान/कार्यालय संख्या, सड़क, इलाका...">
+        </div>
+        <div class="citizen-form-group">
+          <label>विवरण (Description)</label>
+          <textarea id="biz-input-desc" rows="3" placeholder="व्यवसाय की मुख्य विशेषताएं, सेवाएं या उत्पाद..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; background:#0F766E; border-color:#0F766E;"><i class="fas fa-check-circle"></i> व्यवसाय पंजीकृत करें</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer" style="background:#0F172A; color:#94A3B8; padding:50px 0 20px 0; margin-top:50px;">
+    <div class="container text-center" style="font-size:0.8rem;">
+      <p data-i18n="footer_copyright">© 2026 बिहार समाचार हब। सर्वाधिकार सुरक्षित।</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/security.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    window.SecurityHub = window.SecurityHub || window.BSH_SECURITY || {
+      sanitizeFormInput: (str) => typeof str === 'string' ? str.replace(/[<>]/g, '').trim().slice(0, 1000) : (str || ''),
+      escapeHtml: (str) => typeof str === 'string' ? str.replace(/[&<>"'`=/]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;','/':'&#x2F;'}[s]||s)) : (str || '')
+    };
+    let directoryListings = [];
+
+    async function loadDirectory() {
+      try {
+        const res = await fetch('/api/directory');
+        if (res.ok) {
+          const data = await res.json();
+          directoryListings = data.listings || [];
+        } else {
+          const resFallback = await fetch('data/business-directory.json');
+          const dataFallback = await resFallback.json();
+          directoryListings = dataFallback.listings || [];
+        }
+      } catch (e) {
+        try {
+          const resFallback = await fetch('data/business-directory.json');
+          const dataFallback = await resFallback.json();
+          directoryListings = dataFallback.listings || [];
+        } catch (_) {}
+      }
+      renderDirectoryList();
+    }
+
+    function renderDirectoryList() {
+      const container = document.getElementById('directory-grid-container');
+      const search = (document.getElementById('dir-search').value || '').toLowerCase().trim();
+      const district = (document.getElementById('dir-district-filter').value || 'all').toLowerCase();
+      const category = (document.getElementById('dir-category-filter').value || 'all').toLowerCase();
+
+      let filtered = directoryListings.filter(b => {
+        const bDist = (b.district || b.district_id || '').toLowerCase();
+        if (district !== 'all' && bDist !== district) return false;
+        
+        const bCat = (b.category || '').toLowerCase();
+        if (category !== 'all') {
+          const catMatches = (bCat === category) ||
+            (category === 'healthcare' && (bCat === 'health' || bCat === 'healthcare')) ||
+            (category === 'handicrafts' && (bCat === 'handicraft' || bCat === 'handicrafts'));
+          if (!catMatches) return false;
+        }
+
+        if (search) {
+          const text = ((b.title || b.name_hi || '') + ' ' + (b.name_en || '') + ' ' + (b.address || '') + ' ' + (b.description || '') + ' ' + (b.district_hi || '')).toLowerCase();
+          if (!text.includes(search)) return false;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding:60px 20px; color:#64748B;"><i class="fas fa-search" style="font-size:2.5rem; color:#CBD5E1; margin-bottom:10px;"></i><p>कोई व्यवसाय नहीं मिला। आप ऊपर दिए बटन से अपना व्यवसाय जोड़ सकते हैं।</p></div>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(b => `
+        <div class="biz-card">
+          <div>
+            <div class="biz-card-header">
+              <h3 class="biz-name">${SecurityHub.sanitizeFormInput(b.title || b.name_hi || 'व्यवसाय')}</h3>
+              ${b.verified !== false ? '<span class="biz-verified-badge"><i class="fas fa-check-circle"></i> सत्यापित</span>' : ''}
+            </div>
+            <div class="biz-district-cat"><i class="fas fa-map-marker-alt" style="color:#DC2626;"></i> ${SecurityHub.sanitizeFormInput(b.district_hi || b.district || 'बिहार')} | <span>${SecurityHub.sanitizeFormInput(b.category_hi || b.category || 'व्यापार')}</span></div>
+            <p style="font-size:0.85rem; color:#475569; line-height:1.45; margin-bottom:12px;">${SecurityHub.sanitizeFormInput(b.description || '')}</p>
+            <p style="font-size:0.82rem; color:#64748B; margin-bottom:15px;"><i class="fas fa-location-arrow"></i> ${SecurityHub.sanitizeFormInput(b.address || '')}</p>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-top:1px solid #F1F5F9;">
+            <span style="font-size:0.8rem; font-weight:700; color:#F59E0B;"><i class="fas fa-star"></i> ${b.rating || 4.9} (${b.reviews_count || 12}+ समीक्षाएं)</span>
+            <a href="tel:${SecurityHub.sanitizeFormInput(b.phone || '')}" class="biz-contact-btn"><i class="fas fa-phone-alt"></i> कॉल करें</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openAddBusinessModal() {
+      document.getElementById('add-biz-modal').classList.add('open');
+    }
+
+    async function submitBusinessForm(e) {
+      e.preventDefault();
+      const payload = {
+        title: document.getElementById('biz-input-name').value.trim(),
+        name_hi: document.getElementById('biz-input-name').value.trim(),
+        district: document.getElementById('biz-input-district').value.trim().toLowerCase(),
+        district_hi: document.getElementById('biz-input-district').value.trim(),
+        category: document.getElementById('biz-input-category').value,
+        category_hi: document.getElementById('biz-input-category').options[document.getElementById('biz-input-category').selectedIndex].text,
+        phone: document.getElementById('biz-input-phone').value.trim(),
+        address: document.getElementById('biz-input-address').value.trim(),
+        description: document.getElementById('biz-input-desc').value.trim()
+      };
+
+      try {
+        const res = await fetch('/api/directory', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert('धन्यवाद! आपका व्यवसाय सफलतापूर्वक दर्ज कर लिया गया है।');
+          document.getElementById('add-biz-modal').classList.remove('open');
+          document.getElementById('add-biz-form').reset();
+          loadDirectory();
+        } else {
+          alert('त्रुटि: ' + (data.error || 'पंजीकरण विफल रहा'));
+        }
+      } catch (err) {
+        alert('सबमिट करते समय त्रुटि हुई');
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadDirectory);
+    } else {
+      loadDirectory();
+    }
+  </script>
+</body>
+</html>

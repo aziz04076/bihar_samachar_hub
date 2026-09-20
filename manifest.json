@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "बिहार समाचार हब — Bihar Samachar Hub",
+  "short_name": "Bihar News",
+  "description": "बिहार के सभी 38 जिलों और 534 प्रखंडों की सबसे तेज़ प्रामाणिक खबरें, लाइव मौसम, मंडी भाव और प्रशासनिक जानकारी।",
+  "id": "/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "theme_color": "#E05B1C",
+  "background_color": "#FFF9F5",
+  "lang": "hi",
+  "dir": "ltr",
+  "categories": [
+    "news",
+    "magazines",
+    "education",
+    "government"
+  ],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "ताज़ा समाचार",
+      "short_name": "समाचार",
+      "url": "./news.html",
+      "description": "बिहार की लाइव ताज़ा खबरें",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "बिहार के 38 जिले",
+      "short_name": "38 जिले",
+      "url": "./districts.html",
+      "description": "सभी 38 जिलों का संपूर्ण डेटा व प्रशासन",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "संपर्क व सहायता",
+      "short_name": "संपर्क",
+      "url": "./contact.html",
+      "description": "संपादकीय डेस्क से संपर्क करें",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

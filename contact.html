@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data: blob:; frame-src https://maps.google.com; connect-src 'self' https://api.rss2json.com https://api.allorigins.win; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+  <title>संपर्क करें — Contact Us | बिहार समाचार हब (Bihar Samachar Hub)</title>
+  <meta name="description" content="बिहार समाचार हब से संपर्क करें — पटना मुख्य कार्यालय, समाचार डेस्क, विज्ञापन और शिकायत निवारण अधिकारी की जानकारी।">
+  <meta name="keywords" content="Contact Bihar Samachar Hub, बिहार समाचार संपर्क, पटना कार्यालय, शिकायत निवारण, प्रेस विज्ञप्ति">
+  <meta name="theme-color" content="#DC2626">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar News">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Accessibility & 5-Dialect Localization Bar (Phase 5) -->
+  <div class="top-accessibility-bar">
+    <div class="container flex justify-between items-center" style="padding:0;">
+      <div class="flex items-center gap-2">
+        <span style="color:#F97316; font-weight:800;"><i class="fas fa-broadcast-tower"></i> 24x7 बिहार लाइव नेटवर्क</span>
+        <span class="hidden-mobile" style="color:#9CA3AF;">| 38 जिले, 9 प्रमंडल, 100% सत्यापित</span>
+        <span class="live-datetime-widget" id="live-datetime"><i class="far fa-calendar-alt"></i> लोड हो रहा है...</span>
+      </div>
+      <div class="a11y-controls-group">
+        <button class="a11y-btn" onclick="BSH.setFontSize(-1)" title="फॉन्ट छोटा करें">A-</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(0)" title="सामान्य फॉन्ट">A</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(1)" title="फॉन्ट बड़ा करें">A+</button>
+        <select class="dialect-dropdown-select" id="dialect-picker" onchange="BSH.setDialect(this.value)" title="भाषा व बोली चुनें">
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mai">🌾 मैथिली (Maithili)</option>
+          <option value="bho">⚡ भोजपुरी (Bhojpuri)</option>
+          <option value="mag">🏛 मगही (Magahi)</option>
+          <option value="en">🌐 English</option>
+        </select>
+        <button class="theme-toggle-btn a11y-btn" title="डार्क / लाइट मोड"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PWA Install Banner (Mobile App Promotion) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और ऑफ़लाइन न्यूज़ पढ़ें</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">होम</a>
+        <a href="districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="news.html" class="nav-link" data-i18n="nav_news">समाचार</a>
+        <a href="live-blog.html" class="nav-link" data-i18n="nav_live_blog"><span class="nav-live-dot-beacon"></span>लाइव ब्लॉग</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="contact.html" class="nav-link active" data-i18n="nav_contact">संपर्क</a>
+        <button class="btn btn-sm btn-outline" onclick="NewsHub.togglePushNotifications()" title="सूचनाएं" style="margin-left:4px; padding:4px 8px;"><i class="fas fa-bell"></i></button>
+        <button class="btn btn-sm btn-primary" id="nav-auth-btn" onclick="BSH.openAuthModal()" style="padding:4px 10px; font-weight:700;"><i class="fas fa-user-circle"></i> <span>लॉगिन</span></button>
+</div>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu">
+      <a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i> होम</a>
+      <a href="districts.html" data-i18n="nav_districts"><i class="fas fa-map-marked-alt"></i> जिले</a>
+      <a href="news.html" data-i18n="nav_news"><i class="fas fa-newspaper"></i> समाचार</a>
+      <a href="live-blog.html"><i class="fas fa-bolt"></i> लाइव ब्लॉग</a>
+      <a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> हमारे बारे में</a>
+      <a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> संपर्क</a>
+      <div style="display:flex; gap:10px; padding:10px 15px;">
+        <button onclick="BSH.openAuthModal()" style="flex:1; padding:8px; border-radius:8px; background:var(--primary); color:white; font-weight:700; border:none;">
+          <i class="fas fa-user-circle"></i> लॉगिन / प्रोफ़ाइल
+        </button>
+      </div>
+</div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker -->
+  <div class="ticker-bar portal-ticker">
+    <div class="ticker-label-badge">
+      <span class="ticker-live-beacon"></span> <span>BREAKING</span>
+    </div>
+    <div class="ticker-carousel-wrap">
+      <div id="portal-ticker-text" class="ticker-active-slide" style="cursor:pointer;">ताज़ा बुलेटिन लोड हो रहा है...</div>
+    </div>
+    <div class="ticker-controls-group">
+      <button id="portal-ticker-prev" class="ticker-ctrl-btn" title="पिछली खबर"><i class="fas fa-chevron-left"></i></button>
+      <button id="portal-ticker-pause" class="ticker-ctrl-btn" title="रोकें / चलाएं"><i class="fas fa-pause"></i></button>
+      <button id="portal-ticker-next" class="ticker-ctrl-btn" title="अगली खबर"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="ticker-last-updated-badge" id="ticker-last-updated">
+      <i class="far fa-clock"></i> <span>अंतिम अपडेट: अभी-अभी</span>
+    </div>
+  </div>
+
+  <!-- Dedicated Page Header / Breadcrumb Hero -->
+  <header class="inner-page-header">
+    <div class="container">
+      <nav class="bsh-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> होम</a>
+        <span class="sep">/</span>
+        <span aria-current="page">संपर्क करें (Contact Us)</span>
+      </nav>
+      <div class="inner-page-badge">
+        <i class="fas fa-headset"></i> 24x7 पाठक संवाद एवं संपादकीय सहायता केंद्र
+      </div>
+      <h1 class="inner-page-title">हमसे संपर्क करें (Contact &amp; Help Desk)</h1>
+      <p class="inner-page-subtitle">
+        समाचार सुझाव, प्रेस विज्ञप्ति, विज्ञापन साझेदारी, तकनीकी सहायता या किसी प्रकाशित खबर पर विधिक शिकायत के लिए हमारी टीम सदैव उपलब्ध है।
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container" style="padding: 40px 15px 60px;">
+
+    <!-- Top 3 Direct Contact Cards -->
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom: 40px;">
+      
+      <div class="contact-detail-card" style="margin:0; border-top: 4px solid var(--primary);">
+        <div class="contact-detail-icon"><i class="fas fa-building"></i></div>
+        <div class="contact-detail-text">
+          <h4>केंद्रीय संपादकीय कार्यालय</h4>
+          <p>
+            प्रेस एन्क्लेव, 4th फ्लोर, बेली रोड (हाईकोर्ट के निकट), पटना, बिहार - 800001
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-detail-card" style="margin:0; border-top: 4px solid #0284C7;">
+        <div class="contact-detail-icon" style="background:#E0F2FE; color:#0284C7;"><i class="fas fa-phone-alt"></i></div>
+        <div class="contact-detail-text">
+          <h4>पाठक हेल्पलाइन व फोन</h4>
+          <p>
+            हेल्पलाइन: <a href="tel:+916122200100" style="font-weight:700;">+91 612 2200100</a><br>
+            <span style="font-size:0.8rem; color:#64748B;">(सोमवार से शनिवार: 9:00 AM - 8:00 PM)</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-detail-card" style="margin:0; border-top: 4px solid #9333EA;">
+        <div class="contact-detail-icon" style="background:#F3E8FF; color:#9333EA;"><i class="fas fa-envelope-open-text"></i></div>
+        <div class="contact-detail-text">
+          <h4>आधिकारिक ईमेल</h4>
+          <p>
+            प्रेस विज्ञप्ति: <a href="mailto:news@biharsamacharhub.in">news@biharsamacharhub.in</a><br>
+            सामान्य: <a href="mailto:contact@biharsamacharhub.in">contact@biharsamacharhub.in</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact Form & Departmental Info Split -->
+    <div class="contact-layout-split" style="margin-top:0; margin-bottom: 50px;">
+      
+      <!-- Left: Departmental Info Panel -->
+      <div class="contact-info-panel">
+        
+        <div>
+          <h3 style="font-size:1.35rem; color:var(--text-dark); margin-bottom:6px; font-weight:800;">
+            <i class="fas fa-info-circle" style="color:var(--primary); margin-right:6px;"></i> सहायता एवं विभागीय डेस्क
+          </h3>
+          <p style="font-size:0.88rem; color:var(--text-medium); margin-bottom:16px;">
+            अपनी आवश्यकतानुसार संबंधित विभाग से सीधे ईमेल या फोन के माध्यम से संपर्क कर सकते हैं:
+          </p>
+        </div>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-icon" style="background:#FFF3E0; color:#E05B1C;"><i class="fas fa-newspaper"></i></div>
+          <div class="contact-detail-text">
+            <h4>समाचार एवं संपादकीय डेस्क</h4>
+            <p>
+              ज़मीनी खबर, घटना की सूचना या प्रेस विज्ञप्ति भेजने के लिए:<br>
+              ईमेल: <a href="mailto:news@biharsamacharhub.in" style="font-weight:600;">news@biharsamacharhub.in</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-icon" style="background:#E0F2FE; color:#0284C7;"><i class="fas fa-bullhorn"></i></div>
+          <div class="contact-detail-text">
+            <h4>विज्ञापन एवं व्यावसायिक सहयोग</h4>
+            <p>
+              वेबसाइट बैनर, प्रायोजित कंटेंट या जिला स्तर के प्रचार के लिए:<br>
+              ईमेल: <a href="mailto:ads@biharsamacharhub.in" style="font-weight:600;">ads@biharsamacharhub.in</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-icon" style="background:#F0FDF4; color:#16A34A;"><i class="fas fa-user-check"></i></div>
+          <div class="contact-detail-text">
+            <h4>पाठक सेवा एवं तकनीकी सहायता</h4>
+            <p>
+              वेबसाइट उपयोग, सुझाव या तकनीकी समस्या के लिए:<br>
+              ईमेल: <a href="mailto:support@biharsamacharhub.in" style="font-weight:600;">support@biharsamacharhub.in</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-icon" style="background:#F1F5F9; color:#334155;"><i class="fas fa-clock"></i></div>
+          <div class="contact-detail-text">
+            <h4>कार्यालय कार्य समय</h4>
+            <p>
+              सोमवार से शनिवार: 9:00 AM से 8:00 PM<br>
+              रविवार: डिजिटल न्यूज़रूम 24x7 लाइव सक्रिय
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Interactive Contact Form -->
+      <div class="contact-form-card">
+        <h3>संदेश या खबर का सुझाव भेजें</h3>
+        <p>नीचे दिए गए फॉर्म को भरें, हमारी संपादकीय डेस्क 24 घंटे के भीतर आपसे संपर्क करेगी।</p>
+        
+        <form onsubmit="BSH.submitContactForm(event)">
+          <div class="contact-form-group">
+            <label for="contact-form-name">आपका पूरा नाम *</label>
+            <input type="text" id="contact-form-name" class="contact-form-input" placeholder="उदा. अमित कुमार" required>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div class="contact-form-group">
+              <label for="contact-form-phone">मोबाइल नंबर *</label>
+              <input type="tel" id="contact-form-phone" class="contact-form-input" placeholder="10 अंकों का मोबाइल नंबर" required>
+            </div>
+            <div class="contact-form-group">
+              <label for="contact-form-email">ईमेल पता</label>
+              <input type="email" id="contact-form-email" class="contact-form-input" placeholder="name@example.com">
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div class="contact-form-group">
+              <label for="contact-form-subject">संपर्क का विषय / उद्देश्य *</label>
+              <select id="contact-form-subject" class="contact-form-select" required>
+                <option value="समाचार सुझाव">समाचार सुझाव (News Tip / Ground Story)</option>
+                <option value="विज्ञापन सहयोग">विज्ञापन व प्रायोजन (Advertising)</option>
+                <option value="शिकायत या सुधार">खबर में संशोधन या आपत्ति (Correction / Grievance)</option>
+                <option value="सामान्य पूछताछ">सामान्य पूछताछ (General Inquiry)</option>
+              </select>
+            </div>
+            <div class="contact-form-group">
+              <label for="contact-form-district">संबंधित जिला</label>
+              <select id="contact-form-district" class="contact-form-select">
+                <option value="पटना">पटना (Patna)</option>
+                <option value="गया">गया (Gaya)</option>
+                <option value="मुजफ्फरपुर">मुजफ्फरपुर (Muzaffarpur)</option>
+                <option value="भागलपुर">भागलपुर (Bhagalpur)</option>
+                <option value="दरभंगा">दरभंगा (Darbhanga)</option>
+                <option value="पूर्णिया">पूर्णिया (Purnia)</option>
+                <option value="नालंदा">नालंदा (Nalanda)</option>
+                <option value="भोजपुर">भोजपुर / आरा (Bhojpur)</option>
+                <option value="सारण">सारण / छपरा (Saran)</option>
+                <option value="अन्य">अन्य जिला (All Bihar)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="contact-form-group">
+            <label for="contact-form-message">आपका विस्तृत संदेश या खबर की जानकारी *</label>
+            <textarea id="contact-form-message" class="contact-form-textarea" rows="5" placeholder="घटना का समय, स्थान, संबंधित जानकारी या अपनी बात पूरी स्पष्टता से लिखें..." required></textarea>
+          </div>
+
+          <button type="submit" class="contact-submit-btn">
+            <i class="fas fa-paper-plane"></i> संदेश भेजें (Submit Message)
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Grievance Officer & Statutory Compliance -->
+    <div class="grievance-box" style="margin-bottom: 40px;">
+      <h4><i class="fas fa-gavel"></i> शिकायत निवारण अधिकारी (Grievance Redressal Officer)</h4>
+      <p style="margin-bottom:8px;">
+        सूचना प्रौद्योगिकी (मध्यवर्ती दिशानिर्देश और डिजिटल मीडिया आचार संहिता) नियम, 2021 के नियम 11(2)(a) के अनुसार, हमारी वेबसाइट पर प्रकाशित किसी भी खबर, वीडियो या सामग्री से संबंधित शिकायत के लिए आप हमारे शिकायत अधिकारी से संपर्क कर सकते हैं:
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:20px; font-size:0.9rem; margin-top:10px;">
+        <div><strong>अधिकारी:</strong> श्री राजेश कुमार वर्मा (वरिष्ठ संपादक)</div>
+        <div><strong>ईमेल:</strong> <a href="mailto:grievance@biharsamacharhub.in" style="color:#B45309; font-weight:700;">grievance@biharsamacharhub.in</a></div>
+        <div><strong>पावती समय:</strong> 24 घंटे के भीतर</div>
+        <div><strong>निवारण अवधि:</strong> 15 कार्यदिवस के भीतर</div>
+      </div>
+    </div>
+
+    <!-- Bihar Emergency Helplines Directory -->
+    <div>
+      <div style="text-align:center; max-width:700px; margin:0 auto 20px auto;">
+        <span class="sub-header-badge" style="background:#FEE2E2; color:#991B1B; border:1px solid #FECACA;">
+          <i class="fas fa-first-aid"></i> जनहित में जारी
+        </span>
+        <h3 style="font-size:1.45rem; color:var(--text-dark); margin-top:6px; font-weight:800;">
+          बिहार राज्य आपातकालीन हेल्पलाइन डायरेक्टरी (Emergency Numbers)
+        </h3>
+        <p style="font-size:0.88rem; color:var(--text-medium);">
+          किसी भी आपात स्थिति में सीधे बिहार सरकार के इन आधिकारिक नंबरों पर तुरंत संपर्क करें:
+        </p>
+      </div>
+
+      <div class="emergency-grid">
+        <a href="tel:112" class="emergency-card" style="text-decoration:none;">
+          <div class="emergency-num">112</div>
+          <div class="emergency-label">आपातकालीन सेवा (पुलिस/अग्नि/एम्बुलेंस)</div>
+        </a>
+        <a href="tel:181" class="emergency-card" style="text-decoration:none;">
+          <div class="emergency-num">181</div>
+          <div class="emergency-label">महिला हेल्पलाइन बिहार (Women Help)</div>
+        </a>
+        <a href="tel:1070" class="emergency-card" style="text-decoration:none;">
+          <div class="emergency-num">1070</div>
+          <div class="emergency-label">राज्य आपदा नियंत्रण कक्ष (Disaster Relief)</div>
+        </a>
+        <a href="tel:155455" class="emergency-card" style="text-decoration:none;">
+          <div class="emergency-num">155455</div>
+          <div class="emergency-label">मद्यनिषेध कंट्रोल रूम (Prohibition Desk)</div>
+        </a>
+        <a href="tel:104" class="emergency-card" style="text-decoration:none;">
+          <div class="emergency-num">104</div>
+          <div class="emergency-label">राज्य स्वास्थ्य परामर्श (Health Help)</div>
+        </a>
+        <a href="tel:1930" class="emergency-card" style="text-decoration:none;">
+          <div class="emergency-num">1930</div>
+          <div class="emergency-label">साइबर वित्तीय धोखाधड़ी (Cyber Crime)</div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+            <img src="assets/images/logo-emblem.svg" alt="बिहार समाचार हब" width="40" height="40" style="border-radius:50%; filter:drop-shadow(0 3px 8px rgba(224,91,28,0.5));">
+            <h3 style="margin:0; font-size:1.35rem; color:#FFFFFF; font-weight:800;">बिहार समाचार <span style="background:linear-gradient(135deg, #FF6F00, #E05B1C); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">HUB</span></h3>
+          </div>
+          <p style="margin-bottom:12px; line-height:1.6;">
+            बिहार के सभी 38 जिलों, 534 प्रखंडों और ग्राम पंचायतों की प्रामाणिक खबरें, लाइव मौसम, कृषि मंडी भाव, और प्रशासनिक जानकारी का विश्वसनीय डिजिटल मंच।
+          </p>
+          <div class="footer-social-links" style="display:flex; gap:10px; margin-top:10px;">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,0.1); display:inline-flex; align-items:center; justify-content:center; color:white;"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,0.1); display:inline-flex; align-items:center; justify-content:center; color:white;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:#0088cc; display:inline-flex; align-items:center; justify-content:center; color:white;"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:#FF0000; display:inline-flex; align-items:center; justify-content:center; color:white;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>महत्वपूर्ण लिंक</h4>
+          <ul>
+            <li><a href="index.html">होम पेज</a></li>
+            <li><a href="districts.html">सभी 38 जिले (A-Z)</a></li>
+            <li><a href="news.html">ताजा समाचार व लाइव टिकर</a></li>
+            <li><a href="about.html">हमारे बारे में (About Us)</a></li>
+            <li><a href="contact.html" style="color:#FED7AA; font-weight:700;">संपर्क व सहायता (Contact Us)</a></li>
+            <li><a href="javascript:void(0)" onclick="BSH.openCitizenModal()">नागरिक समस्या भेजें</a></li>
+            <li><a href="javascript:void(0)" onclick="BSH.openSavedBookmarksModal()">सेव्ड खबरें (Bookmarks)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>संपर्क एवं सहायता केंद्र</h4>
+          <p style="font-size:0.88rem; color:#94A3B8; margin-bottom:8px;">
+            <i class="fas fa-map-marker-alt" style="color:var(--primary); margin-right:6px;"></i> प्रेस एन्क्लेव, बेली रोड, पटना - 800001
+          </p>
+          <p style="font-size:0.88rem; color:#94A3B8; margin-bottom:8px;">
+            <i class="fas fa-envelope" style="color:var(--primary); margin-right:6px;"></i> contact@biharsamacharhub.in
+          </p>
+          <p style="font-size:0.88rem; color:#94A3B8; margin-bottom:12px;">
+            <i class="fas fa-phone-alt" style="color:var(--primary); margin-right:6px;"></i> +91 612 2200100 (हेल्पलाइन)
+          </p>
+          <div class="footer-disclaimer">
+            <h5 style="color:#CBD5E1; margin-bottom:4px; font-size:0.85rem;">अस्वीकरण:</h5>
+            <p style="font-size:0.8rem; color:#64748B;">यह स्वतंत्र जन-सूचना एवं समाचार एकत्रीकरण मंच है। सभी आंकड़े आधिकारिक स्रोतो से संकलित हैं।</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comprehensive 38-District Sitemap -->
+      <div class="footer-district-directory">
+        <div class="footer-division-title">
+          <i class="fas fa-sitemap"></i> बिहार के सभी 38 जिलों का संपूर्ण डायरेक्टरी मैप (All 38 Districts Directory):
+        </div>
+        <div class="footer-division-grid">
+          <div class="division-col">
+            <h5>पटना प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=patna">पटना (Patna)</a></li>
+              <li><a href="district/index.html?id=nalanda">नालंदा (Nalanda)</a></li>
+              <li><a href="district/index.html?id=bhojpur">भोजपुर (Bhojpur)</a></li>
+              <li><a href="district/index.html?id=buxar">बक्सर (Buxar)</a></li>
+              <li><a href="district/index.html?id=rohtas">रोहतास (Rohtas)</a></li>
+              <li><a href="district/index.html?id=kaimur">कैमूर (Kaimur)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>तिरहुत प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=muzaffarpur">मुजफ्फरपुर (Muzaffarpur)</a></li>
+              <li><a href="district/index.html?id=east-champaran">पूर्वी चंपारण (Motihari)</a></li>
+              <li><a href="district/index.html?id=west-champaran">पश्चिम चंपारण (Bettiah)</a></li>
+              <li><a href="district/index.html?id=sitamarhi">सीतामढ़ी (Sitamarhi)</a></li>
+              <li><a href="district/index.html?id=sheohar">शिवहर (Sheohar)</a></li>
+              <li><a href="district/index.html?id=vaishali">वैशाली (Vaishali)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>मगध प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=gaya">गया (Gaya)</a></li>
+              <li><a href="district/index.html?id=aurangabad">औरंगाबाद (Aurangabad)</a></li>
+              <li><a href="district/index.html?id=nawada">नवादा (Nawada)</a></li>
+              <li><a href="district/index.html?id=jehanabad">जहानाबाद (Jehanabad)</a></li>
+              <li><a href="district/index.html?id=arwal">अरवल (Arwal)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>सारण प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=saran">सारण/छपरा (Saran)</a></li>
+              <li><a href="district/index.html?id=siwan">सीवान (Siwan)</a></li>
+              <li><a href="district/index.html?id=gopalganj">गोपालगंज (Gopalganj)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>दरभंगा प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=darbhanga">दरभंगा (Darbhanga)</a></li>
+              <li><a href="district/index.html?id=madhubani">मधुबनी (Madhubani)</a></li>
+              <li><a href="district/index.html?id=samastipur">समस्तीपुर (Samastipur)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>कोसी प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=saharsa">सहरसा (Saharsa)</a></li>
+              <li><a href="district/index.html?id=supaul">सुपौल (Supaul)</a></li>
+              <li><a href="district/index.html?id=madhepura">मधेपुरा (Madhepura)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>पूर्णिया प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=purnia">पूर्णिया (Purnia)</a></li>
+              <li><a href="district/index.html?id=katihar">कटिहार (Katihar)</a></li>
+              <li><a href="district/index.html?id=araria">अररिया (Araria)</a></li>
+              <li><a href="district/index.html?id=kishanganj">किशनगंज (Kishanganj)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>भागलपुर व मुंगेर</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=bhagalpur">भागलपुर (Bhagalpur)</a></li>
+              <li><a href="district/index.html?id=banka">बांका (Banka)</a></li>
+              <li><a href="district/index.html?id=munger">मुंगेर (Munger)</a></li>
+              <li><a href="district/index.html?id=begusarai">बेगूसराय (Begusarai)</a></li>
+              <li><a href="district/index.html?id=khagaria">खगड़िया (Khagaria)</a></li>
+              <li><a href="district/index.html?id=jamui">जमुई (Jamui)</a></li>
+              <li><a href="district/index.html?id=lakhisarai">लखीसराय (Lakhisarai)</a></li>
+              <li><a href="district/index.html?id=sheikhpura">शेखपुरा (Sheikhpura)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="margin-top:25px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:0.82rem; color:#64748B;">
+        <div>&copy; 2024 बिहार समाचार हब (Bihar Samachar Hub) — सर्वाधिकार सुरक्षित।</div>
+        <div>Made with ❤️ for Bihar • Made for Mobile &amp; Web</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/security.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/districts.js"></script>
+  <script src="assets/js/news.js"></script>
+
+  <!-- Scroll to top -->
+  <button id="scroll-top" title="ऊपर जाएं" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Mobile App Bottom Navigation Dock -->
+  <nav class="app-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="app-nav-item">
+      <i class="fas fa-home"></i>
+      <span>होम</span>
+    </a>
+    <a href="districts.html" class="app-nav-item">
+      <i class="fas fa-map-marked-alt"></i>
+      <span>38 जिले</span>
+    </a>
+    <a href="news.html" class="app-nav-item">
+      <i class="fas fa-bolt"></i>
+      <span>लाइव न्यूज़</span>
+    </a>
+    <a href="javascript:void(0)" onclick="BSH.openSavedBookmarksModal()" class="app-nav-item">
+      <i class="fas fa-bookmark"></i>
+      <span>सेव्ड</span>
+    </a>
+    <a href="javascript:void(0)" onclick="BSH.openCitizenModal()" class="app-nav-item">
+      <i class="fas fa-bullhorn"></i>
+      <span>समस्या भेजें</span>
+    </a>
+  </nav>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data: blob:; frame-src https://maps.google.com; connect-src 'self' https://api.rss2json.com https://api.allorigins.win; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+  <title>हमारे बारे में — About Us | बिहार समाचार हब</title>
+  <meta name="description" content="बिहार समाचार हब के बारे में जानें — बिहार के 38 जिलों का सबसे विश्वसनीय और निष्पक्ष डिजिटल समाचार मंच।">
+  <meta name="theme-color" content="#DC2626">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar News">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Accessibility & 5-Dialect Localization Bar (Phase 5) -->
+  <div class="top-accessibility-bar">
+    <div class="container flex justify-between items-center" style="padding:0;">
+      <div class="flex items-center gap-2">
+        <span style="color:#F97316; font-weight:800;"><i class="fas fa-broadcast-tower"></i> 24x7 बिहार लाइव नेटवर्क</span>
+        <span class="hidden-mobile" style="color:#9CA3AF;">| 38 जिले, 9 प्रमंडल, 100% सत्यापित</span>
+        <span class="live-datetime-widget" id="live-datetime"><i class="far fa-calendar-alt"></i> लोड हो रहा है...</span>
+      </div>
+      <div class="a11y-controls-group">
+        <button class="a11y-btn" onclick="BSH.setFontSize(-1)" title="फॉन्ट छोटा करें">A-</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(0)" title="सामान्य फॉन्ट">A</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(1)" title="फॉन्ट बड़ा करें">A+</button>
+        <select class="dialect-dropdown-select" id="dialect-picker" onchange="BSH.setDialect(this.value)" title="भाषा व बोली चुनें">
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mai">🌾 मैथिली (Maithili)</option>
+          <option value="bho">⚡ भोजपुरी (Bhojpuri)</option>
+          <option value="mag">🏛 मगही (Magahi)</option>
+          <option value="en">🌐 English</option>
+        </select>
+        <button class="theme-toggle-btn a11y-btn" title="डार्क / लाइट मोड"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PWA Install Banner (Mobile App Promotion) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और ऑफ़लाइन न्यूज़ पढ़ें</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">होम</a>
+        <a href="districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="news.html" class="nav-link" data-i18n="nav_news">समाचार</a>
+        <a href="live-blog.html" class="nav-link" data-i18n="nav_live_blog"><span class="nav-live-dot-beacon"></span>लाइव ब्लॉग</a>
+        <a href="about.html" class="nav-link active" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">संपर्क</a>
+        <button class="btn btn-sm btn-outline" onclick="NewsHub.togglePushNotifications()" title="सूचनाएं" style="margin-left:4px; padding:4px 8px;"><i class="fas fa-bell"></i></button>
+        <button class="btn btn-sm btn-primary" id="nav-auth-btn" onclick="BSH.openAuthModal()" style="padding:4px 10px; font-weight:700;"><i class="fas fa-user-circle"></i> <span>लॉगिन</span></button>
+</div>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i> होम</a>
+      <a href="districts.html" data-i18n="nav_districts"><i class="fas fa-map-marked-alt"></i> जिले</a>
+      <a href="news.html" data-i18n="nav_news"><i class="fas fa-newspaper"></i> समाचार</a>
+      <a href="live-blog.html"><i class="fas fa-bolt"></i> लाइव ब्लॉग</a>
+      <a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> हमारे बारे में</a>
+      <a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> संपर्क</a>
+      <div style="display:flex; gap:10px; padding:10px 15px;">
+        <button onclick="BSH.openAuthModal()" style="flex:1; padding:8px; border-radius:8px; background:var(--primary); color:white; font-weight:700; border:none;">
+          <i class="fas fa-user-circle"></i> लॉगिन / प्रोफ़ाइल
+        </button>
+      </div>
+</div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker (portal style with live news) -->
+  <div class="ticker-bar portal-ticker">
+    <div class="ticker-label-badge">
+      <span class="ticker-live-beacon"></span> <span>BREAKING</span>
+    </div>
+    <div class="ticker-carousel-wrap">
+      <div id="portal-ticker-text" class="ticker-active-slide" style="cursor:pointer;">ताज़ा खबरें लोड हो रही हैं...</div>
+    </div>
+    <div class="ticker-controls-group">
+      <button id="portal-ticker-prev" class="ticker-ctrl-btn" title="पिछली खबर"><i class="fas fa-chevron-left"></i></button>
+      <button id="portal-ticker-pause" class="ticker-ctrl-btn" title="रोकें / चलाएं"><i class="fas fa-pause"></i></button>
+      <button id="portal-ticker-next" class="ticker-ctrl-btn" title="अगली खबर"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="ticker-last-updated-badge" id="ticker-last-updated">
+      <i class="far fa-clock"></i> <span>अंतिम अपडेट: अभी-अभी</span>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <header class="inner-page-header">
+    <div class="container">
+      <nav class="bsh-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> होम</a>
+        <span class="sep">/</span>
+        <span aria-current="page">हमारे बारे में</span>
+      </nav>
+      <div class="inner-page-badge"><i class="fas fa-certificate"></i> स्वतंत्र, निष्पक्ष एवं प्रामाणिक डिजिटल मीडिया</div>
+      <h1 class="inner-page-title">बिहार समाचार हब: जन-जन की आवाज़, हर गाँव-जिले का दर्पण</h1>
+      <p class="inner-page-subtitle">बिहार के सभी 38 जिलों, 534 प्रखंडों और 8,406 ग्राम पंचायतों तक निष्पक्ष, तथ्यपरक और ज़मीनी सच्चाई पहुँचाने का सबसे विश्वसनीय डिजिटल मंच।</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container" style="padding: 40px 15px 60px;">
+
+    <!-- Mission Split -->
+    <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:30px; margin-bottom: 45px; align-items:center;">
+      <div>
+        <span class="sub-header-badge" style="background:#FFF3E0; color:#E65100; border:1px solid #FFE0B2; margin-bottom:12px; display:inline-block;">
+          <i class="fas fa-bullseye"></i> हमारा संकल्प
+        </span>
+        <h2 style="font-size:1.85rem; color:var(--text-dark); margin:0 0 16px 0; font-weight:800; line-height:1.3;">
+          बिहार के अंतिम गाँव की आवाज़ को मुख्यधारा तक पहुँचाना
+        </h2>
+        <p style="color:var(--text-medium); font-size:1rem; line-height:1.75; margin-bottom:14px;">
+          <strong>बिहार समाचार हब</strong> की स्थापना इस विश्वास के साथ हुई कि पत्रकारिता की असली ताकत स्टूडियो में नहीं, बल्कि बिहार के खेतों, पंचायतों, विद्यालयों और कलेक्ट्रेट के गलियारों में है।
+        </p>
+        <p style="color:var(--text-medium); font-size:1rem; line-height:1.75; margin-bottom:16px;">
+          चंपारण के किसानों, सीमांचल के बाढ़ पीड़ितों, मिथिलांचल की कला-संस्कृति, मगध की ऐतिहासिक धरोहरों और अंग प्रदेश के बुनकरों तक की सच्ची स्थिति — हम सब पहुँचाते हैं।
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <div style="background:var(--bg-light); border-radius:8px; padding:10px 16px; border-left:4px solid var(--primary); font-size:0.9rem; font-weight:600;">
+            ✓ 100% राजनीतिक दबाव से मुक्त
+          </div>
+          <div style="background:var(--bg-light); border-radius:8px; padding:10px 16px; border-left:4px solid #16A34A; font-size:0.9rem; font-weight:600;">
+            ✓ 2-स्तरीय तथ्य-सत्यापन
+          </div>
+        </div>
+      </div>
+      <div style="background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%); border: 2px solid #FDBA74; border-radius: 18px; padding: 28px; text-align:center; box-shadow: 0 10px 25px rgba(224, 91, 28, 0.08);">
+        <div style="width:72px; height:72px; border-radius:50%; background:#E05B1C; color:white; display:inline-flex; align-items:center; justify-content:center; font-size:2rem; margin-bottom:16px; box-shadow:0 6px 16px rgba(224, 91, 28, 0.3);">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h3 style="font-size:1.35rem; color:#9A3412; margin-bottom:10px; font-weight:800;">हमारा मूल मंत्र</h3>
+        <p style="color:#7C2D12; font-size:0.95rem; line-height:1.6; font-style:italic; margin-bottom:18px;">
+          "सत्य निष्पक्ष होगा, रिपोर्ट ज़मीनी होगी, और प्राथमिकता हमेशा बिहार के 13 करोड़ नागरिकों की होगी।"
+        </p>
+        <a href="districts.html" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:8px;">
+          <i class="fas fa-map-marked-alt"></i> 38 जिलों की जानकारी
+        </a>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div style="margin-bottom: 50px;">
+      <div style="text-align:center; max-width:700px; margin:0 auto 30px auto;">
+        <span class="sub-header-badge" style="background:#E0F2FE; color:#0369A1; border:1px solid #BAE6FD;">
+          <i class="fas fa-columns"></i> हमारे प्रमुख विषय
+        </span>
+        <h2 style="font-size:1.75rem; color:var(--text-dark); margin-top:8px; font-weight:800;">हमारे 4 मुख्य पत्रकारिता स्तंभ</h2>
+      </div>
+      <div class="about-features-grid">
+        <div class="about-feature-card">
+          <div class="about-feature-icon" style="background:#FFF3E0; color:#E05B1C;"><i class="fas fa-globe-asia"></i></div>
+          <h3>38 जिलों का हाइपरलोकल नेटवर्क</h3>
+          <p>बगहा से बांका और किशनगंज से कैमूर तक — हर ब्लॉक, थाना और पंचायत स्तर की ताज़ा और विश्वसनीय खबरें।</p>
+        </div>
+        <div class="about-feature-card">
+          <div class="about-feature-icon" style="background:#E8F5E9; color:#1B5E20;"><i class="fas fa-user-graduate"></i></div>
+          <h3>शिक्षा, BPSC व रोज़गार मंच</h3>
+          <p>BPSC, BSSC, शिक्षक भर्ती, पुलिस बहाली, रिजल्ट और मॉडल उत्तर कुंजी — बिहार के युवाओं के लिए सबसे तेज़ जानकारी।</p>
+        </div>
+        <div class="about-feature-card">
+          <div class="about-feature-icon" style="background:#FEF3C7; color:#B45309;"><i class="fas fa-seedling"></i></div>
+          <h3>किसान, ग्रामीण व सरकारी योजनाएं</h3>
+          <p>मंडी भाव, मौसम पूर्वानुमान, बाढ़ अलर्ट, भूमि सर्वेक्षण और पीएम किसान योजनाओं की सटीक जानकारी।</p>
+        </div>
+        <div class="about-feature-card">
+          <div class="about-feature-icon" style="background:#EDE9FE; color:#6D28D9;"><i class="fas fa-balance-scale"></i></div>
+          <h3>नागरिक अधिकार व जवाबदेही</h3>
+          <p>सड़क, अस्पताल, बिजली या भ्रष्टाचार की समस्याओं को सीधे डीएम-एसपी तक पहुँचाने में मदद।</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div style="margin-bottom: 50px;">
+      <div class="about-stats-row">
+        <div class="about-stat-box">
+          <div class="about-stat-number">38</div>
+          <div class="about-stat-text">जिले (100% बिहार कवरेज)</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-number">534</div>
+          <div class="about-stat-text">प्रखंड स्तर कवरेज</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-number">8,406</div>
+          <div class="about-stat-text">ग्राम पंचायतें कनेक्टेड</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-number">24x7</div>
+          <div class="about-stat-text">लाइव डिजिटल न्यूज़</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fact-Check Box -->
+    <div class="grievance-box" style="margin-bottom: 50px;">
+      <h4><i class="fas fa-check-double"></i> हमारी तथ्य-सत्यापन नीति</h4>
+      <p>बिहार समाचार हब IT (मध्यवर्ती दिशानिर्देश और डिजिटल मीडिया आचार संहिता) नियम 2021 का पूर्ण पालन करता है। हम किसी भी असत्यापित जानकारी को प्रसारित नहीं करते। यदि किसी खबर में कोई त्रुटि पाई जाती है, तो हम तुरंत सुधार प्रकाशित करते हैं।</p>
+    </div>
+
+    <!-- CTA -->
+    <div style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 18px; padding: 35px 25px; color:white; text-align:center;">
+      <h3 style="font-size:1.6rem; margin-bottom:10px; color:#F8FAFC; font-weight:800;">खबर भेजें — सजग नागरिक पत्रकार बनें</h3>
+      <p style="max-width:700px; margin:0 auto 20px auto; color:#CBD5E1; font-size:0.95rem; line-height:1.6;">
+        आपके गाँव या मोहल्ले की कोई समस्या या प्रेरक कहानी है? फोटो/वीडियो के साथ हमें भेजें।
+      </p>
+      <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+        <button onclick="BSH.openCitizenModal()" class="btn btn-primary" style="font-weight:700; padding:12px 24px;">
+          <i class="fas fa-bullhorn"></i> नागरिक समस्या भेजें
+        </button>
+        <a href="contact.html" class="btn btn-outline" style="border-color:#64748B; color:#F8FAFC; padding:12px 24px; font-weight:700;">
+          <i class="fas fa-envelope"></i> संपर्क करें
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+            <img src="assets/images/logo-emblem.svg" alt="बिहार समाचार हब" width="40" height="40" style="border-radius:50%; filter:drop-shadow(0 3px 8px rgba(224,91,28,0.5));">
+            <h3 style="margin:0; font-size:1.35rem; color:#FFFFFF; font-weight:800;">बिहार समाचार <span style="background:linear-gradient(135deg, #FF6F00, #E05B1C); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">HUB</span></h3>
+          </div>
+          <p style="margin-bottom:12px; line-height:1.6;">बिहार के सभी 38 जिलों की प्रामाणिक खबरें, लाइव मौसम, कृषि मंडी भाव और प्रशासनिक जानकारी का विश्वसनीय डिजिटल मंच।</p>
+          <div style="display:flex; gap:10px; margin-top:10px;">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="width:34px;height:34px;border-radius:50%;background:#0088cc;display:inline-flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style="width:34px;height:34px;border-radius:50%;background:#FF0000;display:inline-flex;align-items:center;justify-content:center;color:white;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>महत्वपूर्ण लिंक</h4>
+          <ul>
+            <li><a href="index.html">होम पेज</a></li>
+            <li><a href="districts.html">सभी 38 जिले</a></li>
+            <li><a href="news.html">ताजा समाचार</a></li>
+            <li><a href="about.html" style="color:#FED7AA; font-weight:700;">हमारे बारे में</a></li>
+            <li><a href="contact.html">संपर्क करें</a></li>
+            <li><a href="javascript:void(0)" onclick="BSH.openCitizenModal()">नागरिक समस्या भेजें</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>संपर्क</h4>
+          <p style="font-size:0.88rem; color:#94A3B8; margin-bottom:8px;"><i class="fas fa-envelope" style="color:var(--primary); margin-right:6px;"></i> contact@biharsamacharhub.in</p>
+          <div class="footer-disclaimer">
+            <h5 style="color:#CBD5E1; margin-bottom:4px; font-size:0.85rem;">अस्वीकरण:</h5>
+            <p style="font-size:0.8rem; color:#64748B;">यह स्वतंत्र जन-सूचना एवं समाचार एकत्रीकरण मंच है। सभी आंकड़े आधिकारिक स्रोतों से संकलित हैं।</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:25px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:0.82rem; color:#64748B;">
+        <div>&copy; 2024 बिहार समाचार हब — सर्वाधिकार सुरक्षित।</div>
+        <div>Made with ❤️ for Bihar</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/security.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/districts.js"></script>
+  <script src="assets/js/news.js"></script>
+
+  <button id="scroll-top" title="ऊपर जाएं" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <nav class="app-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="app-nav-item"><i class="fas fa-home"></i><span>होम</span></a>
+    <a href="districts.html" class="app-nav-item"><i class="fas fa-map-marked-alt"></i><span>38 जिले</span></a>
+    <a href="news.html" class="app-nav-item"><i class="fas fa-bolt"></i><span>लाइव न्यूज़</span></a>
+    <a href="javascript:void(0)" onclick="BSH.openSavedBookmarksModal()" class="app-nav-item"><i class="fas fa-bookmark"></i><span>सेव्ड</span></a>
+    <a href="javascript:void(0)" onclick="BSH.openCitizenModal()" class="app-nav-item"><i class="fas fa-bullhorn"></i><span>समस्या भेजें</span></a>
+  </nav>
+
+</body>
+</html>

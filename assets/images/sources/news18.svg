@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="n18Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D47A1"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#n18Grad)"/>
+  <text x="50" y="44" font-family="'Arial Black', Impact, sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">NEWS</text>
+  <rect x="25" y="50" width="50" height="32" rx="6" fill="#D32F2F"/>
+  <text x="50" y="74" font-family="'Arial Black', Impact, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" text-anchor="middle">18</text>
+</svg>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://pagead2.googlesyndication.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data: blob:; frame-src https://maps.google.com https://www.google.com https://googleads.g.doubleclick.net https://www.youtube.com; connect-src 'self' https://api.rss2json.com https://api.allorigins.win https://api.anthropic.com https://api.openai.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+  <title>बिहार वीडियो समाचार बुलेटिन | बिहार समाचार हब</title>
+  <meta name="theme-color" content="#DC2626">
+  <!-- Google AdSense: To enable real monetization, insert your approved Publisher ID below -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_PUBLISHER_ID" crossorigin="anonymous"></script> -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar News">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="top-accessibility-bar">
+    <div class="container flex justify-between items-center" style="padding:0;">
+      <div class="flex items-center gap-2">
+        <span style="color:#F97316; font-weight:800;"><i class="fas fa-broadcast-tower"></i> 24x7 बिहार लाइव नेटवर्क</span>
+        <span class="hidden-mobile" style="color:#9CA3AF;">| 38 जिले, 9 प्रमंडल</span>
+        <span class="live-datetime-widget" id="live-datetime"><i class="far fa-calendar-alt"></i> लोड हो रहा है...</span>
+      </div>
+      <div class="a11y-controls-group">
+        <button class="a11y-btn" onclick="BSH.setFontSize(-1)" title="छोटा फॉन्ट">A-</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(0)" title="सामान्य फॉन्ट">A</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(1)" title="बड़ा फॉन्ट">A+</button>
+        <select class="dialect-dropdown-select" id="dialect-picker" onchange="BSH.setDialect(this.value)">
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mai">🌾 मैथिली (Maithili)</option>
+          <option value="bho">⚡ भोजपुरी (Bhojpuri)</option>
+          <option value="mag">🏛 मगही (Magahi)</option>
+          <option value="en">🌐 English</option>
+        </select>
+        <button class="theme-toggle-btn a11y-btn"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PWA Install Banner (Mobile App Promotion) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और ऑफ़लाइन न्यूज़ पढ़ें</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">होम</a>
+        <a href="districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="news.html" class="nav-link" data-i18n="nav_news">समाचार</a>
+        <a href="live-blog.html" class="nav-link" data-i18n="nav_live_blog"><span class="nav-live-dot-beacon"></span>लाइव ब्लॉग</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">संपर्क</a>
+        <button class="btn btn-sm btn-outline" onclick="NewsHub.togglePushNotifications()" title="सूचनाएं" style="padding:4px 8px;"><i class="fas fa-bell"></i></button>
+        <button class="btn btn-sm btn-primary" id="nav-auth-btn" onclick="BSH.openAuthModal()" style="padding:4px 10px; font-weight:700;"><i class="fas fa-user-circle"></i> <span>लॉगिन</span></button>
+</div>
+      <button class="hamburger" id="hamburger" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html" data-i18n="nav_home">होम</a>
+      <a href="districts.html" data-i18n="nav_districts">जिले</a>
+      <a href="news.html" data-i18n="nav_news">समाचार</a>
+      <a href="about.html" data-i18n="nav_about">हमारे बारे में</a>
+      <a href="contact.html" data-i18n="nav_contact">संपर्क</a>
+      <div style="display:flex; gap:10px; padding:10px 15px;">
+        <button class="theme-toggle-btn" id="mobile-theme-toggle" aria-label="Toggle Dark Mode" style="flex:1; border-radius:8px; height:40px;">
+          <i class="fas fa-moon"></i> <span>थीम</span>
+        </button>
+        <button id="lang-toggle-mobile" onclick="BSH.toggleLang()" style="flex:1; padding:8px; border-radius:8px; background:var(--primary); color:white; font-weight:700;">
+          हिं/EN
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker -->
+  
+  <section style="background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%); color:#FFFFFF; padding: 40px 0 30px 0;">
+    <div class="container text-center">
+      <span class="badge-pill-hub" style="background:#DC2626; color:#FFF; font-size:0.8rem; padding:4px 12px; border-radius:20px;"><i class="fas fa-video"></i> मल्टीमीडिया वीडियो डेस्क</span>
+      <h1 style="font-size:2.3rem; font-weight:800; margin:12px 0;">बिहार वीडियो समाचार बुलेटिन</h1>
+      <p style="color:#C7D2FE; font-size:1.05rem; max-width:700px; margin:0 auto;">ETV Bharat, ABP Bihar, News18, Aaj Tak और Zee Bihar के सत्यापित वीडियो कवरेज एवं ग्राउंड रिपोर्ट्स।</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="ad-slot-container ad-slot-leaderboard">
+      <span class="ad-badge-tag">विज्ञापन / ADVERTISEMENT</span>
+      <div style="display:flex; align-items:center; justify-content:center; height:70px; color:#94A3B8; font-size:0.85rem; font-weight:600;">
+        <i class="fas fa-ad" style="margin-right:8px; font-size:1.2rem; color:#CBD5E1;"></i> Google AdSense Leaderboard (Responsive 728x90)
+      </div>
+    </div>
+  </div>
+
+  <section class="container mt-4">
+    <div class="flex items-center justify-between flex-wrap gap-3 pb-3" style="border-bottom: 2px solid #E2E8F0;">
+      <div class="flex items-center gap-2 flex-wrap" id="video-cat-tabs">
+        <button class="btn btn-sm btn-primary active video-filter-btn" data-cat="all">सभी वीडियो</button>
+        <button class="btn btn-sm btn-outline video-filter-btn" data-cat="politics">🏛 राजनीति व सरकार</button>
+        <button class="btn btn-sm btn-outline video-filter-btn" data-cat="crime">🚨 क्राइम व सुरक्षा</button>
+        <button class="btn btn-sm btn-outline video-filter-btn" data-cat="development">🏗 विकास व योजनाएं</button>
+        <button class="btn btn-sm btn-outline video-filter-btn" data-cat="culture">🌾 संस्कृति व कला</button>
+      </div>
+      <div style="font-size:0.85rem; color:#64748B;">
+        <i class="fas fa-play-circle" style="color:#DC2626;"></i> 18+ लाइव वीडियो रिपोर्ट
+      </div>
+    </div>
+  </section>
+
+  <main class="container mt-6 mb-8">
+        <div class="video-grid-cards" id="video-grid-container">
+      <!-- 1. Politics -->
+      <div class="video-news-card" data-cat="politics" onclick="openVideoModal('https://www.youtube-nocookie.com/embed/0j61c2VpZ1I', 'बिहार कैबिनेट की बैठक में 18 महत्वपूर्ण एजेंडों पर लगी मुहर')">
+        <div class="video-thumb-container">
+          <img src="https://img.youtube.com/vi/0j61c2VpZ1I/hqdefault.jpg" alt="बिहार कैबिनेट फैसला" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&fm=webp&q=75&auto=format&fit=crop';">
+          <div class="video-play-btn-circle"><i class="fas fa-play"></i></div>
+          <span class="video-duration-tag">12:45</span>
+        </div>
+        <div class="video-info-box">
+          <span class="video-channel-badge"><i class="fab fa-youtube"></i> ABP News Bihar</span>
+          <h3 class="video-card-title">बिहार कैबिनेट की बैठक में 18 महत्वपूर्ण एजेंडों पर लगी मुहर, युवाओं के लिए रोजगार पैकेज</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;"><i class="far fa-clock"></i> 2 घंटे पहले • 28.5k देखा गया</span>
+        </div>
+      </div>
+
+      <!-- 2. Development -->
+      <div class="video-news-card" data-cat="development" onclick="openVideoModal('https://www.youtube-nocookie.com/embed/Yk3aN30T_2A', 'पटना मेट्रो: मीठापुर से आईएसबीटी कॉरिडोर पर ट्रायल रन')">
+        <div class="video-thumb-container">
+          <img src="https://img.youtube.com/vi/Yk3aN30T_2A/hqdefault.jpg" alt="पटना मेट्रो ट्रायल" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&fm=webp&q=75&auto=format&fit=crop';">
+          <div class="video-play-btn-circle"><i class="fas fa-play"></i></div>
+          <span class="video-duration-tag">08:20</span>
+        </div>
+        <div class="video-info-box">
+          <span class="video-channel-badge"><i class="fab fa-youtube"></i> News18 Bihar</span>
+          <h3 class="video-card-title">पटना मेट्रो: मीठापुर से आईएसबीटी कॉरिडोर पर ट्रायल रन की तैयारी, देखें ग्राउंड रिपोर्ट</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;"><i class="far fa-clock"></i> 4 घंटे पहले • 34.1k देखा गया</span>
+        </div>
+      </div>
+
+      <!-- 3. Education -->
+      <div class="video-news-card" data-cat="education" onclick="openVideoModal('https://www.youtube-nocookie.com/embed/V2Bq7-bT3-0', 'BPSC शिक्षक भर्ती काउंसिलिंग प्रक्रिया व पदस्थापन')">
+        <div class="video-thumb-container">
+          <img src="https://img.youtube.com/vi/V2Bq7-bT3-0/hqdefault.jpg" alt="BPSC शिक्षक भर्ती" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&fm=webp&q=75&auto=format&fit=crop';">
+          <div class="video-play-btn-circle"><i class="fas fa-play"></i></div>
+          <span class="video-duration-tag">15:10</span>
+        </div>
+        <div class="video-info-box">
+          <span class="video-channel-badge"><i class="fab fa-youtube"></i> ETV Bharat Bihar</span>
+          <h3 class="video-card-title">BPSC शिक्षक नियुक्ति: 38 जिलों में काउंसिलिंग और पदस्थापन आदेश जारी, शिक्षा विभाग की गाइडलाइन</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;"><i class="far fa-clock"></i> 6 घंटे पहले • 42.0k देखा गया</span>
+        </div>
+      </div>
+
+      <!-- 4. Culture -->
+      <div class="video-news-card" data-cat="culture" onclick="openVideoModal('https://www.youtube-nocookie.com/embed/M6M13B9B4rY', 'मिथिला मधुबनी पेंटिंग अंतर्राष्ट्रीय एक्सपो व भागलपुरी सिल्क')">
+        <div class="video-thumb-container">
+          <img src="https://img.youtube.com/vi/M6M13B9B4rY/hqdefault.jpg" alt="मधुबनी पेंटिंग एक्सपो" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&fm=webp&q=75&auto=format&fit=crop';">
+          <div class="video-play-btn-circle"><i class="fas fa-play"></i></div>
+          <span class="video-duration-tag">06:40</span>
+        </div>
+        <div class="video-info-box">
+          <span class="video-channel-badge"><i class="fab fa-youtube"></i> DD Bihar</span>
+          <h3 class="video-card-title">मधुबनी पेंटिंग और भागलपुरी सिल्क को ग्लोबल पहचान: दिल्ली हाट में बिहार का भव्य पवेलियन</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;"><i class="far fa-clock"></i> 1 दिन पहले • 15.8k देखा गया</span>
+        </div>
+      </div>
+
+      <!-- 5. Crime -->
+      <div class="video-news-card" data-cat="crime" onclick="openVideoModal('https://www.youtube-nocookie.com/embed/x7w8q2Z8y1I', 'बिहार एसटीएफ की बड़ी कार्रवाई')">
+        <div class="video-thumb-container">
+          <img src="https://img.youtube.com/vi/x7w8q2Z8y1I/hqdefault.jpg" alt="बिहार पुलिस एसटीएफ" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&fm=webp&q=75&auto=format&fit=crop';">
+          <div class="video-play-btn-circle"><i class="fas fa-play"></i></div>
+          <span class="video-duration-tag">09:15</span>
+        </div>
+        <div class="video-info-box">
+          <span class="video-channel-badge"><i class="fab fa-youtube"></i> Zee Bihar Jharkhand</span>
+          <h3 class="video-card-title">बिहार पुलिस एसटीएफ ने अंतर्राज्यीय सिंडिकेट का किया भंडाफोड़, 4 अपराधी गिरफ्तार</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;"><i class="far fa-clock"></i> 1 दिन पहले • 31.4k देखा गया</span>
+        </div>
+      </div>
+
+      <!-- 6. Development -->
+      <div class="video-news-card" data-cat="development" onclick="openVideoModal('https://www.youtube-nocookie.com/embed/d_5a8h0FkG0', 'बिहार विशेष भूमि सर्वेक्षण ग्राउंड रिपोर्ट')">
+        <div class="video-thumb-container">
+          <img src="https://img.youtube.com/vi/d_5a8h0FkG0/hqdefault.jpg" alt="भूमि सर्वेक्षण" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&fm=webp&q=75&auto=format&fit=crop';">
+          <div class="video-play-btn-circle"><i class="fas fa-play"></i></div>
+          <span class="video-duration-tag">14:30</span>
+        </div>
+        <div class="video-info-box">
+          <span class="video-channel-badge"><i class="fab fa-youtube"></i> Aaj Tak Bihar</span>
+          <h3 class="video-card-title">बिहार डिजिटल भूमि सर्वेक्षण: पंचायतों में कैंप लगाकर खतियान सुधार कार्य में तेजी, देखें लाइव रिपोर्ट</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;"><i class="far fa-clock"></i> 1 दिन पहले • 48.9k देखा गया</span>
+        </div>
+      </div>
+
+      <!-- 7. Culture / Tourism -->
+      <div class="video-news-card" data-cat="culture" onclick="openVideoModal('https://www.youtube-nocookie.com/embed/n6W7s6T-u50', 'नालंदा विश्वविद्यालय व राजगीर ग्लास ब्रिज स्पेशल टूर')">
+        <div class="video-thumb-container">
+          <img src="https://img.youtube.com/vi/n6W7s6T-u50/hqdefault.jpg" alt="नालंदा राजगीर टूर" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&fm=webp&q=75&auto=format&fit=crop';">
+          <div class="video-play-btn-circle"><i class="fas fa-play"></i></div>
+          <span class="video-duration-tag">11:05</span>
+        </div>
+        <div class="video-info-box">
+          <span class="video-channel-badge"><i class="fab fa-youtube"></i> Bihar Tourism</span>
+          <h3 class="video-card-title">विश्व धरोहर नालंदा महाविहार व राजगीr ग्लास ब्रिज: अंतर्राष्ट्रीय पर्यटकों की पहली पसंद</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;"><i class="far fa-clock"></i> 2 दिन पहले • 52.3k देखा गया</span>
+        </div>
+      </div>
+
+      <!-- 8. Development -->
+      <div class="video-news-card" data-cat="development" onclick="openVideoModal('https://www.youtube-nocookie.com/embed/z1x2c3v4b5n', 'दरभंगा एयरपोर्ट नया टर्मिनल व एम्स निर्माण प्रगति')">
+        <div class="video-thumb-container">
+          <img src="https://img.youtube.com/vi/z1x2c3v4b5n/hqdefault.jpg" alt="दरभंगा एयरपोर्ट एम्स" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&fm=webp&q=75&auto=format&fit=crop';">
+          <div class="video-play-btn-circle"><i class="fas fa-play"></i></div>
+          <span class="video-duration-tag">10:15</span>
+        </div>
+        <div class="video-info-box">
+          <span class="video-channel-badge"><i class="fab fa-youtube"></i> ABP Bihar</span>
+          <h3 class="video-card-title">दरभंगा एयरपोर्ट के नए सिविल एन्क्लेव व AIIMS अस्पताल निर्माण की जमीनी हकीकत</h3>
+          <span style="font-size:0.75rem; color:#94A3B8;"><i class="far fa-clock"></i> 2 दिन पहले • 37.8k देखा गया</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="video-player-modal" class="news-modal-overlay">
+    <div class="news-modal-container" style="max-width:800px; padding:0; background:#000; overflow:hidden;">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#111827; color:#FFF;">
+        <h3 id="video-modal-title" style="margin:0; font-size:1rem; font-weight:700;">वीडियो प्लेयर</h3>
+        <button class="tool-btn" onclick="closeVideoModal()" style="color:#FFF; font-size:1.5rem;">&times;</button>
+      </div>
+      <div style="position:relative; aspect-ratio:16/9; background:#000;">
+        <iframe id="video-modal-iframe" src="" style="width:100%; height:100%; border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="background:#0F172A; color:#94A3B8; padding:50px 0 20px 0; margin-top:50px;">
+    <div class="container text-center" style="font-size:0.8rem;">
+      <p data-i18n="footer_copyright">© 2026 बिहार समाचार हब। सर्वाधिकार सुरक्षित।</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/security.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/ab-testing.js" defer></script>
+  <script src="assets/js/news.js" defer></script>
+    <script>
+    function openVideoModal(url, title) {
+      const modal = document.getElementById('video-player-modal');
+      const iframe = document.getElementById('video-modal-iframe');
+      const titleEl = document.getElementById('video-modal-title');
+      
+      let embedUrl = url;
+      if (!embedUrl.includes('autoplay=1')) {
+        embedUrl += (embedUrl.includes('?') ? '&' : '?') + 'autoplay=1';
+      }
+
+      iframe.src = embedUrl;
+      if (titleEl) titleEl.textContent = title;
+      modal.classList.add('open');
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-player-modal');
+      const iframe = document.getElementById('video-modal-iframe');
+      iframe.src = '';
+      modal.classList.remove('open');
+    }
+
+    const initVideos = () => {
+      const modal = document.getElementById('video-player-modal');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeVideoModal();
+        });
+      }
+
+      // Category tab filtering
+      document.querySelectorAll('.video-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.video-filter-btn').forEach(b => {
+            b.classList.remove('btn-primary', 'active');
+            b.classList.add('btn-outline');
+          });
+          btn.classList.remove('btn-outline');
+          btn.classList.add('btn-primary', 'active');
+
+          const cat = btn.dataset.cat;
+          document.querySelectorAll('.video-news-card').forEach(card => {
+            if (cat === 'all' || card.dataset.cat === cat) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initVideos);
+    } else {
+      initVideos();
+    }
+  </script>
+</body>
+</html>

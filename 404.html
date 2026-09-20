@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>पृष्ठ नहीं मिला (404) — बिहार समाचार हब</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: #0F172A;
+      color: #F8FAFC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', -apple-system, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .error-card {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .error-code {
+      font-size: 5rem;
+      font-weight: 800;
+      color: #DC2626;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .error-msg {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .error-sub {
+      color: #94A3B8;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #DC2626;
+      color: #FFF;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-home:hover {
+      background: #B91C1C;
+    }
+  </style>
+  <script>
+    // GitHub Pages Single Page App (SPA) redirect helper:
+    // If the path was a district or news subpage, redirect smoothly
+    (function() {
+      var p = window.location.pathname;
+      if (p.includes('/district')) {
+        window.location.replace('district/index.html' + window.location.search);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="error-card">
+    <div class="error-code">404</div>
+    <div class="error-msg">पृष्ठ नहीं मिला (Page Not Found)</div>
+    <div class="error-sub">जो पृष्ठ आप खोज रहे हैं वह उपलब्ध नहीं है या स्थानांतरित कर दिया गया है।</div>
+    <a href="index.html" class="btn-home">
+      <i class="fas fa-home"></i> होम पेज पर जाएं
+    </a>
+  </div>
+</body>
+</html>

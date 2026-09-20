@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      var p = new URLSearchParams(window.location.search);
+      var d = p.get('id') || p.get('district');
+      if (d) {
+        window.location.replace('district/index.html?id=' + encodeURIComponent(d));
+      }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data: blob:; frame-src https://maps.google.com https://www.google.com https://www.youtube.com; connect-src 'self' https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+  <title>बिहार समाचार हब | Bihar Samachar Hub — Bihar News &amp; District Info</title>
+  <meta name="description" content="Bihar Samachar Hub — Bihar ke sabhi 38 districts ki jankari aur latest Bihar news aggregator. Hindi aur English mein.">
+  <meta name="keywords" content="Bihar news, बिहार समाचार, Bihar districts, Bihar information, Patna, Gaya, Bhagalpur">
+  <meta name="theme-color" content="#DC2626">
+  <!-- Google AdSense: To enable real monetization, insert your approved Publisher ID below -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_PUBLISHER_ID" crossorigin="anonymous"></script> -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bihar News">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Accessibility & 5-Dialect Localization Bar (Phase 5) -->
+  <div class="top-accessibility-bar">
+    <div class="container flex justify-between items-center" style="padding:0;">
+      <div class="flex items-center gap-2">
+        <span style="color:#F97316; font-weight:800;"><i class="fas fa-broadcast-tower"></i> 24x7 बिहार लाइव</span>
+        <span class="hidden-mobile" style="color:#64748B;">|</span>
+        <span class="live-datetime-widget" id="live-datetime"><i class="far fa-calendar-alt"></i> लोड हो रहा है...</span>
+      </div>
+      <div class="a11y-controls-group">
+        <button class="a11y-btn" onclick="BSH.setFontSize(-1)" title="फॉन्ट छोटा करें">A-</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(0)" title="सामान्य फॉन्ट">A</button>
+        <button class="a11y-btn" onclick="BSH.setFontSize(1)" title="फॉन्ट बड़ा करें">A+</button>
+        <select class="dialect-dropdown-select" id="dialect-picker" onchange="BSH.setDialect(this.value)" title="भाषा व बोली चुनें">
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mai">🌾 मैथिली (Maithili)</option>
+          <option value="bho">⚡ भोजपुरी (Bhojpuri)</option>
+          <option value="mag">🏛 मगही (Magahi)</option>
+          <option value="en">🌐 English</option>
+        </select>
+        <button class="theme-toggle-btn a11y-btn" title="डार्क / लाइट मोड"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PWA Install Banner (Mobile App Promotion) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">📱</div>
+      <div class="pwa-banner-text">
+        <strong>बिहार समाचार हब ऐप इंस्टॉल करें</strong>
+        <span>तेज़ स्पीड, लाइव नोटिफिकेशन और ऑफ़लाइन न्यूज़ पढ़ें</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button id="pwa-install-btn" class="btn btn-sm btn-primary">इंस्टॉल करें</button>
+      <button id="pwa-banner-close" class="btn btn-sm btn-outline-light" aria-label="बंद करें">✕</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="बिहार समाचार हब">
+        <div class="brand-logo-emblem">
+          <img src="assets/images/logo-emblem.svg" class="brand-emblem-svg" alt="बिहार समाचार हब लोगो" width="46" height="46">
+          <span class="brand-live-dot" title="24x7 Live"></span>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-main-title">
+            <span class="brand-hi-name">बिहार <span class="brand-accent">समाचार</span></span>
+            <span class="brand-badge-hub">HUB</span>
+          </div>
+          <span class="brand-sub-caption"><i class="fas fa-certificate" style="font-size:0.55rem; color:#F59E0B;"></i> 38 ज़िले • 24x7 डिजिटल न्यूज़ नेटवर्क</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active" data-i18n="nav_home">होम</a>
+        <a href="districts.html" class="nav-link" data-i18n="nav_districts">जिले</a>
+        <a href="news.html" class="nav-link" data-i18n="nav_news">समाचार</a>
+        <a href="live-blog.html" class="nav-link" data-i18n="nav_live_blog"><span class="nav-live-dot-beacon"></span>लाइव ब्लॉग</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">हमारे बारे में</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">संपर्क</a>
+        <button class="btn btn-sm btn-outline" onclick="NewsHub.togglePushNotifications()" title="सूचनाएं" style="margin-left:4px; padding:4px 8px;"><i class="fas fa-bell"></i></button>
+        <button class="btn btn-sm btn-primary" id="nav-auth-btn" onclick="BSH.openAuthModal()" style="padding:4px 10px; font-weight:700;"><i class="fas fa-user-circle"></i> <span>लॉगिन</span></button>
+</div>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu">
+      <a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i> होम</a>
+      <a href="districts.html" data-i18n="nav_districts"><i class="fas fa-map-marked-alt"></i> जिले</a>
+      <a href="news.html" data-i18n="nav_news"><i class="fas fa-newspaper"></i> समाचार</a>
+      <a href="live-blog.html"><i class="fas fa-bolt"></i> लाइव ब्लॉग</a>
+      <a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> हमारे बारे में</a>
+      <a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> संपर्क</a>
+      <div style="display:flex; gap:10px; padding:10px 15px;">
+        <button onclick="BSH.openAuthModal()" style="flex:1; padding:8px; border-radius:8px; background:var(--primary); color:white; font-weight:700; border:none;">
+          <i class="fas fa-user-circle"></i> लॉगिन / प्रोफ़ाइल
+        </button>
+      </div>
+</div>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker (Top Red Banner with Pulse & Live Last Updated) -->
+  <div class="ticker-bar portal-ticker">
+    <div class="ticker-label-badge">
+      <span class="ticker-live-beacon"></span> <span>BREAKING</span>
+    </div>
+    <div class="ticker-carousel-wrap">
+      <div id="portal-ticker-text" class="ticker-active-slide">ताज़ा बुलेटिन लोड हो रहा है...</div>
+    </div>
+    <div class="ticker-controls-group">
+      <button id="portal-ticker-prev" class="ticker-ctrl-btn" title="पिछली खबर"><i class="fas fa-chevron-left"></i></button>
+      <button id="portal-ticker-pause" class="ticker-ctrl-btn" title="रोकें / चलाएं"><i class="fas fa-pause"></i></button>
+      <button id="portal-ticker-next" class="ticker-ctrl-btn" title="अगली खबर"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="ticker-last-updated-badge" id="ticker-last-updated">
+      <i class="far fa-clock"></i> <span>अंतिम अपडेट: अभी-अभी</span>
+    </div>
+  </div>
+
+  <!-- 9 Administrative Divisions Bar (Phase 5) -->
+  <div class="divisions-quick-bar">
+    <span class="division-pill-label"><i class="fas fa-map-marked-alt"></i> 9 प्रमंडल:</span>
+    <button class="division-chip active" onclick="NewsHub.filterByDivision('all', this)">सभी प्रमंडल</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('patna', this)">पटना</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('tirhut', this)">तिरहुत</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('saran', this)">सारण</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('darbhanga', this)">दरभंगा</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('kosi', this)">कोसी</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('purnia', this)">पूर्णिया</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('bhagalpur', this)">भागलपुर</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('munger', this)">मुंगेर</button>
+    <button class="division-chip" onclick="NewsHub.filterByDivision('magadh', this)">मगध</button>
+  </div>
+
+  <!-- Leaderboard Responsive Ad Banner (728x90 Desktop / 320x100 Mobile) -->
+  <div class="container" style="margin-top: 12px; margin-bottom: 8px;">
+    <div class="ad-slot-container">
+      <span class="ad-badge-tag"><i class="fas fa-ad"></i> विज्ञापन / SPONSORED</span>
+      <a href="news.html" class="bsh-leaderboard-banner" title="पटना मार्गदर्शन IAS & BPSC कोचिंग">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:1.6rem; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1));">🏛️</span>
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="ad-sponsor-pill">BPSC 70वीं &amp; शिक्षक भर्ती 4.0</span>
+              <strong style="font-size:0.95rem; color:#9A3412;">पटना मार्गदर्शन IAS संस्थान</strong>
+            </div>
+            <div style="font-size:0.82rem; color:#78350F; margin-top:2px;">
+              38 जिलों के अभ्यर्थियों के लिए विशेष टेस्ट सीरीज, प्रिंटेड नोट्स व लाइव कक्षाएं उपलब्ध!
+            </div>
+          </div>
+        </div>
+        <span class="ad-main-cta-btn">दाखिला व विवरण ➔</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Header & Search with Autocomplete -->
+  <header class="hero advanced-hero">
+    <div class="container hero-container-centered">
+      <div class="hero-top-badge">
+        <span class="pulse-badge"><span class="ticker-live-dot">●</span> 24x7 बिहार डिजिटल न्यूज़ नेटवर्क</span>
+        <span class="hero-subtext">38 जिले • 534 प्रखंड • 8,406 ग्राम पंचायतें</span>
+      </div>
+      <h1 class="hero-title" data-i18n="hero_title">बिहार की हर खबर, हर गाँव-जिले की सच्ची रिपोर्ट</h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">Bihar's Premier Digital News &amp; District Knowledge Platform. Ground Reports, Administration, Politics, and Schemes.</p>
+      
+      <!-- Prominent Floating Search Bar with Live Autocomplete -->
+      <div class="search-autocomplete-box" id="search-autocomplete-box">
+        <i class="fas fa-search search-icon-left"></i>
+        <input type="text" id="hero-autocomplete-search" class="search-input-field" placeholder="जिला, प्रखंड, नेता या खबर खोजें... (जैसे: पटना, गया, BPSC, नीतीश कुमार, बाढ़)" autocomplete="off">
+        <button id="hero-search-clear" class="search-clear-btn" title="साफ़ करें"><i class="fas fa-times"></i></button>
+        <div id="hero-autocomplete-results" class="autocomplete-dropdown">
+          <!-- Populated dynamically by news.js -->
+        </div>
+      </div>
+
+      <!-- Quick Trending Tags -->
+      <div class="hero-trending-tags">
+        <span class="trending-title"><i class="fas fa-fire"></i> ट्रेंडिंग:</span>
+        <a href="javascript:void(0)" onclick="NewsHub.filterByKeyword('कैबिनेट')" class="trending-tag">🗳️ कैबिनेट निर्णय</a>
+        <a href="javascript:void(0)" onclick="NewsHub.filterByKeyword('BPSC')" class="trending-tag">💼 BPSC 70वीं</a>
+        <a href="javascript:void(0)" onclick="NewsHub.filterByKeyword('सर्वेक्षण')" class="trending-tag">🏛️ भूमि सर्वेक्षण</a>
+        <a href="district/index.html?id=patna" class="trending-tag">📍 पटना</a>
+        <a href="district/index.html?id=gaya" class="trending-tag">📍 गया</a>
+        <a href="district/index.html?id=muzaffarpur" class="trending-tag">📍 मुजफ्फरपुर</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- District Quick-Select Bar (38 Bihar Districts Horizontal Scroll Strip) -->
+  <div class="container">
+    <div class="district-quick-strip">
+      <div class="district-strip-header">
+        <span class="district-strip-label">
+          <i class="fas fa-map-marker-alt" style="color:var(--primary);"></i> 
+          <strong>जिला क्विक-सिलेक्ट (सभी 38 जिले):</strong> क्लिक करके सीधे जिले की खबरें देखें
+        </span>
+        <span class="district-strip-count">38 जिले</span>
+      </div>
+      <div class="district-strip-scroll-wrap">
+        <button id="dist-scroll-left" class="district-scroll-arrow" title="बाएं स्क्रॉल करें"><i class="fas fa-chevron-left"></i></button>
+        <div class="district-chips-track" id="district-quick-chips">
+          <!-- Populated by news.js with 38 clickable district chips -->
+        </div>
+        <button id="dist-scroll-right" class="district-scroll-arrow" title="दाएं स्क्रॉल करें"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- "बिहार मित्र" Official AI Assistant Panel (Priority 4) -->
+  <section class="section py-2" style="margin-top: 10px;">
+    <div class="container">
+      <div class="bihar-mitra-hero-panel" id="bihar-mitra-home-box">
+        <div class="mitra-panel-header">
+          <div class="mitra-title-group">
+            <div class="mitra-bot-avatar">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div>
+              <h3 class="mitra-name">बिहार मित्र AI सहायक <span style="font-size:0.75rem; background:rgba(37,99,235,0.4); color:#93C5FD; padding:2px 8px; border-radius:12px; border:1px solid rgba(147,197,253,0.3); font-weight:700;">Smart AI 2.0</span></h3>
+              <span class="mitra-status-badge"><span class="ticker-live-dot" style="background:#34D399;">●</span> 24x7 ऑनलाइन • 38 जिलों व समसामयिकी के सभी सवालों के उत्तर</span>
+            </div>
+          </div>
+          <span style="font-size:0.78rem; color:#94A3B8;"><i class="fas fa-bolt" style="color:#F59E0B;"></i> इंस्टेंट रिस्पांस</span>
+        </div>
+
+        <!-- Quick Prompts Chips -->
+        <div class="mitra-quick-prompts">
+          <button type="button" class="mitra-prompt-btn" onclick="NewsHub.askBiharMitra('आज की 5 बड़ी खबरें क्या हैं?')">🔥 आज की 5 बड़ी खबरें</button>
+          <button type="button" class="mitra-prompt-btn" onclick="NewsHub.askBiharMitra('BPSC 70वीं और शिक्षक भर्ती नया अपडेट?')">🎓 BPSC 70वीं व शिक्षक भर्ती</button>
+          <button type="button" class="mitra-prompt-btn" onclick="NewsHub.askBiharMitra('पटना और उत्तर बिहार का मौसम कैसा रहेगा?')">🌦 मौसम व बारिश अपडेट</button>
+          <button type="button" class="mitra-prompt-btn" onclick="NewsHub.askBiharMitra('सात निश्चय-2 और उद्यमी योजना के मुख्य लाभ?')">🏛 सरकारी योजनाएं</button>
+          <button type="button" class="mitra-prompt-btn" onclick="NewsHub.askBiharMitra('बिहार विशेष भूमि सर्वेक्षण नियम?')">📜 भूमि सर्वेक्षण नियम</button>
+        </div>
+
+        <!-- Live Response Box -->
+        <div class="mitra-response-box" id="mitra-home-response">
+          <!-- Rendered via AI -->
+        </div>
+
+        <!-- Input Form -->
+        <form class="mitra-input-form" onsubmit="event.preventDefault(); NewsHub.submitBiharMitraHome();">
+          <input type="text" id="mitra-home-input" class="mitra-input-field" placeholder="बिहार से जुड़ा कोई भी सवाल पूछें... (जैसे: BPSC परीक्षा, पटना मौसम, कैबिनेट निर्णय, बाढ़ स्थिति)">
+          <button type="submit" id="mitra-home-submit-btn" class="mitra-send-btn">
+            <i class="fas fa-paper-plane"></i> <span>पूछें</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Google Maps Explorer Section for Bihar & All 38 Districts -->
+  <div class="container" style="margin-bottom: 24px;">
+    <div class="interactive-map-card gmaps-explorer-card">
+      <div class="interactive-map-header">
+        <div class="interactive-map-title">
+          <div class="gmaps-brand-icon"><i class="fab fa-google"></i></div>
+          <div>
+            <h3 style="margin:0; font-size:clamp(1.05rem, 2.2vw, 1.3rem); font-weight:800; color:var(--text-dark);">
+              बिहार लाइव गूगल मैप्स (Google Maps Bihar Explorer)
+            </h3>
+            <span style="font-size:0.8rem; color:var(--text-medium); font-weight:500;">
+              बिहार के सभी 38 जिलों का लाइव गूगल मैप नेविगेशन
+            </span>
+          </div>
+          <span class="live-map-badge" style="background:#E8F0FE; color:#1A73E8; border:1px solid #BFDBFE;">
+            ● GOOGLE MAPS
+          </span>
+        </div>
+
+        <div class="gmaps-header-controls">
+          <div class="gmaps-select-wrap">
+            <i class="fas fa-location-crosshairs gmaps-select-icon"></i>
+            <select id="homepage-gmap-select" class="gmaps-district-select" aria-label="Select District for Google Maps">
+              <option value="bihar" selected>📍 संपूर्ण बिहार (All Bihar)</option>
+              <optgroup label="पटना प्रमंडल (Patna)">
+                <option value="patna">पटना (Patna)</option>
+                <option value="nalanda">नालंदा (Nalanda)</option>
+                <option value="bhojpur">भोजपुर - आरा (Bhojpur)</option>
+                <option value="buxar">बक्सर (Buxar)</option>
+                <option value="rohtas">रोहतास (Rohtas)</option>
+                <option value="kaimur">कैमूर (Kaimur)</option>
+              </optgroup>
+              <optgroup label="मगध प्रमंडल (Magadh)">
+                <option value="gaya">गया (Gaya)</option>
+                <option value="aurangabad">औरंगाबाद (Aurangabad)</option>
+                <option value="nawada">नवादा (Nawada)</option>
+                <option value="jehanabad">जहानाबाद (Jehanabad)</option>
+                <option value="arwal">अरवल (Arwal)</option>
+              </optgroup>
+              <optgroup label="तिरहुत प्रमंडल (Tirhut)">
+                <option value="muzaffarpur">मुजफ्फरपुर (Muzaffarpur)</option>
+                <option value="west-champaran">पश्चिम चंपारण (West Champaran)</option>
+                <option value="east-champaran">पूर्वी चंपारण (East Champaran)</option>
+                <option value="vaishali">वैशाली - हाजीपुर (Vaishali)</option>
+                <option value="sitamarhi">सीतामढ़ी (Sitamarhi)</option>
+                <option value="sheohar">शिवहर (Sheohar)</option>
+              </optgroup>
+              <optgroup label="सारण प्रमंडल (Saran)">
+                <option value="saran">सारण - छपरा (Saran)</option>
+                <option value="siwan">सिवान (Siwan)</option>
+                <option value="gopalganj">गोपालगंज (Gopalganj)</option>
+              </optgroup>
+              <optgroup label="दरभंगा प्रमंडल (Darbhanga)">
+                <option value="darbhanga">दरभंगा (Darbhanga)</option>
+                <option value="madhubani">मधुबनी (Madhubani)</option>
+                <option value="samastipur">समस्तीपुर (Samastipur)</option>
+              </optgroup>
+              <optgroup label="कोसी प्रमंडल (Kosi)">
+                <option value="saharsa">सहरसा (Saharsa)</option>
+                <option value="supaul">सुपौल (Supaul)</option>
+                <option value="madhepura">मधेपुरा (Madhepura)</option>
+              </optgroup>
+              <optgroup label="पूर्णिया प्रमंडल (Purnia)">
+                <option value="purnia">पूर्णिया (Purnia)</option>
+                <option value="katihar">कटिहार (Katihar)</option>
+                <option value="araria">अररिया (Araria)</option>
+                <option value="kishanganj">किशनगंज (Kishanganj)</option>
+              </optgroup>
+              <optgroup label="भागलपुर प्रमंडल (Bhagalpur)">
+                <option value="bhagalpur">भागलपुर (Bhagalpur)</option>
+                <option value="banka">बांका (Banka)</option>
+              </optgroup>
+              <optgroup label="मुंगेर प्रमंडल (Munger)">
+                <option value="munger">मुंगेर (Munger)</option>
+                <option value="begusarai">बेगूसराय (Begusarai)</option>
+                <option value="khagaria">खगड़िया (Khagaria)</option>
+                <option value="jamui">जमुई (Jamui)</option>
+                <option value="lakhisarai">लखीसराय (Lakhisarai)</option>
+                <option value="sheikhpura">शेखपुरा (Sheikhpura)</option>
+              </optgroup>
+            </select>
+          </div>
+          <a id="homepage-gmap-open-btn" href="https://www.google.com/maps/search/?api=1&query=Bihar+India" target="_blank" rel="noopener" class="btn btn-sm gmaps-open-app-btn">
+            <i class="fab fa-google"></i> Google Maps ऐप ↗
+          </a>
+          <a id="homepage-gmap-district-page-link" href="javascript:void(0)" class="btn btn-sm gmaps-view-district-btn" style="display:none;">
+            <i class="fas fa-file-lines"></i> ज़िला विवरण ➔
+          </a>
+        </div>
+      </div>
+
+      <div class="interactive-map-wrapper gmaps-frame-wrapper" style="position:relative; height:450px; border-radius:12px; overflow:hidden; border:2px solid rgba(26,115,232,0.2);">
+        <iframe
+          id="homepage-google-map"
+          src="https://maps.google.com/maps?q=Bihar,+India&t=&z=7&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0; width:100%; height:100%; display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Quick District Selection Pills (All 38 Bihar Districts Direct Switchers) -->
+      <div class="gmaps-quick-pills-bar">
+        <span class="gmaps-pills-label"><i class="fas fa-bolt" style="color:var(--primary);"></i> सभी 38 जिले (त्वरित गूगल मैप):</span>
+        <button type="button" class="gmaps-chip-btn active" data-slug="bihar" data-name="Bihar, India" data-zoom="7">📍 संपूर्ण बिहार</button>
+        <!-- पटना प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="patna" data-name="Patna District, Bihar" data-zoom="11">पटना</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="nalanda" data-name="Nalanda District, Bihar" data-zoom="11">नालंदा</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="bhojpur" data-name="Bhojpur District, Bihar" data-zoom="11">भोजपुर (आरा)</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="buxar" data-name="Buxar District, Bihar" data-zoom="11">बक्सर</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="rohtas" data-name="Rohtas District, Bihar" data-zoom="11">रोहतास (सासाराम)</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="kaimur" data-name="Kaimur District, Bihar" data-zoom="11">कैमूर (भभुआ)</button>
+        <!-- मगध प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="gaya" data-name="Gaya District, Bihar" data-zoom="11">गया</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="aurangabad" data-name="Aurangabad District, Bihar" data-zoom="11">औरंगाबाद</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="nawada" data-name="Nawada District, Bihar" data-zoom="11">नवादा</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="jehanabad" data-name="Jehanabad District, Bihar" data-zoom="11">जहानाबाद</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="arwal" data-name="Arwal District, Bihar" data-zoom="11">अरवल</button>
+        <!-- तिरहुत प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="muzaffarpur" data-name="Muzaffarpur District, Bihar" data-zoom="11">मुजफ्फरपुर</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="west-champaran" data-name="West Champaran District, Bihar" data-zoom="11">प. चंपारण (बेतिया)</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="east-champaran" data-name="East Champaran District, Bihar" data-zoom="11">पू. चंपारण (मोतिहारी)</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="vaishali" data-name="Vaishali District, Bihar" data-zoom="11">वैशाली (हाजीपुर)</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="sitamarhi" data-name="Sitamarhi District, Bihar" data-zoom="11">सीतामढ़ी</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="sheohar" data-name="Sheohar District, Bihar" data-zoom="11">शिवहर</button>
+        <!-- सारण प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="saran" data-name="Saran District, Bihar" data-zoom="11">सारण (छपरा)</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="siwan" data-name="Siwan District, Bihar" data-zoom="11">सिवान</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="gopalganj" data-name="Gopalganj District, Bihar" data-zoom="11">गोपालगंज</button>
+        <!-- दरभंगा प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="darbhanga" data-name="Darbhanga District, Bihar" data-zoom="11">दरभंगा</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="madhubani" data-name="Madhubani District, Bihar" data-zoom="11">मधुबनी</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="samastipur" data-name="Samastipur District, Bihar" data-zoom="11">समस्तीपुर</button>
+        <!-- कोसी प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="saharsa" data-name="Saharsa District, Bihar" data-zoom="11">सहरसा</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="supaul" data-name="Supaul District, Bihar" data-zoom="11">सुपौल</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="madhepura" data-name="Madhepura District, Bihar" data-zoom="11">मधेपुरा</button>
+        <!-- पूर्णिया प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="purnia" data-name="Purnia District, Bihar" data-zoom="11">पूर्णिया</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="katihar" data-name="Katihar District, Bihar" data-zoom="11">कटिहार</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="araria" data-name="Araria District, Bihar" data-zoom="11">अररिया</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="kishanganj" data-name="Kishanganj District, Bihar" data-zoom="11">किशनगंज</button>
+        <!-- भागलपुर प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="bhagalpur" data-name="Bhagalpur District, Bihar" data-zoom="11">भागलपुर</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="banka" data-name="Banka District, Bihar" data-zoom="11">बांका</button>
+        <!-- मुंगेर प्रमंडल -->
+        <button type="button" class="gmaps-chip-btn" data-slug="munger" data-name="Munger District, Bihar" data-zoom="11">मुंगेर</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="begusarai" data-name="Begusarai District, Bihar" data-zoom="11">बेगूसराय</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="khagaria" data-name="Khagaria District, Bihar" data-zoom="11">खगड़िया</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="jamui" data-name="Jamui District, Bihar" data-zoom="11">जमुई</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="lakhisarai" data-name="Lakhisarai District, Bihar" data-zoom="11">लखीसराय</button>
+        <button type="button" class="gmaps-chip-btn" data-slug="sheikhpura" data-name="Sheikhpura District, Bihar" data-zoom="11">शेखपुरा</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero News Showcase (Auto-Rotating Carousel Slider + Top 3 Spotlight Stories) -->
+  <section class="portal-hero-showcase">
+    <div class="container">
+      <div class="hero-layout-grid">
+        <!-- Main Auto-Rotating Carousel Slider -->
+        <div class="hero-slider-main" id="hero-slider-main">
+          <!-- Slides injected by news.js with active class on current slide -->
+          <div class="hero-slide active">
+            <div class="skeleton-shimmer" style="width:100%; height:100%;"></div>
+          </div>
+          <button class="hero-slider-nav-btn hero-slider-prev" id="hero-prev-btn" title="पिछली खबर"><i class="fas fa-chevron-left"></i></button>
+          <button class="hero-slider-nav-btn hero-slider-next" id="hero-next-btn" title="अगली खबर"><i class="fas fa-chevron-right"></i></button>
+          <div class="hero-slider-dots" id="hero-slider-dots"></div>
+        </div>
+
+        <!-- Spotlight Side Stack (3 Stories) -->
+        <div class="hero-side-stack-panel" id="hero-spotlight-panel">
+          <div class="spotlight-header">
+            <span><i class="fas fa-bolt" style="color:#DC2626;"></i> बिहार स्पॉटलाइट (Top 3)</span>
+            <a href="news.html" style="font-size:0.75rem; color:#DC2626; text-decoration:none;">सभी देखें →</a>
+          </div>
+          <div id="spotlight-cards-container" style="display:flex; flex-direction:column; gap:10px; flex:1;">
+            <div class="spotlight-card"><div class="skeleton-shimmer" style="width:100%; height:100%;"></div></div>
+            <div class="spotlight-card"><div class="skeleton-shimmer" style="width:100%; height:100%;"></div></div>
+            <div class="spotlight-card"><div class="skeleton-shimmer" style="width:100%; height:100%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- "✨ आपके लिए (Personalized For You)" Section -->
+  <section class="section py-2">
+    <div class="container">
+      <div class="aapke-liye-card" id="aapke-liye-section">
+        <div class="aapke-liye-header">
+          <div class="aapke-liye-title">
+            <i class="fas fa-sparkles" style="color:#FFB74D;"></i>
+            <span>✨ आपके लिए (Personalized)</span>
+            <span class="aapke-liye-district-pill" id="aapke-liye-district-name"><i class="fas fa-map-pin"></i> पटना</span>
+          </div>
+          <button class="btn-change-district" onclick="NewsHub.promptChangeHomeDistrict()">
+            <i class="fas fa-cog"></i> अपना जिला बदलें
+          </button>
+        </div>
+        <div class="aapke-liye-grid" id="aapke-liye-grid">
+          <!-- Injected dynamically based on user's selected district -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Netflix-Style Horizontal Scrollable Rows -->
+  <section class="section py-3" style="background:#FBFBFB;">
+    <div class="container">
+      <!-- Row 1: Politics -->
+      <div class="netflix-row-container">
+        <div class="netflix-row-header">
+          <h3 class="netflix-row-title"><i class="fas fa-landmark" style="color:#C62828;"></i> टॉप राजनीति &amp; शासन (Top Politics)</h3>
+          <div class="netflix-row-actions">
+            <button class="netflix-scroll-btn" onclick="NewsHub.scrollRow('row-politics-track', -300)" title="पीछे"><i class="fas fa-chevron-left"></i></button>
+            <button class="netflix-scroll-btn" onclick="NewsHub.scrollRow('row-politics-track', 300)" title="आगे"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="netflix-row-track" id="row-politics-track">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Row 2: Education & BPSC -->
+      <div class="netflix-row-container">
+        <div class="netflix-row-header">
+          <h3 class="netflix-row-title"><i class="fas fa-graduation-cap" style="color:#0D47A1;"></i> शिक्षा, BPSC व सरकारी नौकरी (Education &amp; Jobs)</h3>
+          <div class="netflix-row-actions">
+            <button class="netflix-scroll-btn" onclick="NewsHub.scrollRow('row-education-track', -300)" title="पीछे"><i class="fas fa-chevron-left"></i></button>
+            <button class="netflix-scroll-btn" onclick="NewsHub.scrollRow('row-education-track', 300)" title="आगे"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="netflix-row-track" id="row-education-track">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Row 3: Village & Agriculture -->
+      <div class="netflix-row-container">
+        <div class="netflix-row-header">
+          <h3 class="netflix-row-title"><i class="fas fa-seedling" style="color:#1B5E20;"></i> गाँव-पंचायत, किसान व कृषि (Village &amp; Panchayat)</h3>
+          <div class="netflix-row-actions">
+            <button class="netflix-scroll-btn" onclick="NewsHub.scrollRow('row-village-track', -300)" title="पीछे"><i class="fas fa-chevron-left"></i></button>
+            <button class="netflix-scroll-btn" onclick="NewsHub.scrollRow('row-village-track', 300)" title="आगे"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="netflix-row-track" id="row-village-track">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Sarkari Naukri & Result Tracker Section (Priority 3) -->
+  <section class="section py-3" id="jobs-tracker-wrapper">
+    <div class="container">
+      <div class="jobs-tracker-section">
+        <div class="jobs-header-wrap">
+          <div class="jobs-title-group">
+            <div class="jobs-header-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div>
+              <h2 class="jobs-main-title">सरकारी नौकरी, रिजल्ट व छात्रवृत्ति ट्रैकर</h2>
+              <span class="jobs-sub-badge">BPSC, शिक्षक भर्ती, पुलिस बहाली, BSEB रिजल्ट व सरकारी योजनाएं (100% आधिकारिक)</span>
+            </div>
+          </div>
+          <div class="jobs-search-filter-wrap">
+            <input type="text" id="jobs-search-input" class="jobs-search-input" placeholder="नौकरी, विभाग या पद खोजें (उदा: BPSC, शिक्षक, पुलिस)..." oninput="JobsTracker.handleSearch(this.value)">
+          </div>
+        </div>
+
+        <div class="jobs-tabs-bar">
+          <button class="jobs-tab-btn active" onclick="JobsTracker.setCategory('all', this)"><i class="fas fa-th-large"></i> सभी अपडेट्स</button>
+          <button class="jobs-tab-btn" onclick="JobsTracker.setCategory('latest_jobs', this)"><i class="fas fa-briefcase"></i> सरकारी नौकरियां</button>
+          <button class="jobs-tab-btn" onclick="JobsTracker.setCategory('results', this)"><i class="fas fa-graduation-cap"></i> परीक्षा परिणाम (Results)</button>
+          <button class="jobs-tab-btn" onclick="JobsTracker.setCategory('admit_cards', this)"><i class="fas fa-id-card"></i> एडमिट कार्ड</button>
+          <button class="jobs-tab-btn" onclick="JobsTracker.setCategory('scholarships', this)"><i class="fas fa-hand-holding-usd"></i> छात्रवृत्ति व योजनाएं</button>
+        </div>
+
+        <div class="jobs-grid" id="jobs-items-grid">
+          <!-- Populated dynamically by jobs-tracker.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multimedia & Interactive Features Hub Section (Phase 2 & 3) -->
+  <section class="section py-3" style="background:#F8FAFC; border-top:1px solid #E2E8F0; border-bottom:1px solid #E2E8F0;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:16px;">
+        <div>
+          <span class="sub-header-badge" style="background:#EFF6FF; color:#1D4ED8; border:1px solid #BFDBFE;">
+            <i class="fas fa-bolt"></i> 24x7 लाइव ब्लॉग व ब्रेकिंग कवरेज
+          </span>
+          <h2 class="section-title mt-1">24x7 लाइव ब्लॉग व ब्रेकिंग टाइमलाइन</h2>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
+        <!-- Card 2: Live Blog -->
+        <a href="live-blog.html" class="interactive-feature-card" style="display:flex; flex-direction:column; background:white; border:1px solid #E2E8F0; border-radius:12px; padding:18px; text-decoration:none; color:inherit; box-shadow:0 2px 8px rgba(0,0,0,0.04); transition:all 0.2s ease;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+            <div style="width:44px; height:44px; border-radius:10px; background:#FEF3C7; color:#D97706; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div>
+              <h4 style="margin:0; font-size:1.05rem; font-weight:800; color:#0F172A;">24x7 लाइव ब्लॉग</h4>
+              <span style="font-size:0.75rem; color:#D97706; font-weight:700;">Minute-by-Minute Timeline</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:#64748B; margin:0 0 12px 0; line-height:1.45; flex:1;">
+            बिहार की हर ब्रेकिंग घटना, प्रशासनिक आदेश और चुनाव/कैबिनेट फैसलों का पल-पल का लाइव कवरेज।
+          </p>
+          <span style="font-size:0.85rem; color:#D97706; font-weight:700; display:flex; align-items:center; gap:6px;">
+            लाइव ब्लॉग देखें <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Portal Split Layout (News Feed + Sticky Sidebar: Trending, Weather, Poll) -->
+  <section class="section py-4" style="background:#FFFFFF;">
+    <div class="container">
+      <div class="portal-split-layout">
+        <!-- Main News Feed Column -->
+        <div class="portal-feed-column">
+          <div class="feed-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
+            <div>
+              <h2 class="section-title" id="feed-heading" style="margin:0;">बिहार की ताज़ा बड़ी खबरें</h2>
+              <span style="font-size:0.85rem; color:#64748B;" id="feed-subheading">सत्यापित स्थानीय व राज्यस्तरीय रिपोर्टिंग • 38 जिले</span>
+            </div>
+            <a href="news.html" class="btn btn-sm btn-outline" style="font-size:0.82rem; font-weight:700; padding:6px 14px; border-radius:8px;">
+              सभी समाचार देखें <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="portal-cat-tabs" id="homepage-cat-tabs">
+            <button class="cat-tab-btn active" data-category="all"><i class="fas fa-th-large"></i> सभी खबरें</button>
+            <button class="cat-tab-btn" data-category="politics"><i class="fas fa-landmark"></i> राजनीति</button>
+            <button class="cat-tab-btn" data-category="education"><i class="fas fa-graduation-cap"></i> शिक्षा व नौकरी</button>
+            <button class="cat-tab-btn" data-category="crime"><i class="fas fa-shield-alt"></i> अपराध व पुलिस</button>
+            <button class="cat-tab-btn" data-category="weather"><i class="fas fa-cloud-sun"></i> मौसम</button>
+            <button class="cat-tab-btn" data-category="village_panchayat"><i class="fas fa-seedling"></i> गाँव-पंचायत</button>
+            <button class="cat-tab-btn" data-category="sports"><i class="fas fa-trophy"></i> खेल</button>
+            <button class="cat-tab-btn" data-category="schemes"><i class="fas fa-hand-holding-heart"></i> योजनाएं</button>
+          </div>
+
+          <!-- Main News Grid -->
+          <div class="news-grid" id="homepage-news">
+            <!-- Populated dynamically by NewsHub.renderHomepageNewsGrid() -->
+          </div>
+
+          <!-- Load More Button -->
+          <div style="text-align:center; margin-top:28px; margin-bottom:12px;">
+            <button id="homepage-load-more-btn" class="btn btn-outline-primary" style="padding:12px 32px; font-weight:700; border-radius:30px; font-size:0.95rem; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
+              <i class="fas fa-sync-alt"></i> और खबरें लोड करें
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Sticky Sidebar (Trending + Weather + Daily Poll) -->
+        <aside class="portal-sidebar-sticky">
+          <!-- 1. Trending Now (#1 to #5 Ranked List) -->
+          <div class="sidebar-widget-card">
+            <div class="sidebar-widget-header" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2);">
+              <div class="sidebar-widget-title" style="color:#E65100;">
+                <i class="fas fa-fire-alt text-danger"></i> <strong>ट्रेंडिंग नाऊ (#1 से #5)</strong>
+              </div>
+              <span style="font-size:0.75rem; color:#E65100; font-weight:700;">Top Bihar Reads</span>
+            </div>
+            <div class="trending-widget-list" id="sidebar-trending-list">
+              <!-- Dynamically populated by NewsHub.renderSidebarTrending() -->
+            </div>
+          </div>
+
+          <!-- 2. Live Weather Widget (with 38 districts dropdown) -->
+          <div class="sidebar-widget-card" id="weather-sidebar-widget">
+            <div class="sidebar-widget-header" style="background: linear-gradient(135deg, #E0F2FE, #BAE6FD);">
+              <div class="sidebar-widget-title" style="color:#0369A1;">
+                <i class="fas fa-cloud-sun-rain"></i> <strong>बिहार लाइव मौसम व AQI</strong>
+              </div>
+              <span style="font-size:0.72rem; color:#0369A1; font-weight:600;">24x7 अपडेट</span>
+            </div>
+            <div class="weather-card-body">
+              <select id="weather-district-select" class="weather-district-select" onchange="NewsHub.updateWeatherWidget(this.value)">
+                <!-- 38 districts options populated by NewsHub.initWeatherWidget() -->
+              </select>
+              <div class="weather-main-display">
+                <div>
+                  <div class="weather-temp-big" id="weather-temp-val">29°C</div>
+                  <div class="weather-condition-tag" id="weather-condition-val">☀️ साफ़ धूप व खिली हवा</div>
+                </div>
+                <div class="weather-icon-big" id="weather-icon-val">🌤️</div>
+              </div>
+              <div class="weather-stats-grid">
+                <div class="weather-stat-cell">
+                  <i class="fas fa-wind" style="color:#0284C7;"></i>
+                  <span>हवा: <strong>11 km/h</strong></span>
+                </div>
+                <div class="weather-stat-cell">
+                  <i class="fas fa-droplet" style="color:#0284C7;"></i>
+                  <span>नमी: <strong>58%</strong></span>
+                </div>
+                <div class="weather-stat-cell" style="grid-column:1/-1;">
+                  <i class="fas fa-lungs" style="color:#16A34A;"></i>
+                  <span>वायु गुणवत्ता (AQI): <strong id="weather-aqi-val" style="color:#16A34A;">88 (संतोषजनक)</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Daily Poll Widget (Interactive Voting & Live Animated %) -->
+          <div class="sidebar-widget-card" id="daily-poll-widget">
+            <div class="sidebar-widget-header" style="background: linear-gradient(135deg, #F3E8FF, #E9D5FF);">
+              <div class="sidebar-widget-title" style="color:#7E22CE;">
+                <i class="fas fa-poll"></i> <strong>आज का बड़ा सवाल (Daily Poll)</strong>
+              </div>
+              <span style="font-size:0.72rem; color:#7E22CE; font-weight:600;">जनमत</span>
+            </div>
+            <div class="poll-card-body">
+              <div class="poll-question" id="poll-question-text">
+                क्या बिहार में नए निवेश और रोज़गार के अवसरों में वास्तविक तेज़ी आ रही है?
+              </div>
+              <div class="poll-options-list" id="poll-options-container">
+                <!-- Dynamically rendered -->
+              </div>
+              <div class="poll-meta-row">
+                <span id="poll-total-votes"><i class="fas fa-users"></i> 3,428 लोगों ने वोट किया</span>
+                <a href="javascript:void(0)" onclick="NewsHub.resetPollVote()" style="color:#7E22CE; font-weight:600; text-decoration:none;">वोट बदलें</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bihar Useful Utility Suite: Mandi Bhav, Sarkari Job/Exam Desk & Citizen Report -->
+  <section class="section bihar-utilities-section" style="background:#F8FAFC; border-top:1px solid #E2E8F0; border-bottom:1px solid #E2E8F0;">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="sub-header-badge" style="background:#E8F5E9; color:#1B5E20; border:1px solid #C8E6C9;">
+            <i class="fas fa-tools"></i> बिहार जन-उपयोगी सेवाएं (Bihar Utilities)
+          </span>
+          <h2 class="section-title mt-1">मंडी भाव, सरकारी भर्ती डेस्क व जन-शिकायत</h2>
+        </div>
+      </div>
+
+      <div class="utility-grid">
+        <!-- Card 1: Bihar Mandi Bhav -->
+        <div class="utility-card">
+          <div class="utility-card-header" style="background: linear-gradient(135deg, #1B5E20, #2E7D32); color:white; padding: 14px 18px; border-radius: 12px 12px 0 0; display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0; font-size:1.05rem; display:flex; align-items:center; gap:8px;">
+              <i class="fas fa-seedling"></i> बिहार प्रमुख मंडी भाव (Live Rates)
+            </h3>
+            <span class="badge" style="background:rgba(255,255,255,0.25); color:white; font-size:0.75rem; padding:3px 8px; border-radius:12px;">आज का भाव</span>
+          </div>
+          <div class="utility-card-body" style="padding:16px; background:white; border:1px solid #E2E8F0; border-top:none; border-radius: 0 0 12px 12px;">
+            <table class="mandi-table" style="width:100%; font-size:0.88rem; border-collapse:collapse;">
+              <thead>
+                <tr style="border-bottom:2px solid #E2E8F0; text-align:left; color:#64748B;">
+                  <th style="padding:6px 4px;">फसल/उत्पाद</th>
+                  <th style="padding:6px 4px;">मंडी केंद्र</th>
+                  <th style="padding:6px 4px; text-align:right;">औसत भाव (रु/क्विंटल)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #F1F5F9;">
+                  <td style="padding:8px 4px; font-weight:600;">👑 मखाना (Super Grade)</td>
+                  <td style="padding:8px 4px; color:#64748B;">दरभंगा / मधुबनी</td>
+                  <td style="padding:8px 4px; text-align:right; font-weight:700; color:#1B5E20;">₹19,500 - ₹24,000</td>
+                </tr>
+                <tr style="border-bottom:1px solid #F1F5F9;">
+                  <td style="padding:8px 4px; font-weight:600;">🌽 मक्का (Maize)</td>
+                  <td style="padding:8px 4px; color:#64748B;">गुलाबबाग, पूर्णिया</td>
+                  <td style="padding:8px 4px; text-align:right; font-weight:700; color:#1B5E20;">₹2,240 / क्विं.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #F1F5F9;">
+                  <td style="padding:8px 4px; font-weight:600;">🌾 कतरनी चावल (Katarni)</td>
+                  <td style="padding:8px 4px; color:#64748B;">भागलपुर मंडी</td>
+                  <td style="padding:8px 4px; text-align:right; font-weight:700; color:#1B5E20;">₹4,850 / क्विं.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #F1F5F9;">
+                  <td style="padding:8px 4px; font-weight:600;">🌾 गेहूं (Wheat Sharbati)</td>
+                  <td style="padding:8px 4px; color:#64748B;">मोकामा / पटना</td>
+                  <td style="padding:8px 4px; text-align:right; font-weight:700; color:#1B5E20;">₹2,420 / क्विं.</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 4px; font-weight:600;">🥔 लाल आलू (Potato)</td>
+                  <td style="padding:8px 4px; color:#64748B;">बिहारशरीफ, नालंदा</td>
+                  <td style="padding:8px 4px; text-align:right; font-weight:700; color:#1B5E20;">₹1,650 / क्विं.</td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="margin-top:12px; font-size:0.78rem; color:#64748B; display:flex; justify-content:space-between; align-items:center;">
+              <span>* ई-नाम (e-NAM) व कृषि बाजार समिति दरें</span>
+              <a href="news.html" style="color:#1B5E20; font-weight:600; text-decoration:none;">कृषि समाचार पढ़ें →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Sarkari Job & Exam Alert Desk -->
+        <div class="utility-card">
+          <div class="utility-card-header" style="background: linear-gradient(135deg, #0D47A1, #1565C0); color:white; padding: 14px 18px; border-radius: 12px 12px 0 0; display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0; font-size:1.05rem; display:flex; align-items:center; gap:8px;">
+              <i class="fas fa-briefcase"></i> सरकारी भर्ती &amp; परीक्षा अलर्ट डेस्क
+            </h3>
+            <span class="badge" style="background:rgba(255,255,255,0.25); color:white; font-size:0.75rem; padding:3px 8px; border-radius:12px;">Active Notifications</span>
+          </div>
+          <div class="utility-card-body" style="padding:16px; background:white; border:1px solid #E2E8F0; border-top:none; border-radius: 0 0 12px 12px;">
+            <ul class="job-alert-list" style="list-style:none; padding:0; margin:0;">
+              <li style="padding:10px 0; border-bottom:1px solid #F1F5F9; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong style="display:block; font-size:0.9rem; color:#0F172A;">BPSC 70वीं संयुक्त परीक्षा</strong>
+                  <span style="font-size:0.78rem; color:#64748B;">कुल पद: 1,957+ • मुख्य परीक्षा प्रारूप अपडेट</span>
+                </div>
+                <a href="news.html" class="badge-link" style="background:#E3F2FD; color:#0D47A1; padding:4px 10px; border-radius:8px; font-size:0.8rem; font-weight:600; text-decoration:none;">विस्तृत देखें</a>
+              </li>
+              <li style="padding:10px 0; border-bottom:1px solid #F1F5F9; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong style="display:block; font-size:0.9rem; color:#0F172A;">बिहार सिपाही भर्ती परीक्षा (CSBC)</strong>
+                  <span style="font-size:0.78rem; color:#64748B;">21,391 पद • शारीरिक दक्षता परीक्षा (PET) शेड्यूल</span>
+                </div>
+                <a href="news.html" class="badge-link" style="background:#E3F2FD; color:#0D47A1; padding:4px 10px; border-radius:8px; font-size:0.8rem; font-weight:600; text-decoration:none;">नोटिस पढ़ें</a>
+              </li>
+              <li style="padding:10px 0; border-bottom:1px solid #F1F5F9; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong style="display:block; font-size:0.9rem; color:#0F172A;">बिहार शिक्षक भर्ती TRE 4.0</strong>
+                  <span style="font-size:0.78rem; color:#64748B;">शिक्षा विभाग • 80,000+ पदों की रोस्टर क्लीयरेंस</span>
+                </div>
+                <a href="news.html" class="badge-link" style="background:#E3F2FD; color:#0D47A1; padding:4px 10px; border-radius:8px; font-size:0.8rem; font-weight:600; text-decoration:none;">अपडेट्स</a>
+              </li>
+              <li style="padding:10px 0; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong style="display:block; font-size:0.9rem; color:#0F172A;">BSSC द्वितीय इंटर स्तरीय परीक्षा</strong>
+                  <span style="font-size:0.78rem; color:#64748B;">12,199 पद • 25 लाख+ आवेदकों का एडमिट कार्ड नोटिस</span>
+                </div>
+                <a href="news.html" class="badge-link" style="background:#E3F2FD; color:#0D47A1; padding:4px 10px; border-radius:8px; font-size:0.8rem; font-weight:600; text-decoration:none;">देखें</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: Bihar Citizen Desk & Governance -->
+        <div class="utility-card">
+          <div class="utility-card-header" style="background: linear-gradient(135deg, #DC2626, #C62828); color:white; padding: 14px 18px; border-radius: 12px 12px 0 0; display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0; font-size:1.05rem; display:flex; align-items:center; gap:8px;">
+              <i class="fas fa-bullhorn"></i> नागरिक रिपोर्टर &amp; जन सहायता
+            </h3>
+            <span class="badge" style="background:rgba(255,255,255,0.25); color:white; font-size:0.75rem; padding:3px 8px; border-radius:12px;">Jan Sunwai</span>
+          </div>
+          <div class="utility-card-body" style="padding:16px; background:white; border:1px solid #E2E8F0; border-top:none; border-radius: 0 0 12px 12px;">
+            <p style="font-size:0.86rem; color:#475569; margin-bottom:12px; line-height:1.5;">
+              क्या आपके गाँव, पंचायत या शहर में बिजली, सड़क, अस्पताल, नल-जल या भूमि सर्वेक्षण की कोई समस्या है? हमें अपनी खबर या वीडियो भेजें।
+            </p>
+            <button onclick="BSH.openCitizenModal()" class="btn btn-primary" style="width:100%; display:flex; justify-content:center; align-items:center; gap:8px; padding:10px 14px; font-size:0.92rem;">
+              <i class="fas fa-camera"></i> अपनी खबर / समस्या भेजें
+            </button>
+            <div style="margin-top:14px; padding-top:12px; border-top:1px solid #E2E8F0; font-size:0.8rem; color:#64748B;">
+              <div style="margin-bottom:6px;"><strong>📞 आपातकालीन हेल्पलाइन नंबर:</strong></div>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <span style="background:#FFF3E0; color:#C62828; padding:3px 8px; border-radius:6px; font-weight:600;">डायल 112 (आपातकाल)</span>
+                <span style="background:#E8F5E9; color:#1B5E20; padding:3px 8px; border-radius:6px; font-weight:600;">1912 (बिजली हेल्प)</span>
+                <span style="background:#E3F2FD; color:#0D47A1; padding:3px 8px; border-radius:6px; font-weight:600;">104 (स्वास्थ्य)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dedicated About Us Section (हमारे बारे में) -->
+  <section class="bsh-about-section" id="about-bsh">
+    <div class="container">
+      <div class="section-header" style="text-align:center; max-width:800px; margin:0 auto 20px auto;">
+        <div>
+          <span class="sub-header-badge" style="background:#FFF3E0; color:#E65100; border:1px solid #FFE0B2;">
+            <i class="fas fa-landmark"></i> निष्पक्ष व स्वतंत्र डिजिटल मीडिया
+          </span>
+          <h2 class="section-title mt-1">हमारे बारे में (About Bihar Samachar Hub)</h2>
+          <p style="color:#64748B; font-size:0.95rem; margin-top:8px; line-height:1.6;">
+            बिहार के सभी 38 जिलों, 534 प्रखंडों और 8,406 ग्राम पंचायतों तक निष्पक्ष, प्रामाणिक और बिना किसी राजनीतिक दबाव के ज़मीनी सच्चाई पहुँचाने का पहला समर्पित हाइपरलोकल डिजिटल मंच।
+          </p>
+        </div>
+      </div>
+
+      <div class="about-features-grid">
+        <!-- Feature 1 -->
+        <div class="about-feature-card">
+          <div class="about-feature-icon" style="background:#FFF3E0; color:#DC2626;">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>हमारा लक्ष्य और संकल्प (Our Mission)</h3>
+          <p>
+            राष्ट्रीय मीडिया की उपेक्षा के बीच बिहार के दूर-दराज के गाँवों, टोलों और प्रखंडों की अनसुनी आवाज़ को मुख्यधारा में लाना। गाँव के विकास, पंचायत चुनाव, स्वास्थ्य, ग्रामीण सड़क और शिक्षा की सच्ची तस्वीर प्रस्तुत करना।
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="about-feature-card">
+          <div class="about-feature-icon" style="background:#E8F5E9; color:#1B5E20;">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>100% तथ्यपरक पत्रकारिता (Fact-Checked)</h3>
+          <p>
+            हम किसी राजनीतिक दल या कॉर्पोरेट स्वार्थ से मुक्त होकर पूर्ण निष्पक्षता के साथ कार्य करते हैं। हर खबर को हमारे पटना केंद्रीय संपादकीय ब्यूरो और स्थानीय ज़िला संवाददाताओं द्वारा 2-स्तरीय सत्यापन के बाद ही प्रसारित किया जाता है।
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="about-feature-card">
+          <div class="about-feature-icon" style="background:#E3F2FD; color:#0D47A1;">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h3>नागरिक-प्रथम व उपयोगी सेवाएं (Citizen First)</h3>
+          <p>
+            BPSC, सिपाही व शिक्षक भर्ती के आधिकारिक सर्कुलर, कृषि मंडी भाव, भूमि सर्वेक्षण गाइडलाइन, और आपातकालीन हेल्पलाइन सीधे बिहार के युवाओं और किसानों तक पहुँचाना हमारा प्रमुख कर्तव्य है।
+          </p>
+        </div>
+      </div>
+
+      <!-- State Reach Stats Row -->
+      <div class="about-stats-row">
+        <div class="about-stat-box">
+          <div class="about-stat-number">38</div>
+          <div class="about-stat-text">जिले (संपूर्ण बिहार कवरेज)</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-number">534</div>
+          <div class="about-stat-text">प्रखंड (ग्राउंड नेटवर्क)</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-number">8,406</div>
+          <div class="about-stat-text">ग्राम पंचायतें कनेक्टेड</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-number">24x7</div>
+          <div class="about-stat-text">लाइव डिजिटल न्यूज़ रूम</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dedicated Contact Us Section (संपर्क करें) -->
+  <section class="bsh-contact-section" id="contact-bsh">
+    <div class="container">
+      <div class="section-header" style="text-align:center; max-width:800px; margin:0 auto 20px auto;">
+        <div>
+          <span class="sub-header-badge" style="background:#E0F2FE; color:#0369A1; border:1px solid #BAE6FD;">
+            <i class="fas fa-headset"></i> 24x7 संपादकीय व पाठक सेवा
+          </span>
+          <h2 class="section-title mt-1">हमसे संपर्क करें (Contact Bureau &amp; Desk)</h2>
+          <p style="color:#64748B; font-size:0.95rem; margin-top:8px; line-height:1.6;">
+            समाचार सुझाव, प्रेस विज्ञप्ति, विज्ञापन साझेदारी या किसी खबर पर आपत्ति/शिकायत के लिए हमारी टीम से सीधे जुड़ें।
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-layout-split">
+        <!-- Left: Official Bureau Details -->
+        <div class="contact-info-panel">
+          <div class="contact-detail-card">
+            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail-text">
+              <h4>मुख्य संपादकीय कार्यालय</h4>
+              <p>
+                बिहार समाचार हब डिजिटल मीडिया, 4th फ्लोर, प्रेस एन्क्लेव, बेली रोड (निकट पटना उच्च न्यायालय), पटना, बिहार - 800001
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail-card">
+            <div class="contact-detail-icon"><i class="fas fa-phone-volume"></i></div>
+            <div class="contact-detail-text">
+              <h4>फोन हेल्पलाइन व सहायता केंद्र</h4>
+              <p>
+                हेल्पलाइन: <a href="tel:+916122200100">+91 612 2200100</a><br>
+                समय: सोमवार से शनिवार (प्रातः 9 बजे से सायं 8 बजे)
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail-card">
+            <div class="contact-detail-icon"><i class="fas fa-envelope-open-text"></i></div>
+            <div class="contact-detail-text">
+              <h4>विभागीय ईमेल पते</h4>
+              <p>
+                समाचार व प्रेस विज्ञप्ति: <a href="mailto:news@biharsamacharhub.in">news@biharsamacharhub.in</a><br>
+                संपादकीय राय: <a href="mailto:editor@biharsamacharhub.in">editor@biharsamacharhub.in</a><br>
+                विज्ञापन व साझेदारी: <a href="mailto:ads@biharsamacharhub.in">ads@biharsamacharhub.in</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail-card">
+            <div class="contact-detail-icon" style="background:#F3E8FF; color:#7E22CE;"><i class="fas fa-gavel"></i></div>
+            <div class="contact-detail-text">
+              <h4>शिकायत निवारण अधिकारी (Grievance Officer)</h4>
+              <p>
+                <strong>श्री राजेश कुमार वर्मा</strong> (वरिष्ठ संपादक)<br>
+                ईमेल: <a href="mailto:grievance@biharsamacharhub.in">grievance@biharsamacharhub.in</a><br>
+                <span style="font-size:0.75rem; color:#64748B;">(सूचना प्रौद्योगिकी - मध्यवर्ती दिशानिर्देश और डिजिटल मीडिया आचार संहिता 2021 के अंतर्गत)</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Quick Message Form -->
+        <div class="contact-form-card">
+          <h3>संदेश या समाचार सुझाव भेजें</h3>
+          <p>नीचे दिए गए फॉर्म को भरें, हमारी संपादकीय टीम 24 घंटे में आपसे संपर्क करेगी।</p>
+          <form onsubmit="NewsHub.submitContactForm(event)">
+            <div class="contact-form-group">
+              <label>आपका नाम *</label>
+              <input type="text" id="contact-form-name" class="contact-form-input" placeholder="पूरा नाम लिखें" required>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="contact-form-group">
+                <label>मोबाइल / व्हाट्सएप नंबर *</label>
+                <input type="tel" id="contact-form-phone" class="contact-form-input" placeholder="10 अंकों का नंबर" required>
+              </div>
+              <div class="contact-form-group">
+                <label>ईमेल पता</label>
+                <input type="email" id="contact-form-email" class="contact-form-input" placeholder="name@example.com">
+              </div>
+            </div>
+
+            <div class="contact-form-group">
+              <label>संपर्क का विषय *</label>
+              <select id="contact-form-subject" class="contact-form-select" required>
+                <option value="समाचार सुझाव">समाचार सुझाव (News Tip / Ground Story)</option>
+                <option value="विज्ञापन सहयोग">विज्ञापन व प्रायोजन (Advertising / Sponsorship)</option>
+                <option value="शिकायत या सुधार">खबर में संशोधन या शिकायत (Correction / Grievance)</option>
+                <option value="सामान्य पूछताछ">सामान्य पूछताछ (General Inquiry)</option>
+              </select>
+            </div>
+
+            <div class="contact-form-group">
+              <label>आपका विस्तृत संदेश *</label>
+              <textarea id="contact-form-message" class="contact-form-textarea" rows="4" placeholder="अपना संदेश या खबर का पूरा विवरण लिखें..." required></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit-btn">
+              <i class="fas fa-paper-plane"></i> संदेश भेजें (Submit Message)
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / WhatsApp Bulletin Signup -->
+  <div class="container">
+    <div class="portal-newsletter-section">
+      <div class="newsletter-content">
+        <h3><i class="fab fa-whatsapp" style="color:#25D366; margin-right:8px;"></i> दैनिक बिहार बुलेटिन व्हाट्सएप पर पाएं</h3>
+        <p>हर सुबह 8 बजे अपने जिले की बड़ी खबरें, मौसम और सरकारी भर्ती सूचना सीधे अपने फोन पर।</p>
+      </div>
+      <form class="newsletter-form-wrap" onsubmit="event.preventDefault(); NewsHub.subscribeNewsletter();">
+        <input type="text" id="newsletter-input-phone" class="newsletter-input" placeholder="अपना 10-अंकों का व्हाट्सएप नंबर दर्ज करें" required>
+        <button type="submit" class="newsletter-submit-btn"><i class="fas fa-paper-plane"></i> सब्सक्राइब करें</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- About Section in Footer -->
+        <div class="footer-brand" id="about-bsh-footer">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+            <img src="assets/images/logo-emblem.svg" alt="बिहार समाचार हब" width="42" height="42" style="border-radius:50%; filter:drop-shadow(0 3px 8px rgba(224,91,28,0.5));">
+            <h3 style="margin:0; font-size:1.35rem; color:#FFFFFF; font-weight:800;">बिहार समाचार <span style="background:linear-gradient(135deg, #FF6F00, #DC2626); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">HUB</span></h3>
+          </div>
+          <p data-i18n="footer_desc" style="margin-bottom:12px; line-height:1.6;">
+            बिहार के सभी 38 जिलों, 534 प्रखंडों और ग्राम पंचायतों की प्रामाणिक खबरें, लाइव मौसम, कृषि मंडी भाव, और प्रशासनिक जानकारी का विश्वसनीय डिजिटल मंच।
+          </p>
+          <div class="footer-social-links" style="display:flex; gap:10px; margin-top:10px;">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,0.1); display:inline-flex; align-items:center; justify-content:center; color:white; transition:all 0.2s;"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,0.1); display:inline-flex; align-items:center; justify-content:center; color:white; transition:all 0.2s;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:#25D366; display:inline-flex; align-items:center; justify-content:center; color:white; transition:all 0.2s;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:#0088cc; display:inline-flex; align-items:center; justify-content:center; color:white; transition:all 0.2s;"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style="width:34px; height:34px; border-radius:50%; background:#FF0000; display:inline-flex; align-items:center; justify-content:center; color:white; transition:all 0.2s;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4 data-i18n="quick_links">महत्वपूर्ण लिंक</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav_home">होम पेज</a></li>
+            <li><a href="districts.html" data-i18n="nav_districts">सभी 38 जिले (A-Z)</a></li>
+            <li><a href="news.html" data-i18n="nav_news">ताजा समाचार व लाइव टिकर</a></li>
+            <li><a href="about.html">हमारे बारे में (About Us)</a></li>
+            <li><a href="contact.html">संपर्क व शिकायत (Contact Us)</a></li>
+            <li><a href="javascript:void(0)" onclick="BSH.openCitizenModal()">नागरिक समस्या भेजें</a></li>
+            <li><a href="javascript:void(0)" onclick="BSH.openSavedBookmarksModal()">सेव्ड खबरें (Bookmarks)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section in Footer -->
+        <div class="footer-contact" id="contact-bsh-footer">
+          <h4>संपादकीय व संपर्क</h4>
+          <p style="font-size:0.88rem; color:#94A3B8; margin-bottom:8px;">
+            <i class="fas fa-map-marker-alt" style="color:var(--primary); margin-right:6px;"></i> प्रेस एन्क्लेव, बेली रोड, पटना - 800001
+          </p>
+          <p style="font-size:0.88rem; color:#94A3B8; margin-bottom:8px;">
+            <i class="fas fa-envelope" style="color:var(--primary); margin-right:6px;"></i> contact@biharsamacharhub.in
+          </p>
+          <p style="font-size:0.88rem; color:#94A3B8; margin-bottom:12px;">
+            <i class="fas fa-phone-alt" style="color:var(--primary); margin-right:6px;"></i> +91 612 2200100 (हेल्पलाइन)
+          </p>
+          <div class="footer-disclaimer">
+            <h5 style="color:#CBD5E1; margin-bottom:4px; font-size:0.85rem;">अस्वीकरण:</h5>
+            <p style="font-size:0.8rem; color:#64748B;">यह स्वतंत्र जन-सूचना एवं समाचार एकत्रीकरण मंच है। सभी आंकड़े आधिकारिक स्रोतों से संकलित हैं।</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comprehensive 38-District Sitemap by 9 Divisions -->
+      <div class="footer-district-directory">
+        <div class="footer-division-title">
+          <i class="fas fa-sitemap"></i> बिहार के सभी 38 जिलों का संपूर्ण डायरेक्टरी मैप (All 38 Districts Directory):
+        </div>
+        <div class="footer-division-grid">
+          <div class="division-col">
+            <h5>पटना प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=patna">पटना (Patna)</a></li>
+              <li><a href="district/index.html?id=nalanda">नालंदा (Nalanda)</a></li>
+              <li><a href="district/index.html?id=bhojpur">भोजपुर (Bhojpur)</a></li>
+              <li><a href="district/index.html?id=buxar">बक्सर (Buxar)</a></li>
+              <li><a href="district/index.html?id=rohtas">रोहतास (Rohtas)</a></li>
+              <li><a href="district/index.html?id=kaimur">कैमूर (Kaimur)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>तिरहुत प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=muzaffarpur">मुजफ्फरपुर (Muzaffarpur)</a></li>
+              <li><a href="district/index.html?id=east-champaran">पूर्वी चंपारण (Motihari)</a></li>
+              <li><a href="district/index.html?id=west-champaran">पश्चिम चंपारण (Bettiah)</a></li>
+              <li><a href="district/index.html?id=sitamarhi">सीतामढ़ी (Sitamarhi)</a></li>
+              <li><a href="district/index.html?id=sheohar">शिवहर (Sheohar)</a></li>
+              <li><a href="district/index.html?id=vaishali">वैशाली (Vaishali)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>मगध प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=gaya">गया (Gaya)</a></li>
+              <li><a href="district/index.html?id=aurangabad">औरंगाबाद (Aurangabad)</a></li>
+              <li><a href="district/index.html?id=nawada">नवादा (Nawada)</a></li>
+              <li><a href="district/index.html?id=jehanabad">जहानाबाद (Jehanabad)</a></li>
+              <li><a href="district/index.html?id=arwal">अरवल (Arwal)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>सारण प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=saran">सारण/छपरा (Saran)</a></li>
+              <li><a href="district/index.html?id=siwan">सीवान (Siwan)</a></li>
+              <li><a href="district/index.html?id=gopalganj">गोपालगंज (Gopalganj)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>दरभंगा प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=darbhanga">दरभंगा (Darbhanga)</a></li>
+              <li><a href="district/index.html?id=madhubani">मधुबनी (Madhubani)</a></li>
+              <li><a href="district/index.html?id=samastipur">समस्तीपुर (Samastipur)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>कोसी प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=saharsa">सहरसा (Saharsa)</a></li>
+              <li><a href="district/index.html?id=supaul">सुपौल (Supaul)</a></li>
+              <li><a href="district/index.html?id=madhepura">मधेपुरा (Madhepura)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>पूर्णिया प्रमंडल</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=purnia">पूर्णिया (Purnia)</a></li>
+              <li><a href="district/index.html?id=katihar">कटिहार (Katihar)</a></li>
+              <li><a href="district/index.html?id=araria">अररिया (Araria)</a></li>
+              <li><a href="district/index.html?id=kishanganj">किशनगंज (Kishanganj)</a></li>
+            </ul>
+          </div>
+          <div class="division-col">
+            <h5>भागलपुर व मुंगेर</h5>
+            <ul class="division-district-links">
+              <li><a href="district/index.html?id=bhagalpur">भागलपुर (Bhagalpur)</a></li>
+              <li><a href="district/index.html?id=banka">बांका (Banka)</a></li>
+              <li><a href="district/index.html?id=munger">मुंगेर (Munger)</a></li>
+              <li><a href="district/index.html?id=begusarai">बेगूसराय (Begusarai)</a></li>
+              <li><a href="district/index.html?id=khagaria">खगड़िया (Khagaria)</a></li>
+              <li><a href="district/index.html?id=jamui">जमुई (Jamui)</a></li>
+              <li><a href="district/index.html?id=lakhisarai">लखीसराय (Lakhisarai)</a></li>
+              <li><a href="district/index.html?id=sheikhpura">शेखपुरा (Sheikhpura)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="margin-top:25px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:0.82rem; color:#64748B;">
+        <div>&copy; 2024 बिहार समाचार हब (Bihar Samachar Hub) — सर्वाधिकार सुरक्षित।</div>
+        <div style="display:flex; align-items:center; gap:16px;">
+          <a href="admin.html" style="color:#94A3B8; text-decoration:none; font-weight:600;"><i class="fas fa-chart-line"></i> लाइव एनालिटिक्स</a>
+          <span>•</span>
+          <span>Made with ❤️ for Bihar</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/security.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/ab-testing.js" defer></script>
+  <script src="assets/js/districts.js" defer></script>
+  <script src="assets/js/news.js" defer></script>
+
+  <!-- Scroll to top -->
+  <button id="scroll-top" title="ऊपर जाएं" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Mobile Sticky Bottom Anchor Ad (320x50 Responsive Unit) -->
+  <div class="mobile-sticky-ad-anchor" id="mobile-sticky-anchor-ad">
+    <div class="mobile-anchor-ad-content">
+      <span class="mobile-anchor-badge"><i class="fas fa-ad"></i> SPONSORED</span>
+      <div class="mobile-anchor-title">BPSC 70वीं &amp; शिक्षक भर्ती: स्पेशल क्रैश कोर्स 50% छूट</div>
+      <a href="news.html" class="mobile-anchor-cta">देखें ➔</a>
+      <button class="mobile-anchor-close" onclick="document.getElementById('mobile-sticky-anchor-ad').style.display='none'" aria-label="Close Ad">✕</button>
+    </div>
+  </div>
+
+  <!-- Mobile App Bottom Navigation Dock (Ultra Pro Max PWA Experience) -->
+  <nav class="app-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="app-nav-item active">
+      <i class="fas fa-home"></i>
+      <span>होम</span>
+    </a>
+    <a href="districts.html" class="app-nav-item">
+      <i class="fas fa-map-marked-alt"></i>
+      <span>38 जिले</span>
+    </a>
+    <a href="news.html" class="app-nav-item">
+      <i class="fas fa-bolt"></i>
+      <span>लाइव न्यूज़</span>
+    </a>
+    <a href="javascript:void(0)" onclick="BSH.openSavedBookmarksModal()" class="app-nav-item">
+      <i class="fas fa-bookmark"></i>
+      <span>सेव्ड</span>
+    </a>
+    <a href="javascript:void(0)" onclick="BSH.openCitizenModal()" class="app-nav-item">
+      <i class="fas fa-bullhorn"></i>
+      <span>समस्या भेजें</span>
+    </a>
+  </nav>
+</body>
+</html>
