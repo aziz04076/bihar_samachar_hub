@@ -2223,9 +2223,16 @@ if sys.platform == "win32":
         pass
 
 class ThreadingServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
-    address_family = socket.AF_INET6 if socket.has_dualstack_ipv6() else socket.AF_INET
     allow_reuse_address = True
     daemon_threads = True
+
+    def __init__(self, server_address, RequestHandlerClass, bind_and_activate=True):
+        host, port = server_address
+        if ':' in host or host == '::':
+            self.address_family = socket.AF_INET6
+        else:
+            self.address_family = socket.AF_INET
+        super().__init__(server_address, RequestHandlerClass, bind_and_activate)
 
     def server_bind(self):
         if self.address_family == socket.AF_INET6:
