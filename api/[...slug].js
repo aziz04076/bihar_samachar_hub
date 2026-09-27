@@ -21,6 +21,17 @@ module.exports = (req, res) => {
   }
   slug = String(slug || '').toLowerCase().replace(/^\/+|\/+$/g, '');
 
+  // 0. /api/health
+  if (slug === 'health') {
+    return res.status(200).json({
+      status: 'healthy',
+      online: true,
+      service: 'Bihar Samachar Hub Serverless API',
+      version: '4.0.0',
+      timestamp: new Date().toISOString()
+    });
+  }
+
   // 1. /api/news
   if (slug === 'news' || slug === '') {
     try {

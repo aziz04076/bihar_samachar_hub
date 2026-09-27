@@ -304,11 +304,15 @@
 
   </div>
 
+  <script src="assets/js/config.js"></script>
   <script>
     const AdminDashboard = {
       async fetchMetrics() {
         try {
-          const res = await fetch('/api/analytics?_t=' + Date.now());
+          const apiBase = (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]'))
+            ? window.API_BASE.replace(/\/+$/, '')
+            : '/api';
+          const res = await fetch(`${apiBase}/analytics?_t=` + Date.now());
           if (!res.ok) return;
           const data = await res.json();
           this.render(data);
@@ -367,7 +371,10 @@
         const btn = document.getElementById('btn-force-sync');
         if (btn) btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> सिंक हो रहा है...';
         try {
-          const res = await fetch('/api/sync');
+          const apiBase = (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]'))
+            ? window.API_BASE.replace(/\/+$/, '')
+            : '/api';
+          const res = await fetch(`${apiBase}/sync`);
           const data = await res.json();
           alert(`✅ सिंक सफल: ${data.added_count} नई खबरें जोड़ी गईं! कुल: ${data.total_news}`);
           this.fetchMetrics();

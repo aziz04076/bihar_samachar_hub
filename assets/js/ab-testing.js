@@ -79,9 +79,16 @@ const BSH_AB = {
   trackImpression() {
     const headlineVar = this.getVariant('hero_headline');
 
+    const getTrackUrl = () => {
+      if (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]')) {
+        return `${window.API_BASE.replace(/\/+$/, '')}/analytics/track`;
+      }
+      return '/api/analytics/track';
+    };
+
     if (window.location.protocol.startsWith('http')) {
       try {
-        fetch('/api/analytics/track', {
+        fetch(getTrackUrl(), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -95,9 +102,16 @@ const BSH_AB = {
 
   trackConversion(testId) {
     const variant = this.getVariant(testId);
+    const getTrackUrl = () => {
+      if (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]')) {
+        return `${window.API_BASE.replace(/\/+$/, '')}/analytics/track`;
+      }
+      return '/api/analytics/track';
+    };
+
     if (window.location.protocol.startsWith('http')) {
       try {
-        fetch('/api/analytics/track', {
+        fetch(getTrackUrl(), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

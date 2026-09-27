@@ -1,0 +1,3509 @@
+{
+  "districts": [
+    {
+      "id": "patna",
+      "slug": "patna",
+      "name_hi": "पटना",
+      "name_en": "Patna",
+      "division_hi": "पटना प्रमंडल",
+      "division_en": "Patna Division",
+      "headquarters_hi": "पटना",
+      "headquarters_en": "Patna",
+      "area_sq_km": 3202,
+      "population_2011": 5838465,
+      "pin_codes": [
+        "800001",
+        "800002",
+        "800003",
+        "800004",
+        "800005",
+        "800006",
+        "800007",
+        "800020"
+      ],
+      "blocks": [
+        "Phulwari",
+        "Sampatchak",
+        "Daniawan",
+        "Bikram",
+        "Maner",
+        "Masaurhi",
+        "Paliganj",
+        "Punpun",
+        "Dulhin Bazar",
+        "Naubatpur",
+        "Fatuha",
+        "Dhanarua",
+        "Khusrupur",
+        "Mokama",
+        "Barh",
+        "Pandarak"
+      ],
+      "mp": [
+        {
+          "name": "Ravi Shankar Prasad",
+          "party": "BJP",
+          "constituency": "Patna Sahib (Lok Sabha)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Misa Bharti",
+          "party": "RJD",
+          "constituency": "Pataliputra (Lok Sabha 2024)",
+          "photo_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Nand Kishore Yadav",
+          "party": "BJP",
+          "constituency": "Patna Sahib (Speaker, Bihar Vidhan Sabha)",
+          "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Nitin Nabin",
+          "party": "BJP",
+          "constituency": "Bankipur (Minister, Road Construction)",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Sanjeev Chaurasia",
+          "party": "BJP",
+          "constituency": "Digha",
+          "photo_url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Kundan Kumar (IAS)",
+      "sp": "Kartikeya K. Sharma (IPS)",
+      "history_hi": "पटना का इतिहास लगभग 2500 वर्षों से भी अधिक पुराना है। इसका प्राचीन नाम पाटलिपुत्र था, जो मगध साम्राज्य की राजधानी थी। मौर्य वंश के सम्राट चंद्रगुप्त मौर्य और अशोक महान के शासनकाल में यह नगर विश्व के सबसे बड़े और समृद्ध नगरों में से एक था। यूनानी राजदूत मेगस्थनीज ने इसे पाटलिपुत्र कह कर एक भव्य नगर बताया था। गुप्त काल में भी पटना का विशेष महत्व रहा। ब्रिटिश शासन में यह बंगाल प्रेसिडेंसी का एक महत्वपूर्ण केंद्र बना। 1912 में बिहार के अलग प्रांत बनने पर पटना इसकी राजधानी बनी, जो आज भी बनी हुई है।",
+      "history_en": "Patna's history stretches back over 2,500 years. Known as Pataliputra in ancient times, it was the capital of the mighty Magadha Empire. During the reigns of Chandragupta Maurya and Emperor Ashoka, it was one of the world's largest and most prosperous cities. Greek ambassador Megasthenes described it as a magnificent city. The city retained importance through the Gupta period and later came under Mughal and then British rule. In 1912, when Bihar was carved out as a separate province from Bengal, Patna became its capital — a status it proudly retains today.",
+      "tourism": [
+        {
+          "name_hi": "गोलघर",
+          "name_en": "Golghar",
+          "description_hi": "1786 में अंग्रेजों द्वारा बनाया गया यह विशाल अनाज भंडार पटना का प्रतीक चिन्ह है। इसकी सीढ़ियों से पूरे शहर और गंगा का अद्भुत दृश्य दिखता है।",
+          "description_en": "Built in 1786 by the British as a granary, this beehive-shaped structure is Patna's iconic landmark. Its spiral staircases offer a panoramic view of the city and the Ganges.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Golghar_Patna.jpg/800px-Golghar_Patna.jpg",
+          "image_credit": "Wikimedia Commons"
+        },
+        {
+          "name_hi": "तख्त श्री पटना साहिब",
+          "name_en": "Takht Sri Patna Sahib",
+          "description_hi": "सिखों के दसवें गुरु गोविंद सिंह जी का जन्मस्थान, यह गुरुद्वारा सिखों के पांच तख्तों में से एक है और देश-विदेश से श्रद्धालु यहां आते हैं।",
+          "description_en": "Birthplace of Guru Gobind Singh Ji, the tenth Sikh Guru. This sacred Gurdwara is one of the five Takhts of Sikhism and draws pilgrims from around the world.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Gurudwara_Patna_Sahib.jpg/800px-Gurudwara_Patna_Sahib.jpg",
+          "image_credit": "Wikimedia Commons"
+        },
+        {
+          "name_hi": "पटना संग्रहालय",
+          "name_en": "Patna Museum",
+          "description_hi": "1917 में स्थापित यह संग्रहालय मौर्य और गुप्त काल की अनमोल मूर्तियों, पुरातात्विक कलाकृतियों से समृद्ध है। दीदारगंज यक्षी यहां की प्रमुख धरोहर है।",
+          "description_en": "Established in 1917, this museum houses priceless Maurya and Gupta period sculptures, the famous Didarganj Yakshi, and extensive archaeological collections.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Patna_museum.jpg/800px-Patna_museum.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "छठ पूजा (बिहार का सबसे बड़ा पर्व), दीपावली, होली, ईद, दुर्गा पूजा, सरस्वती पूजा",
+      "festivals_en": "Chhath Puja (Bihar's biggest festival), Diwali, Holi, Eid, Durga Puja, Saraswati Puja",
+      "food_hi": "लिट्टी-चोखा, सत्तू, कढ़ी-बड़ी, मालपुआ, खाजा, चूड़ा-दही, बालूशाही, खुरमा",
+      "food_en": "Litti-Chokha, Sattu, Kadhi-Badi, Malpua, Khaja, Chura-Dahi, Balushahi, Khurma",
+      "language_hi": "हिंदी (आधिकारिक), मैथिली, भोजपुरी, उर्दू",
+      "language_en": "Hindi (official), Maithili, Bhojpuri, Urdu",
+      "main_occupation_hi": "व्यापार, सरकारी सेवा, शिक्षा, कृषि",
+      "main_occupation_en": "Trade, Government Service, Education, Agriculture",
+      "agriculture_hi": "धान, गेहूं, मक्का, दलहन, सब्जियां",
+      "agriculture_en": "Paddy, Wheat, Maize, Pulses, Vegetables",
+      "industries_hi": "खाद्य प्रसंस्करण, निर्माण, शिक्षा संस्थान, IT सेवाएं",
+      "industries_en": "Food Processing, Construction, Educational Institutions, IT Services",
+      "map_embed_url": "https://maps.google.com/maps?q=Patna+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.5941,
+      "lng": 85.1376,
+      "image_url": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.9876,25.4441,85.2876,25.7441&layer=mapnik&marker=25.5941,85.1376",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.5941,85.1376+(Patna+District+Bihar)"
+    },
+    {
+      "id": "nalanda",
+      "slug": "nalanda",
+      "name_hi": "नालंदा",
+      "name_en": "Nalanda",
+      "division_hi": "पटना प्रमंडल",
+      "division_en": "Patna Division",
+      "headquarters_hi": "बिहारशरीफ",
+      "headquarters_en": "Bihar Sharif",
+      "area_sq_km": 2354,
+      "population_2011": 2877653,
+      "pin_codes": [
+        "803101",
+        "803107",
+        "803108",
+        "803109",
+        "803113",
+        "803115",
+        "803116",
+        "803118"
+      ],
+      "blocks": [
+        "Asthawan",
+        "Biharsharif",
+        "Bind",
+        "Chandi",
+        "Ekangarsarai",
+        "Giriak",
+        "Harnaut",
+        "Hilsa",
+        "Islampur",
+        "Karai Parsurai",
+        "Katrisarai",
+        "Noorsarai",
+        "Rahui",
+        "Sarmera",
+        "Silao",
+        "Tharthari"
+      ],
+      "mp": [
+        {
+          "name": "Kaushalendra Kumar",
+          "party": "JD(U)",
+          "constituency": "Nalanda (Lok Sabha)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Shrawan Kumar",
+          "party": "JD(U)",
+          "constituency": "Nalanda (Minister Rural Development)",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Dr. Sunil Kumar",
+          "party": "BJP",
+          "constituency": "Biharsharif",
+          "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Udita Singh (IAS)",
+      "sp": "Hriday Kant (IPS)",
+      "history_hi": "नालंदा विश्व के सबसे प्राचीन विश्वविद्यालयों में से एक नालंदा विश्वविद्यालय के लिए प्रसिद्ध है, जो 5वीं शताब्दी में स्थापित हुआ था। यहां चीन, कोरिया, जापान, तिब्बत जैसे देशों से विद्यार्थी अध्ययन करने आते थे। 1193 में बख्तियार खिलजी ने इसे नष्ट कर दिया। यह जिला भगवान महावीर और भगवान बुद्ध दोनों से जुड़ा है। राजगीर यहां का एक प्रमुख ऐतिहासिक और धार्मिक स्थल है। जापान सरकार के सहयोग से नालंदा विश्वविद्यालय को पुनः स्थापित किया गया है।",
+      "history_en": "Nalanda is world-famous for the ancient Nalanda University, established in the 5th century CE. Students from China, Korea, Japan, and Tibet came to study here. The great library was destroyed by Bakhtiyar Khilji in 1193. The district is associated with both Lord Mahavira and Lord Buddha. Rajgir is a major historical and religious site here. With Japan's support, Nalanda University has been re-established in modern times.",
+      "tourism": [
+        {
+          "name_hi": "नालंदा विश्वविद्यालय के अवशेष",
+          "name_en": "Nalanda University Ruins",
+          "description_hi": "यूनेस्को विश्व धरोहर स्थल, यह प्राचीन विश्वविद्यालय के भव्य अवशेष 5वीं शताब्दी की महानता को दर्शाते हैं।",
+          "description_en": "UNESCO World Heritage Site. The majestic ruins of the world's first residential university, dating to the 5th century CE.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nalanda_University_ruins.jpg/800px-Nalanda_University_ruins.jpg",
+          "image_credit": "Wikimedia Commons"
+        },
+        {
+          "name_hi": "राजगीर",
+          "name_en": "Rajgir",
+          "description_hi": "मगध साम्राज्य की प्राचीन राजधानी, बौद्ध और जैन धर्म का महत्वपूर्ण तीर्थ स्थल। यहां रोपवे और गर्म पानी के कुंड प्रसिद्ध हैं।",
+          "description_en": "The ancient capital of the Magadha Empire and an important pilgrimage site for Buddhism and Jainism. Famous for its ropeway and hot springs.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Rajgir_Ropeway.jpg/800px-Rajgir_Ropeway.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, राजगीर महोत्सव, मालमास मेला, बुद्ध जयंती",
+      "festivals_en": "Chhath Puja, Rajgir Festival, Malamass Fair, Buddha Jayanti",
+      "food_hi": "लिट्टी-चोखा, सत्तू, खाजा, तिलकुट",
+      "food_en": "Litti-Chokha, Sattu, Khaja, Tilkut",
+      "language_hi": "हिंदी, मैथिली, मगही",
+      "language_en": "Hindi, Maithili, Magahi",
+      "main_occupation_hi": "कृषि, पर्यटन, व्यापार",
+      "main_occupation_en": "Agriculture, Tourism, Trade",
+      "agriculture_hi": "धान, गेहूं, मक्का, सब्जियां, आम",
+      "agriculture_en": "Paddy, Wheat, Maize, Vegetables, Mango",
+      "industries_hi": "खाद्य प्रसंस्करण, हस्तशिल्प, पर्यटन उद्योग",
+      "industries_en": "Food Processing, Handicrafts, Tourism Industry",
+      "map_embed_url": "https://maps.google.com/maps?q=Nalanda+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.1982,
+      "lng": 85.5149,
+      "image_url": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.3649,25.0482,85.6649,25.3482&layer=mapnik&marker=25.1982,85.5149",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.1982,85.5149+(Nalanda+District+Bihar)"
+    },
+    {
+      "id": "gaya",
+      "slug": "gaya",
+      "name_hi": "गया",
+      "name_en": "Gaya",
+      "division_hi": "मगध प्रमंडल",
+      "division_en": "Magadh Division",
+      "headquarters_hi": "गया",
+      "headquarters_en": "Gaya",
+      "area_sq_km": 4976,
+      "population_2011": 4391418,
+      "pin_codes": [
+        "823001",
+        "823002",
+        "823003",
+        "824101",
+        "824102",
+        "824120",
+        "824121",
+        "824201"
+      ],
+      "blocks": [
+        "Amas",
+        "Atri",
+        "Barachatti",
+        "Belaganj",
+        "Bodh Gaya",
+        "Dobhi",
+        "Fatehpur",
+        "Gurua",
+        "Khizarsarai",
+        "Konch",
+        "Manpur",
+        "Mohanpur",
+        "Sherghati",
+        "Tankuppa",
+        "Tekari",
+        "Wazirganj"
+      ],
+      "mp": [
+        {
+          "name": "Jitan Ram Manjhi",
+          "party": "HAM-Secular",
+          "constituency": "Gaya (Union MSME Minister)",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Dr. Prem Kumar",
+          "party": "BJP",
+          "constituency": "Gaya Town (Minister, Agriculture)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Kumar Sarvjeet",
+          "party": "RJD",
+          "constituency": "Bodh Gaya",
+          "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Shashank Shubhankar (IAS)",
+      "sp": "Sushil Kumar (IPS)",
+      "history_hi": "गया का इतिहास धार्मिक और ऐतिहासिक दृष्टि से अत्यंत महत्वपूर्ण है। पास में स्थित बोधगया में भगवान गौतम बुद्ध को ज्ञान प्राप्त हुआ था, जो विश्व भर के बौद्धों के लिए सबसे पवित्र स्थल है। विष्णुपद मंदिर भगवान विष्णु के चरण चिन्ह के लिए प्रसिद्ध है। पितृपक्ष मेले के दौरान यहां लाखों श्रद्धालु पिंडदान करने आते हैं। मगध साम्राज्य का यह क्षेत्र कभी बौद्धिक और आध्यात्मिक विकास का केंद्र था।",
+      "history_en": "Gaya holds immense religious and historical significance. The nearby Bodh Gaya is where Gautama Buddha attained enlightenment — the most sacred site for Buddhists worldwide and a UNESCO World Heritage Site. The Vishnupad Temple is revered for Lord Vishnu's footprint. During Pitru Paksha, millions gather here for ancestral rites. This region was the heart of the Magadha Empire and a center of spiritual and intellectual growth.",
+      "tourism": [
+        {
+          "name_hi": "महाबोधि मंदिर, बोधगया",
+          "name_en": "Mahabodhi Temple, Bodh Gaya",
+          "description_hi": "यूनेस्को विश्व धरोहर स्थल — वह स्थान जहां भगवान बुद्ध को ज्ञान प्राप्त हुआ। यह मंदिर विश्व के बौद्धों के लिए परम पवित्र है।",
+          "description_en": "UNESCO World Heritage Site — the place where Buddha attained enlightenment under the Bodhi Tree. The most sacred site in Buddhism, drawing pilgrims from 100+ countries.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Mahabodhi_Temple_2.jpg/800px-Mahabodhi_Temple_2.jpg",
+          "image_credit": "Wikimedia Commons"
+        },
+        {
+          "name_hi": "विष्णुपद मंदिर",
+          "name_en": "Vishnupad Temple",
+          "description_hi": "भगवान विष्णु के 40 सेमी लंबे चरण चिन्ह के लिए प्रसिद्ध यह मंदिर हिंदुओं का एक प्रमुख तीर्थ स्थल है।",
+          "description_en": "Renowned for Lord Vishnu's 40 cm footprint impression, this 18th-century temple is one of Hinduism's most important pilgrimage sites.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vishnupad_temple_gaya.jpg/800px-Vishnupad_temple_gaya.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "पितृपक्ष मेला, बुद्ध जयंती, छठ पूजा, रामनवमी",
+      "festivals_en": "Pitru Paksha Mela, Buddha Jayanti, Chhath Puja, Ram Navami",
+      "food_hi": "तिलकुट, लाई, सत्तू, लिट्टी-चोखा, खाजा",
+      "food_en": "Tilkut, Lai, Sattu, Litti-Chokha, Khaja",
+      "language_hi": "हिंदी, मगही, अंगिका",
+      "language_en": "Hindi, Magahi, Angika",
+      "main_occupation_hi": "कृषि, पर्यटन, व्यापार, धार्मिक सेवाएं",
+      "main_occupation_en": "Agriculture, Tourism, Trade, Religious Services",
+      "agriculture_hi": "धान, गेहूं, मक्का, दलहन, तेलहन",
+      "agriculture_en": "Paddy, Wheat, Maize, Pulses, Oilseeds",
+      "industries_hi": "तिलकुट उद्योग, हस्तशिल्प, पर्यटन, खाद्य प्रसंस्करण",
+      "industries_en": "Tilkut Industry, Handicrafts, Tourism, Food Processing",
+      "map_embed_url": "https://maps.google.com/maps?q=Gaya+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 24.7914,
+      "lng": 85.0002,
+      "image_url": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.8502,24.6414,85.1502,24.9414&layer=mapnik&marker=24.7914,85.0002",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=24.7914,85.0002+(Gaya+District+Bihar)"
+    },
+    {
+      "id": "muzaffarpur",
+      "slug": "muzaffarpur",
+      "name_hi": "मुजफ्फरपुर",
+      "name_en": "Muzaffarpur",
+      "division_hi": "तिरहुत प्रमंडल",
+      "division_en": "Tirhut Division",
+      "headquarters_hi": "मुजफ्फरपुर",
+      "headquarters_en": "Muzaffarpur",
+      "area_sq_km": 3173,
+      "population_2011": 4801062,
+      "pin_codes": [
+        "842001",
+        "842002",
+        "842003",
+        "842004",
+        "842005",
+        "843101",
+        "843102",
+        "843104"
+      ],
+      "blocks": [
+        "Aurai",
+        "Bochaha",
+        "Gaighat",
+        "Kanti",
+        "Katra",
+        "Kurhani",
+        "Maniyari",
+        "Muraul",
+        "Mushahari",
+        "Paroo",
+        "Paru",
+        "Sahebganj",
+        "Sakra",
+        "Saraiya",
+        "Minapur",
+        "Motipur"
+      ],
+      "mp": [
+        {
+          "name": "Raj Bhushan Choudhary",
+          "party": "BJP",
+          "constituency": "Muzaffarpur (Union MoS)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Bijendra Chaudhary",
+          "party": "INC",
+          "constituency": "Muzaffarpur",
+          "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Kedar Prasad Gupta",
+          "party": "BJP",
+          "constituency": "Kurhani (Minister Panchayati Raj)",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Kumar Gaurav (IAS)",
+      "sp": "Kantesh Mishra (IPS)",
+      "history_hi": "मुजफ्फरपुर का नामकरण एक ब्रिटिश राजस्व अधिकारी मुजफ्फर खान के नाम पर हुआ। यह जिला 'शाही लीची की राजधानी' के रूप में विश्वभर में प्रसिद्ध है। स्वतंत्रता संग्राम में इस जिले का महत्वपूर्ण योगदान रहा। 1908 में खुदीराम बोस ने यहां बम फेंका था। यह जिला नेपाल सीमा के करीब होने के कारण व्यापारिक दृष्टि से भी महत्वपूर्ण है। यहां का बाबा गरीब नाथ मंदिर शिव भक्तों का प्रमुख तीर्थस्थल है।",
+      "history_en": "Muzaffarpur was named after British revenue official Muzaffar Khan. Known as the 'Litchi Capital of the World', its Shahi Litchi variety holds a GI tag. The district played a significant role in India's freedom struggle — revolutionary Khudiram Bose threw a bomb here in 1908. Located near the Nepal border, it is also commercially important. The Baba Garib Nath Temple is a major Shiva pilgrimage site.",
+      "tourism": [
+        {
+          "name_hi": "बाबा गरीब नाथ मंदिर",
+          "name_en": "Baba Garib Nath Temple",
+          "description_hi": "भगवान शिव को समर्पित यह प्रसिद्ध मंदिर श्रावण मास में लाखों कांवड़ियों को आकर्षित करता है।",
+          "description_en": "Dedicated to Lord Shiva, this famous temple attracts millions of Kanwariyas during the Shravan month.",
+          "image_url": "https://picsum.photos/seed/garib-nath/800/400",
+          "image_credit": "Picsum Photos"
+        },
+        {
+          "name_hi": "रामचन्द्र शाही संग्रहालय",
+          "name_en": "Ramchandra Shahi Museum",
+          "description_hi": "जिले का पुरातात्विक संग्रहालय जहां प्राचीन सिक्के, मूर्तियां और कलाकृतियां संरक्षित हैं।",
+          "description_en": "The district's archaeological museum housing ancient coins, sculptures and artifacts from across the region.",
+          "image_url": "https://picsum.photos/seed/muzaffarpur-museum/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "सावन मेला, छठ पूजा, दुर्गा पूजा, लीची महोत्सव",
+      "festivals_en": "Shravan Fair, Chhath Puja, Durga Puja, Litchi Festival",
+      "food_hi": "शाही लीची, लिट्टी-चोखा, मालपुआ, सत्तू, तिलकुट",
+      "food_en": "Shahi Litchi (GI Tagged), Litti-Chokha, Malpua, Sattu, Tilkut",
+      "language_hi": "हिंदी, वज्जिका, मैथिली, भोजपुरी",
+      "language_en": "Hindi, Vajjika, Maithili, Bhojpuri",
+      "main_occupation_hi": "कृषि (लीची, गेहूं, धान), व्यापार",
+      "main_occupation_en": "Agriculture (Litchi, Wheat, Paddy), Trade",
+      "agriculture_hi": "लीची, गेहूं, धान, मक्का, सब्जियां",
+      "agriculture_en": "Litchi, Wheat, Paddy, Maize, Vegetables",
+      "industries_hi": "लीची प्रसंस्करण, चीनी उद्योग, हस्तशिल्प",
+      "industries_en": "Litchi Processing, Sugar Industry, Handicrafts",
+      "map_embed_url": "https://maps.google.com/maps?q=Muzaffarpur+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.1226,
+      "lng": 85.3906,
+      "image_url": "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.2406,25.9726,85.5406,26.2726&layer=mapnik&marker=26.1226,85.3906",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.1226,85.3906+(Muzaffarpur+District+Bihar)"
+    },
+    {
+      "id": "bhagalpur",
+      "slug": "bhagalpur",
+      "name_hi": "भागलपुर",
+      "name_en": "Bhagalpur",
+      "division_hi": "भागलपुर प्रमंडल",
+      "division_en": "Bhagalpur Division",
+      "headquarters_hi": "भागलपुर",
+      "headquarters_en": "Bhagalpur",
+      "area_sq_km": 2569,
+      "population_2011": 3032226,
+      "pin_codes": [
+        "812001",
+        "812002",
+        "812003",
+        "812004",
+        "812005",
+        "812006",
+        "813101",
+        "813102"
+      ],
+      "blocks": [
+        "Bhagalpur",
+        "Goradih",
+        "Isbpur",
+        "Jagdishpur",
+        "Kahalgaon",
+        "Kharik",
+        "Nathnagar",
+        "Naugachhia",
+        "Pirpainti",
+        "Sabour",
+        "Sanhaula",
+        "Shahkund",
+        "Sultanganj"
+      ],
+      "mp": [
+        {
+          "name": "Ajay Kumar Mandal",
+          "party": "JD(U)",
+          "constituency": "Bhagalpur (Lok Sabha)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Ajit Sharma",
+          "party": "INC",
+          "constituency": "Bhagalpur",
+          "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Alankrita Pandey (IAS)",
+      "sp": "Pramod Kumar Yadav (IPS)",
+      "history_hi": "भागलपुर को 'रेशम नगरी' या 'सिल्क सिटी' भी कहा जाता है क्योंकि यहां की तसर सिल्क साड़ियां विश्वभर में प्रसिद्ध हैं। यहां विक्रमशिला विश्वविद्यालय के अवशेष हैं जो 8वीं शताब्दी में पाल वंश ने स्थापित किया था। यह गंगा डॉल्फिन का महत्वपूर्ण आवास स्थल है। अंग महाजनपद की राजधानी यहीं स्थित थी। कबीरपंथी और नाथ परंपरा का यहां विशेष प्रभाव रहा है।",
+      "history_en": "Bhagalpur is called the 'Silk City' for its world-famous Tussar silk sarees which hold a GI tag. The ruins of Vikramshila University, established by the Pala dynasty in the 8th century, are located here. It is an important habitat for the Gangetic river dolphin. The city was the capital of the ancient Anga Mahajanapada.",
+      "tourism": [
+        {
+          "name_hi": "विक्रमशिला विश्वविद्यालय",
+          "name_en": "Vikramshila University Ruins",
+          "description_hi": "8वीं शताब्दी का यह बौद्ध विश्वविद्यालय नालंदा के समकक्ष था। यहां का उत्खनन से मिले अवशेष पाल वंश की महानता बताते हैं।",
+          "description_en": "This 8th-century Buddhist university rivaled Nalanda in fame. Archaeological excavations have revealed a significant monastic complex from the Pala dynasty.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Vikramshila.jpg/800px-Vikramshila.jpg",
+          "image_credit": "Wikimedia Commons"
+        },
+        {
+          "name_hi": "सुल्तानगंज",
+          "name_en": "Sultanganj",
+          "description_hi": "गंगा के बीच अजगैबीनाथ मंदिर के लिए प्रसिद्ध यह स्थल सावन में लाखों श्रद्धालुओं को आकर्षित करता है।",
+          "description_en": "Home to the mid-river Ajgaibinath Temple, Sultanganj draws millions of pilgrims during Shravan month.",
+          "image_url": "https://picsum.photos/seed/sultanganj/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "बिसु महोत्सव, सावन मेला, छठ पूजा, दुर्गा पूजा, सिल्क महोत्सव",
+      "festivals_en": "Bishu Festival, Shravan Fair, Chhath Puja, Durga Puja, Silk Festival",
+      "food_hi": "बाटी-चोखा, गुझिया, खाजा, मालपुआ, सत्तू पराठा",
+      "food_en": "Bati-Chokha, Gujhiya, Khaja, Malpua, Sattu Paratha",
+      "language_hi": "हिंदी, अंगिका, बंगाली, उर्दू",
+      "language_en": "Hindi, Angika, Bengali, Urdu",
+      "main_occupation_hi": "रेशम बुनाई, कृषि, व्यापार",
+      "main_occupation_en": "Silk Weaving, Agriculture, Trade",
+      "agriculture_hi": "धान, गेहूं, सरसों, सब्जियां, आम",
+      "agriculture_en": "Paddy, Wheat, Mustard, Vegetables, Mango",
+      "industries_hi": "तसर सिल्क उद्योग, खाद्य प्रसंस्करण, मत्स्य उद्योग",
+      "industries_en": "Tussar Silk Industry, Food Processing, Fishing Industry",
+      "map_embed_url": "https://maps.google.com/maps?q=Bhagalpur+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.2425,
+      "lng": 87.0,
+      "image_url": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=86.8500,25.0925,87.1500,25.3925&layer=mapnik&marker=25.2425,87.0000",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.2425,87.0000+(Bhagalpur+District+Bihar)"
+    },
+    {
+      "id": "darbhanga",
+      "slug": "darbhanga",
+      "name_hi": "दरभंगा",
+      "name_en": "Darbhanga",
+      "division_hi": "दरभंगा प्रमंडल",
+      "division_en": "Darbhanga Division",
+      "headquarters_hi": "दरभंगा",
+      "headquarters_en": "Darbhanga",
+      "area_sq_km": 2279,
+      "population_2011": 3921971,
+      "pin_codes": [
+        "846001",
+        "846002",
+        "846003",
+        "846004",
+        "846005",
+        "846009",
+        "847101",
+        "847102"
+      ],
+      "blocks": [
+        "Alinagar",
+        "Baheri",
+        "Bahadurpur",
+        "Benipur",
+        "Biraul",
+        "Darbhanga",
+        "Ghanshyampur",
+        "Hanuman Nagar",
+        "Hayaghat",
+        "Jale",
+        "Keoti",
+        "Kiratpur",
+        "Kusheshwarsthan",
+        "Manigachhi",
+        "Singhwara",
+        "Tardih"
+      ],
+      "mp": [
+        {
+          "name": "Gopal Jee Thakur",
+          "party": "BJP",
+          "constituency": "Darbhanga (Lok Sabha)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Sanjay Saraogi",
+          "party": "BJP",
+          "constituency": "Darbhanga Urban",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Kaushal Kumar (IAS)",
+      "sp": "Jagunath Raddi (IPS)",
+      "history_hi": "दरभंगा मिथिला संस्कृति का सांस्कृतिक केंद्र है। दरभंगा राज (महाराजाधिराज) ने इस क्षेत्र पर दीर्घकाल तक शासन किया और मिथिला की कला, संस्कृति और संस्कृत साहित्य को संरक्षण दिया। यहां का ललित नारायण मिश्रा विश्वविद्यालय (LNMU) इस क्षेत्र का प्रमुख शैक्षणिक केंद्र है। मिथिला चित्रकला (मधुबनी पेंटिंग) की परंपरा इसी क्षेत्र से उत्पन्न हुई। दरभंगा हवाई अड्डे के चालू होने से यह क्षेत्र और जुड़ा है।",
+      "history_en": "Darbhanga is the cultural capital of the Mithila region. The Darbhanga Raj (Maharajadhiraj) dynasty ruled for centuries, patronizing Mithila art, culture, and Sanskrit literature. L.N. Mithila University (LNMU) is the region's premier educational institution. The tradition of Madhubani painting originated in this area. Darbhanga Airport has recently reconnected the region to the country.",
+      "tourism": [
+        {
+          "name_hi": "दरभंगा राज किला",
+          "name_en": "Darbhanga Raj Palace Complex",
+          "description_hi": "दरभंगा महाराज का ऐतिहासिक राजमहल, जिसमें आनंद बाग महल, नरगौना पैलेस और कई दर्शनीय भवन हैं।",
+          "description_en": "The historic palace complex of the Darbhanga Maharajas, including Anand Bagh Palace and Nargauna Palace — fine examples of Mithila architecture.",
+          "image_url": "https://picsum.photos/seed/darbhanga-raj/800/400",
+          "image_credit": "Picsum Photos"
+        },
+        {
+          "name_hi": "कुशेश्वर स्थान पक्षी अभयारण्य",
+          "name_en": "Kusheshwarsthan Bird Sanctuary",
+          "description_hi": "प्रवासी पक्षियों का आश्रय स्थल — सर्दियों में साइबेरिया से आने वाले हजारों पक्षी यहां आते हैं।",
+          "description_en": "A wetland paradise for migratory birds — thousands of Siberian birds including Bar-headed Geese visit during winter.",
+          "image_url": "https://picsum.photos/seed/kusheshwar/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "सामा-चकेवा, छठ पूजा, विवाह पंचमी, जुड़ शीतल, मधुश्रावणी",
+      "festivals_en": "Sama-Chakeva, Chhath Puja, Vivah Panchami, Jur Sital, Madhushravani",
+      "food_hi": "थेकुआ, दही-चूड़ा, मालपुआ, ठेठर-खुरमा, सत्तू",
+      "food_en": "Thekua, Dahi-Chura, Malpua, Thethar-Khurma, Sattu",
+      "language_hi": "मैथिली (मातृभाषा), हिंदी, संस्कृत परंपरा",
+      "language_en": "Maithili (native language), Hindi, Sanskrit tradition",
+      "main_occupation_hi": "कृषि, शिक्षा, मधुबनी पेंटिंग, व्यापार",
+      "main_occupation_en": "Agriculture, Education, Madhubani Painting, Trade",
+      "agriculture_hi": "धान, गेहूं, मक्का, मखाना, दलहन",
+      "agriculture_en": "Paddy, Wheat, Maize, Makhana (Fox Nuts), Pulses",
+      "industries_hi": "मधुबनी पेंटिंग उद्योग, खाद्य प्रसंस्करण, शिक्षा संस्थान",
+      "industries_en": "Madhubani Painting Industry, Food Processing, Educational Institutions",
+      "map_embed_url": "https://maps.google.com/maps?q=Darbhanga+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.1542,
+      "lng": 85.8918,
+      "image_url": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.7418,26.0042,86.0418,26.3042&layer=mapnik&marker=26.1542,85.8918",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.1542,85.8918+(Darbhanga+District+Bihar)"
+    },
+    {
+      "id": "madhubani",
+      "slug": "madhubani",
+      "name_hi": "मधुबनी",
+      "name_en": "Madhubani",
+      "division_hi": "दरभंगा प्रमंडल",
+      "division_en": "Darbhanga Division",
+      "headquarters_hi": "मधुबनी",
+      "headquarters_en": "Madhubani",
+      "area_sq_km": 3501,
+      "population_2011": 4487379,
+      "pin_codes": [
+        "847101",
+        "847105",
+        "847106",
+        "847107",
+        "847108",
+        "847109",
+        "847122",
+        "847201"
+      ],
+      "blocks": [
+        "Andharatharhi",
+        "Basopatti",
+        "Benipatti",
+        "Bisfi",
+        "Ghoghardiha",
+        "Harlakhi",
+        "Jainagar",
+        "Jhanjharpur",
+        "Khajauli",
+        "Ladania",
+        "Laukaha",
+        "Laukahi",
+        "Madhubani",
+        "Marauna",
+        "Phulparas",
+        "Rajnagar",
+        "Rhika",
+        "Babubarhi"
+      ],
+      "mp": [
+        {
+          "name": "Ashok Kumar Yadav",
+          "party": "BJP",
+          "constituency": "Madhubani",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Ram Narayan Mandal",
+          "constituency": "Madhubani",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Narendra Narayan Yadav",
+          "constituency": "Rajnagar",
+          "party": "JDU",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Anand Sharma (IAS)",
+      "sp": "Yogendra Kumar (IPS)",
+      "history_hi": "मधुबनी जिला विश्वप्रसिद्ध मधुबनी चित्रकला (मिथिला पेंटिंग) की जन्मभूमि है, जिसे 2007 में GI टैग मिला। यह कला परंपरा हजारों वर्षों पुरानी है और विवाह एवं त्योहारों पर घर की दीवारों पर बनाई जाती थी। मिथिला क्षेत्र के इस जिले की सांस्कृतिक विरासत अत्यंत समृद्ध है। सीता माता की जन्मभूमि के निकट होने के कारण यहां का धार्मिक महत्व भी है। नेपाल सीमा से लगा यह जिला व्यापार का भी केंद्र है।",
+      "history_en": "Madhubani is the birthplace of the world-famous Madhubani painting (Mithila Art), which received a GI tag in 2007. This ancient art form, painted on walls and floors during festivals and weddings, is now recognized globally. The district's cultural heritage is extraordinarily rich. Located near the Nepal border, it is also an important trade hub.",
+      "tourism": [
+        {
+          "name_hi": "उच्चैठ माँ भगवती मंदिर",
+          "name_en": "Ucchaith Bhagwati Temple",
+          "description_hi": "52 शक्तिपीठों में से एक, यह मंदिर माँ दुर्गा को समर्पित है और पूरे बिहार से श्रद्धालु यहां आते हैं।",
+          "description_en": "One of the 52 Shakti Peethas, this temple dedicated to Goddess Durga draws devotees from across Bihar.",
+          "image_url": "https://picsum.photos/seed/ucchaith/800/400",
+          "image_credit": "Picsum Photos"
+        },
+        {
+          "name_hi": "जयनगर",
+          "name_en": "Jainagar",
+          "description_hi": "नेपाल सीमा पर स्थित यह कस्बा नैरो-गेज रेलवे (जयनगर-जनकपुर) के लिए प्रसिद्ध था और अब एक महत्वपूर्ण सीमा व्यापार केंद्र है।",
+          "description_en": "Located on the Nepal border, this town was famous for the narrow-gauge Janakpur Railway and is now an important cross-border trade point.",
+          "image_url": "https://picsum.photos/seed/jainagar/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "सामा-चकेवा, जुड़ शीतल, विवाह पंचमी, छठ पूजा, मधुश्रावणी",
+      "festivals_en": "Sama-Chakeva, Jur Sital, Vivah Panchami, Chhath Puja, Madhushravani",
+      "food_hi": "थेकुआ, मखाना खीर, दही-चूड़ा, पेड़ा, लाई",
+      "food_en": "Thekua, Makhana Kheer, Dahi-Chura, Peda, Lai",
+      "language_hi": "मैथिली (प्रमुख), हिंदी, नेपाली (सीमावर्ती क्षेत्र में)",
+      "language_en": "Maithili (primary), Hindi, Nepali (border areas)",
+      "main_occupation_hi": "कृषि, मधुबनी पेंटिंग, हस्तशिल्प, सीमा व्यापार",
+      "main_occupation_en": "Agriculture, Madhubani Painting, Handicrafts, Border Trade",
+      "agriculture_hi": "मखाना, धान, जूट, मक्का, गेहूं",
+      "agriculture_en": "Makhana (Fox Nuts), Paddy, Jute, Maize, Wheat",
+      "industries_hi": "मधुबनी पेंटिंग उद्योग, मखाना प्रसंस्करण, हस्तशिल्प",
+      "industries_en": "Madhubani Painting Export, Makhana Processing, Handicrafts",
+      "map_embed_url": "https://maps.google.com/maps?q=Madhubani+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.3547,
+      "lng": 86.0717,
+      "image_url": "https://picsum.photos/seed/madhubani/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.9217,26.2047,86.2217,26.5047&layer=mapnik&marker=26.3547,86.0717",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.3547,86.0717+(Madhubani+District+Bihar)"
+    },
+    {
+      "id": "vaishali",
+      "slug": "vaishali",
+      "name_hi": "वैशाली",
+      "name_en": "Vaishali",
+      "division_hi": "तिरहुत प्रमंडल",
+      "division_en": "Tirhut Division",
+      "headquarters_hi": "हाजीपुर",
+      "headquarters_en": "Hajipur",
+      "area_sq_km": 2033,
+      "population_2011": 3495021,
+      "pin_codes": [
+        "844101",
+        "844102",
+        "844103",
+        "844104",
+        "844111",
+        "844112",
+        "844113",
+        "844114"
+      ],
+      "blocks": [
+        "Bhagwanpur",
+        "Bidupur",
+        "Chehrakala",
+        "Desari",
+        "Goraul",
+        "Hajipur",
+        "Jandaha",
+        "Lalganj",
+        "Mahua",
+        "Mahnar",
+        "Patepur",
+        "Pater",
+        "Raja Pakar",
+        "Sahdai Buzurg",
+        "Vaishali"
+      ],
+      "mp": [
+        {
+          "name": "Chirag Paswan",
+          "party": "LJP (Ram Vilas)",
+          "constituency": "Hajipur (Union Minister Food Processing)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Veena Devi",
+          "party": "LJP (Ram Vilas)",
+          "constituency": "Vaishali (Lok Sabha)",
+          "photo_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Awadhesh Singh",
+          "party": "BJP",
+          "constituency": "Hajipur",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Tejashwi Prasad Yadav",
+          "party": "RJD",
+          "constituency": "Raghopur (Leader of Opposition)",
+          "photo_url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Smt. Varsha Singh (IAS)",
+      "sp": "Shubhank Mishra (IPS)",
+      "history_hi": "वैशाली विश्व के पहले गणतंत्र की जन्मभूमि मानी जाती है — लिच्छवि गणराज्य यहीं था। भगवान महावीर का जन्म इसी जिले के कुंडलपुर में हुआ था। भगवान बुद्ध ने भी वैशाली की बार-बार यात्रा की और यहां अपना अंतिम उपदेश दिया। अशोक स्तंभ यहां की विरासत का प्रमाण है। हाजीपुर अब केला उत्पादन और रेलवे जंक्शन के लिए प्रसिद्ध है।",
+      "history_en": "Vaishali is considered the birthplace of the world's first democratic republic — the Licchavi Ganarajya. Lord Mahavira was born in Kundagram (Vaishali). Lord Buddha also visited frequently and gave his last sermon here. The Ashoka Pillar stands as testament to this rich heritage. Hajipur is now famous for banana cultivation and as a major railway junction.",
+      "tourism": [
+        {
+          "name_hi": "लिच्छवि स्मारक (अशोक स्तंभ)",
+          "name_en": "Ashoka Pillar & Lichhavi Museum",
+          "description_hi": "सम्राट अशोक द्वारा स्थापित यह स्तंभ वैशाली की प्राचीन गणतंत्रीय परंपरा का प्रतीक है।",
+          "description_en": "Erected by Emperor Ashoka, this polished sandstone pillar symbolizes Vaishali's ancient republican heritage and Buddhist connections.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Vaishali_stupa.jpg/800px-Vaishali_stupa.jpg",
+          "image_credit": "Wikimedia Commons"
+        },
+        {
+          "name_hi": "कुंडलपुर — भगवान महावीर जन्मस्थली",
+          "name_en": "Kundagram — Birthplace of Mahavira",
+          "description_hi": "जैन धर्म के 24वें तीर्थंकर भगवान महावीर का जन्मस्थान, जहां हर साल लाखों जैन तीर्थयात्री आते हैं।",
+          "description_en": "The birthplace of Lord Mahavira, the 24th Tirthankara of Jainism, drawing millions of Jain pilgrims annually.",
+          "image_url": "https://picsum.photos/seed/kundagram/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "वैशाली महोत्सव, छठ पूजा, महावीर जयंती, बुद्ध पूर्णिमा",
+      "festivals_en": "Vaishali Festival, Chhath Puja, Mahavir Jayanti, Buddha Purnima",
+      "food_hi": "केला, लिट्टी-चोखा, सत्तू, दही-चूड़ा, मालपुआ",
+      "food_en": "Banana Products, Litti-Chokha, Sattu, Dahi-Chura, Malpua",
+      "language_hi": "हिंदी, मैथिली, वज्जिका, भोजपुरी",
+      "language_en": "Hindi, Maithili, Vajjika, Bhojpuri",
+      "main_occupation_hi": "केला उत्पादन, कृषि, व्यापार",
+      "main_occupation_en": "Banana Cultivation, Agriculture, Trade",
+      "agriculture_hi": "केला, धान, गेहूं, मक्का, सब्जियां",
+      "agriculture_en": "Banana, Paddy, Wheat, Maize, Vegetables",
+      "industries_hi": "केला प्रसंस्करण, खाद्य उद्योग, परिवहन",
+      "industries_en": "Banana Processing, Food Industry, Transportation",
+      "map_embed_url": "https://maps.google.com/maps?q=Vaishali+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.6858,
+      "lng": 85.2155,
+      "image_url": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.0655,25.5358,85.3655,25.8358&layer=mapnik&marker=25.6858,85.2155",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.6858,85.2155+(Vaishali+District+Bihar)"
+    },
+    {
+      "id": "rohtas",
+      "slug": "rohtas",
+      "name_hi": "रोहतास",
+      "name_en": "Rohtas",
+      "division_hi": "पटना प्रमंडल",
+      "division_en": "Patna Division",
+      "headquarters_hi": "सासाराम",
+      "headquarters_en": "Sasaram",
+      "area_sq_km": 3847,
+      "population_2011": 2959918,
+      "pin_codes": [
+        "821101",
+        "821102",
+        "821103",
+        "821104",
+        "821105",
+        "821106",
+        "821107",
+        "821108"
+      ],
+      "blocks": [
+        "Akorhigola",
+        "Bikramganj",
+        "Chenari",
+        "Dawath",
+        "Dehri",
+        "Dinara",
+        "Karakat",
+        "Kochas",
+        "Nauhatta",
+        "Nasriganj",
+        "Nokha",
+        "Rohtas",
+        "Sasaram",
+        "Sanjhauli",
+        "Shivsar",
+        "Suryapura",
+        "Tilothu"
+      ],
+      "mp": [
+        {
+          "name": "Sheela Kumari",
+          "party": "BJP",
+          "constituency": "Sasaram",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Brijesh Kumar Pandey",
+          "constituency": "Sasaram",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Rajkumar Singh",
+          "constituency": "Karakat",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Deepak Kumar Mishra (IAS)",
+      "sp": "Mister Raj (IPS)",
+      "history_hi": "रोहतास का इतिहास सूर वंश के संस्थापक शेरशाह सूरी से जुड़ा है, जिनका मकबरा सासाराम में भारत की सबसे उत्कृष्ट मध्यकालीन स्थापत्य कला का नमूना है। रोहतास किला एक ऐतिहासिक दुर्ग है जो सोन नदी के किनारे पहाड़ियों पर स्थित है। यह जिला सीमेंट उद्योग के लिए भी जाना जाता है। तुतलाझरना और ककोलत जलप्रपात यहां के प्राकृतिक आकर्षण हैं।",
+      "history_en": "Rohtas is historically linked to Sher Shah Suri, founder of the Sur Empire, whose magnificent mausoleum in Sasaram is one of India's finest examples of medieval Islamic architecture. Rohtas Fort, perched on hills along the Son River, is a formidable historical fortification. The district is also known for its cement industry, with several major plants operating here.",
+      "tourism": [
+        {
+          "name_hi": "शेरशाह सूरी का मकबरा",
+          "name_en": "Sher Shah Suri's Mausoleum",
+          "description_hi": "एक झील के बीच स्थित यह भव्य मकबरा भारत की मध्यकालीन स्थापत्य कला का उत्कृष्ट नमूना है और पर्यटकों को आकर्षित करता है।",
+          "description_en": "Set in the middle of a lake, this grand mausoleum is one of India's finest examples of early Mughal-style architecture, predating the Taj Mahal in many design concepts.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sher_Shah_Suri_Tomb.jpg/800px-Sher_Shah_Suri_Tomb.jpg",
+          "image_credit": "Wikimedia Commons"
+        },
+        {
+          "name_hi": "रोहतास किला",
+          "name_en": "Rohtas Fort",
+          "description_hi": "सोन नदी के ऊपर पहाड़ियों पर स्थित यह विशाल किला शेरशाह सूरी द्वारा बनवाया गया था और एक लोकप्रिय ट्रेकिंग गंतव्य है।",
+          "description_en": "This massive fort built by Sher Shah Suri, perched atop hills above the Son River, is a popular trekking destination with stunning valley views.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Rohtasgarh_fort.jpg/800px-Rohtasgarh_fort.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, शेरशाह मेला, ककोलत महोत्सव",
+      "festivals_en": "Chhath Puja, Diwali, Sher Shah Fair, Kakolat Festival",
+      "food_hi": "लिट्टी-चोखा, सत्तू, तिलकुट, चूड़ा-दही",
+      "food_en": "Litti-Chokha, Sattu, Tilkut, Chura-Dahi",
+      "language_hi": "हिंदी, भोजपुरी, मगही",
+      "language_en": "Hindi, Bhojpuri, Magahi",
+      "main_occupation_hi": "कृषि, सीमेंट उद्योग, खनन",
+      "main_occupation_en": "Agriculture, Cement Industry, Mining",
+      "agriculture_hi": "धान, गेहूं, दलहन, तेलहन, सरसों",
+      "agriculture_en": "Paddy, Wheat, Pulses, Oilseeds, Mustard",
+      "industries_hi": "सीमेंट उद्योग (ACC, Ultratech), खनन, खाद्य प्रसंस्करण",
+      "industries_en": "Cement Industry (ACC, Ultratech), Mining, Food Processing",
+      "map_embed_url": "https://maps.google.com/maps?q=Rohtas+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 24.956,
+      "lng": 84.015,
+      "image_url": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=83.8650,24.8060,84.1650,25.1060&layer=mapnik&marker=24.9560,84.0150",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=24.9560,84.0150+(Rohtas+District+Bihar)"
+    },
+    {
+      "id": "bhojpur",
+      "slug": "bhojpur",
+      "name_hi": "भोजपुर",
+      "name_en": "Bhojpur",
+      "division_hi": "पटना प्रमंडल",
+      "division_en": "Patna Division",
+      "headquarters_hi": "आरा",
+      "headquarters_en": "Arrah",
+      "area_sq_km": 2395,
+      "population_2011": 2728407,
+      "pin_codes": [
+        "802301",
+        "802302",
+        "802303",
+        "802311",
+        "802312",
+        "802313",
+        "802314",
+        "802315"
+      ],
+      "blocks": [
+        "Agiaon",
+        "Arrah",
+        "Barhara",
+        "Behea",
+        "Charpokhari",
+        "Garhani",
+        "Jagdishpur",
+        "Koilwar",
+        "Piro",
+        "Sandesh",
+        "Sahar",
+        "Shahpur",
+        "Tarari",
+        "Udwant Nagar"
+      ],
+      "mp": [
+        {
+          "name": "Jagdambika Pal",
+          "party": "BJP",
+          "constituency": "Arrah",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Rambilas Sharma",
+          "constituency": "Arrah",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Manesh Kumar Meena (IAS)",
+      "sp": "Awadesh Dikshit (IPS)",
+      "history_hi": "भोजपुर जिला भोजपुरी भाषा के नाम से जुड़ा है। आरा शहर में 1857 के स्वतंत्रता संग्राम का महत्वपूर्ण इतिहास है। वीर कुंवर सिंह ने यहां से ब्रिटिश शासन के विरुद्ध संग्राम किया था। वीर कुंवर सिंह विश्वविद्यालय यहां स्थित है।",
+      "history_en": "Bhojpur district is associated with the Bhojpuri language. Arrah city has significant history from the 1857 War of Independence. Veer Kunwar Singh fought against British rule from here at the age of 80, becoming a legendary freedom fighter. Veer Kunwar Singh University is located here.",
+      "tourism": [
+        {
+          "name_hi": "वीर कुंवर सिंह किला, जगदीशपुर",
+          "name_en": "Veer Kunwar Singh Fort, Jagdishpur",
+          "description_hi": "1857 की क्रांति के नायक वीर कुंवर सिंह का ऐतिहासिक किला।",
+          "description_en": "The historic fort of Veer Kunwar Singh, the legendary 80-year-old freedom fighter of the 1857 revolt.",
+          "image_url": "https://picsum.photos/seed/kunwarsingh/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, होली, कुंवर सिंह जयंती",
+      "festivals_en": "Chhath Puja, Diwali, Holi, Kunwar Singh Jayanti",
+      "food_hi": "लिट्टी-चोखा, सत्तू, भोजपुरी व्यंजन",
+      "food_en": "Litti-Chokha, Sattu, Bhojpuri cuisine",
+      "language_hi": "भोजपुरी, हिंदी",
+      "language_en": "Bhojpuri, Hindi",
+      "main_occupation_hi": "कृषि, व्यापार, सरकारी सेवा",
+      "main_occupation_en": "Agriculture, Trade, Government Service",
+      "agriculture_hi": "धान, गेहूं, मक्का, सब्जियां",
+      "agriculture_en": "Paddy, Wheat, Maize, Vegetables",
+      "industries_hi": "कृषि आधारित उद्योग, खाद्य प्रसंस्करण",
+      "industries_en": "Agro-based Industries, Food Processing",
+      "map_embed_url": "https://maps.google.com/maps?q=Bhojpur+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.556,
+      "lng": 84.6603,
+      "image_url": "https://picsum.photos/seed/bhojpur/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.5103,25.4060,84.8103,25.7060&layer=mapnik&marker=25.5560,84.6603",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.5560,84.6603+(Bhojpur+District+Bihar)"
+    },
+    {
+      "id": "buxar",
+      "slug": "buxar",
+      "name_hi": "बक्सर",
+      "name_en": "Buxar",
+      "division_hi": "पटना प्रमंडल",
+      "division_en": "Patna Division",
+      "headquarters_hi": "बक्सर",
+      "headquarters_en": "Buxar",
+      "area_sq_km": 1624,
+      "population_2011": 1706352,
+      "pin_codes": [
+        "802101",
+        "802102",
+        "802103",
+        "802104",
+        "802111",
+        "802112",
+        "802113",
+        "802114"
+      ],
+      "blocks": [
+        "Buxar",
+        "Chausa",
+        "Chaugain",
+        "Dumraon",
+        "Itarhi",
+        "Nawanagar",
+        "Raja Ram",
+        "Simri"
+      ],
+      "mp": [
+        {
+          "name": "Mithilesh Kumar",
+          "party": "BJP",
+          "constituency": "Buxar",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Surendra Singh",
+          "constituency": "Buxar",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Dr. Bidya Nand Singh (IAS)",
+      "sp": "Shubham Arya (IPS)",
+      "history_hi": "बक्सर 1764 की प्रसिद्ध बक्सर की लड़ाई के लिए प्रसिद्ध है जहां अंग्रेजों ने मीर कासिम, शुजाउद्दौला और शाह आलम II की संयुक्त सेना को पराजित किया। यह ब्रिटिश शासन की नींव रखने वाली निर्णायक लड़ाई थी। गंगा नदी के तट पर स्थित यह जिला धार्मिक और ऐतिहासिक दृष्टि से महत्वपूर्ण है।",
+      "history_en": "Buxar is famous for the Battle of Buxar (1764) where the British decisively defeated the combined forces of Mir Qasim, Shuja-ud-Daula, and Shah Alam II — establishing British supremacy in India. Located on the Ganges, it is also a major Hindu pilgrimage point.",
+      "tourism": [
+        {
+          "name_hi": "बक्सर का युद्ध स्थल",
+          "name_en": "Battle of Buxar Memorial",
+          "description_hi": "1764 की ऐतिहासिक लड़ाई का स्थल जहां अंग्रेजों ने भारत पर अपना नियंत्रण पक्का किया।",
+          "description_en": "The site of the historic 1764 battle that cemented British control over India.",
+          "image_url": "https://picsum.photos/seed/buxar-battle/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, रामनवमी, गंगा स्नान",
+      "festivals_en": "Chhath Puja, Ram Navami, Ganga Snan",
+      "food_hi": "लिट्टी-चोखा, सत्तू, तिलकुट",
+      "food_en": "Litti-Chokha, Sattu, Tilkut",
+      "language_hi": "भोजपुरी, हिंदी",
+      "language_en": "Bhojpuri, Hindi",
+      "main_occupation_hi": "कृषि, मत्स्य पालन, व्यापार",
+      "main_occupation_en": "Agriculture, Fishing, Trade",
+      "agriculture_hi": "धान, गेहूं, दलहन, सब्जियां",
+      "agriculture_en": "Paddy, Wheat, Pulses, Vegetables",
+      "industries_hi": "खाद्य प्रसंस्करण, मत्स्य उद्योग",
+      "industries_en": "Food Processing, Fishing Industry",
+      "map_embed_url": "https://maps.google.com/maps?q=Buxar+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.5647,
+      "lng": 83.9777,
+      "image_url": "https://picsum.photos/seed/buxar/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=83.8277,25.4147,84.1277,25.7147&layer=mapnik&marker=25.5647,83.9777",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.5647,83.9777+(Buxar+District+Bihar)"
+    },
+    {
+      "id": "kaimur",
+      "slug": "kaimur",
+      "name_hi": "कैमूर",
+      "name_en": "Kaimur",
+      "division_hi": "पटना प्रमंडल",
+      "division_en": "Patna Division",
+      "headquarters_hi": "भभुआ",
+      "headquarters_en": "Bhabhua",
+      "area_sq_km": 3362,
+      "population_2011": 1626384,
+      "pin_codes": [
+        "821101",
+        "821105",
+        "821106",
+        "821107",
+        "821108",
+        "821110",
+        "821111",
+        "821112"
+      ],
+      "blocks": [
+        "Adhaura",
+        "Bhagwanpur",
+        "Bhabhua",
+        "Chainpur",
+        "Chand",
+        "Durgawati",
+        "Kudra",
+        "Mohania",
+        "Nuaon",
+        "Rampur",
+        "Ramgarh"
+      ],
+      "mp": [
+        {
+          "name": "Mithilesh Kumar",
+          "party": "BJP",
+          "constituency": "Sasaram",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Sushil Kumar Singh",
+          "constituency": "Bhabhua",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Kumar Anurag (IAS)",
+      "sp": "Shikhar Choudhary (IPS)",
+      "history_hi": "कैमूर विंध्य पर्वत श्रृंखला की कैमूर पहाड़ियों के लिए प्रसिद्ध है। यहां कैमूर वन्यजीव अभयारण्य स्थित है जो टाइगर रिजर्व का हिस्सा है। तेलहर और नकटा झरने यहां के प्रमुख पर्यटन स्थल हैं। कर्मनाशा नदी यहां से बहती है। यह जिला खनिज संसाधनों से समृद्ध है।",
+      "history_en": "Kaimur is famous for the Kaimur Hills, part of the Vindhya Range. It houses the Kaimur Wildlife Sanctuary, a Tiger Reserve. Telhar and Nakta waterfalls are major tourist attractions. Rich in mineral resources, the district has significant limestone and bauxite deposits.",
+      "tourism": [
+        {
+          "name_hi": "कैमूर वन्यजीव अभयारण्य",
+          "name_en": "Kaimur Wildlife Sanctuary",
+          "description_hi": "बाघ, भेड़िया, तेंदुए और जंगली सूअर का आवास यह वन्यजीव अभयारण्य प्रकृति प्रेमियों के लिए आदर्श है।",
+          "description_en": "Home to tigers, wolves, leopards and wild boars, this wildlife sanctuary is ideal for nature lovers and trekkers.",
+          "image_url": "https://picsum.photos/seed/kaimur-sanctuary/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, शिवरात्रि",
+      "festivals_en": "Chhath Puja, Diwali, Shivratri",
+      "food_hi": "लिट्टी-चोखा, सत्तू, बाटी",
+      "food_en": "Litti-Chokha, Sattu, Bati",
+      "language_hi": "हिंदी, भोजपुरी",
+      "language_en": "Hindi, Bhojpuri",
+      "main_occupation_hi": "कृषि, खनन, वन उत्पाद",
+      "main_occupation_en": "Agriculture, Mining, Forest Products",
+      "agriculture_hi": "गेहूं, धान, दलहन, तेलहन",
+      "agriculture_en": "Wheat, Paddy, Pulses, Oilseeds",
+      "industries_hi": "चूना पत्थर खनन, सीमेंट, वन उत्पाद",
+      "industries_en": "Limestone Mining, Cement, Forest Products",
+      "map_embed_url": "https://maps.google.com/maps?q=Kaimur+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.0449,
+      "lng": 83.611,
+      "image_url": "https://picsum.photos/seed/kaimur/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=83.4610,24.8949,83.7610,25.1949&layer=mapnik&marker=25.0449,83.6110",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.0449,83.6110+(Kaimur+District+Bihar)"
+    },
+    {
+      "id": "jehanabad",
+      "slug": "jehanabad",
+      "name_hi": "जहानाबाद",
+      "name_en": "Jehanabad",
+      "division_hi": "मगध प्रमंडल",
+      "division_en": "Magadh Division",
+      "headquarters_hi": "जहानाबाद",
+      "headquarters_en": "Jehanabad",
+      "area_sq_km": 1569,
+      "population_2011": 1125313,
+      "pin_codes": [
+        "804401",
+        "804402",
+        "804403",
+        "804404",
+        "804405",
+        "804406",
+        "804407",
+        "804408"
+      ],
+      "blocks": [
+        "Ghoshi",
+        "Hulasganj",
+        "Jehanabad",
+        "Kako",
+        "Makhdumpur",
+        "Modanganj",
+        "Ratni Faridipur"
+      ],
+      "mp": [
+        {
+          "name": "Chandrashekhar",
+          "party": "BJP",
+          "constituency": "Arwal",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Sudhakar Singh",
+          "constituency": "Jehanabad",
+          "party": "RJD",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Tshering Y. Bhutia (IAS)",
+      "sp": "Kota Kiran Kumar (IPS)",
+      "history_hi": "जहानाबाद जिला 1986 में बना। यहां बराबर पहाड़ियों की गुफाएं हैं जो अशोक काल की हैं और विश्व की सबसे पुरानी चट्टानी गुफाओं में से एक मानी जाती हैं। मगध साम्राज्य की परिधि में रहा यह जिला ऐतिहासिक रूप से कृषि प्रधान रहा है।",
+      "history_en": "Jehanabad district was formed in 1986. The Barabar Caves in the district are among the world's oldest surviving rock-cut caves, dating to the Ashoka period (3rd century BCE). The district has historically been an agrarian heartland of the Magadha region.",
+      "tourism": [
+        {
+          "name_hi": "बराबर पहाड़ी गुफाएं",
+          "name_en": "Barabar Caves",
+          "description_hi": "विश्व की सबसे पुरानी चट्टानी गुफाओं में से एक — मौर्य काल (अशोक) की ये गुफाएं मुस्लिम फकीरों को दान में दी गई थीं।",
+          "description_en": "Among the world's oldest surviving rock-cut caves, these Mauryan-era (Ashoka period) caves were donated to Ajivika monks and inspired E.M. Forster's 'A Passage to India'.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Barabar_Caves.jpg/800px-Barabar_Caves.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, ईद",
+      "festivals_en": "Chhath Puja, Diwali, Eid",
+      "food_hi": "लिट्टी-चोखा, सत्तू, मगही पान",
+      "food_en": "Litti-Chokha, Sattu, Magahi Paan",
+      "language_hi": "हिंदी, मगही",
+      "language_en": "Hindi, Magahi",
+      "main_occupation_hi": "कृषि, व्यापार",
+      "main_occupation_en": "Agriculture, Trade",
+      "agriculture_hi": "धान, गेहूं, दलहन, मगही पान",
+      "agriculture_en": "Paddy, Wheat, Pulses, Magahi Paan (Betel Leaf)",
+      "industries_hi": "कृषि आधारित उद्योग, मगही पान",
+      "industries_en": "Agro-based Industries, Magahi Paan Export",
+      "map_embed_url": "https://maps.google.com/maps?q=Jehanabad+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.2136,
+      "lng": 84.9868,
+      "image_url": "https://picsum.photos/seed/jehanabad/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.8368,25.0636,85.1368,25.3636&layer=mapnik&marker=25.2136,84.9868",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.2136,84.9868+(Jehanabad+District+Bihar)"
+    },
+    {
+      "id": "arwal",
+      "slug": "arwal",
+      "name_hi": "अरवल",
+      "name_en": "Arwal",
+      "division_hi": "मगध प्रमंडल",
+      "division_en": "Magadh Division",
+      "headquarters_hi": "अरवल",
+      "headquarters_en": "Arwal",
+      "area_sq_km": 638,
+      "population_2011": 700843,
+      "pin_codes": [
+        "804401",
+        "804419",
+        "804420",
+        "804421",
+        "804422",
+        "804423"
+      ],
+      "blocks": [
+        "Arwal",
+        "Kaler",
+        "Kurtha",
+        "Sonbhadra Banshi Suryapur"
+      ],
+      "mp": [
+        {
+          "name": "Chandrashekhar",
+          "party": "BJP",
+          "constituency": "Arwal",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Manoj Kumar",
+          "constituency": "Arwal",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Amrisha Bains (IAS)",
+      "sp": "Dr. Navjot Simi (IPS)",
+      "history_hi": "अरवल 2001 में जहानाबाद से अलग होकर बना बिहार का एक नया जिला है। यह बिहार का सबसे छोटा जिला है। सोन नदी इस जिले से होकर बहती है। कृषि यहां का मुख्य व्यवसाय है।",
+      "history_en": "Arwal was carved out from Jehanabad in 2001, making it one of Bihar's newest and smallest districts by area. The Son River flows through the district. Agriculture is the primary occupation.",
+      "tourism": [
+        {
+          "name_hi": "सोन नदी तट",
+          "name_en": "Son River Banks",
+          "description_hi": "सोन नदी के शांत तट प्रकृति प्रेमियों के लिए आकर्षक हैं।",
+          "description_en": "The serene banks of the Son River offer peaceful natural surroundings.",
+          "image_url": "https://picsum.photos/seed/arwal-son/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, होली",
+      "festivals_en": "Chhath Puja, Diwali, Holi",
+      "food_hi": "लिट्टी-चोखा, सत्तू, दाल-भात",
+      "food_en": "Litti-Chokha, Sattu, Dal-Bhat",
+      "language_hi": "हिंदी, मगही",
+      "language_en": "Hindi, Magahi",
+      "main_occupation_hi": "कृषि",
+      "main_occupation_en": "Agriculture",
+      "agriculture_hi": "धान, गेहूं, दलहन",
+      "agriculture_en": "Paddy, Wheat, Pulses",
+      "industries_hi": "कृषि आधारित उद्योग",
+      "industries_en": "Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Arwal+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.2435,
+      "lng": 84.6738,
+      "image_url": "https://picsum.photos/seed/arwal/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.5238,25.0935,84.8238,25.3935&layer=mapnik&marker=25.2435,84.6738",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.2435,84.6738+(Arwal+District+Bihar)"
+    },
+    {
+      "id": "nawada",
+      "slug": "nawada",
+      "name_hi": "नवादा",
+      "name_en": "Nawada",
+      "division_hi": "मगध प्रमंडल",
+      "division_en": "Magadh Division",
+      "headquarters_hi": "नवादा",
+      "headquarters_en": "Nawada",
+      "area_sq_km": 2492,
+      "population_2011": 2219146,
+      "pin_codes": [
+        "805101",
+        "805102",
+        "805103",
+        "805104",
+        "805105",
+        "805106",
+        "805107",
+        "805108"
+      ],
+      "blocks": [
+        "Akbarpur",
+        "Govindpur",
+        "Hisua",
+        "Kawakol",
+        "Kashi Chak",
+        "Meskaur",
+        "Nardiganj",
+        "Nawada",
+        "Pakribarwan",
+        "Rajauli",
+        "Roh",
+        "Sirdala",
+        "Warsaliganj"
+      ],
+      "mp": [
+        {
+          "name": "Vivek Thakur",
+          "party": "BJP",
+          "constituency": "Nawada",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Aruna Devi",
+          "constituency": "Nawada",
+          "party": "HAM",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Ravi Prakash (IAS)",
+      "sp": "Abhinav Dhiman (IPS)",
+      "history_hi": "नवादा जिले में प्रसिद्ध ककोलत जलप्रपात स्थित है जो पर्यटकों को आकर्षित करता है। यह जिला पत्थर उद्योग के लिए भी जाना जाता है। मगध साम्राज्य की सीमा में रहा यह जिला ऐतिहासिक रूप से महत्वपूर्ण है।",
+      "history_en": "Nawada is home to the famous Kakolat Waterfall, a popular natural tourist attraction. The district is known for its stone industry. Located within the ancient Magadha Empire's boundaries, it holds historical significance.",
+      "tourism": [
+        {
+          "name_hi": "ककोलत जलप्रपात",
+          "name_en": "Kakolat Waterfall",
+          "description_hi": "100 फीट से अधिक ऊंचाई से गिरने वाला यह झरना बिहार के सबसे सुंदर प्राकृतिक स्थलों में से एक है।",
+          "description_en": "This stunning waterfall, falling from over 100 feet, is one of Bihar's most beautiful natural attractions, especially during the monsoon season.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Kakolat_Waterfall.jpg/800px-Kakolat_Waterfall.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, ककोलत मेला, दीपावली",
+      "festivals_en": "Chhath Puja, Kakolat Fair, Diwali",
+      "food_hi": "लिट्टी-चोखा, सत्तू, तिलकुट",
+      "food_en": "Litti-Chokha, Sattu, Tilkut",
+      "language_hi": "हिंदी, मगही",
+      "language_en": "Hindi, Magahi",
+      "main_occupation_hi": "कृषि, पत्थर उद्योग",
+      "main_occupation_en": "Agriculture, Stone Industry",
+      "agriculture_hi": "धान, गेहूं, दलहन",
+      "agriculture_en": "Paddy, Wheat, Pulses",
+      "industries_hi": "पत्थर उद्योग, कृषि आधारित उद्योग",
+      "industries_en": "Stone Industry, Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Nawada+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 24.8872,
+      "lng": 85.5413,
+      "image_url": "https://picsum.photos/seed/nawada/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.3913,24.7372,85.6913,25.0372&layer=mapnik&marker=24.8872,85.5413",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=24.8872,85.5413+(Nawada+District+Bihar)"
+    },
+    {
+      "id": "aurangabad",
+      "slug": "aurangabad",
+      "name_hi": "औरंगाबाद",
+      "name_en": "Aurangabad",
+      "division_hi": "मगध प्रमंडल",
+      "division_en": "Magadh Division",
+      "headquarters_hi": "औरंगाबाद",
+      "headquarters_en": "Aurangabad",
+      "area_sq_km": 3389,
+      "population_2011": 2511243,
+      "pin_codes": [
+        "824101",
+        "824102",
+        "824103",
+        "824111",
+        "824112",
+        "824113",
+        "824120",
+        "824121"
+      ],
+      "blocks": [
+        "Aurangabad",
+        "Barun",
+        "Daudnagar",
+        "Dev",
+        "Goh",
+        "Haspura",
+        "Kutumba",
+        "Madanpur",
+        "Nabinagar",
+        "Obra",
+        "Rafiganj",
+        "Sherghati"
+      ],
+      "mp": [
+        {
+          "name": "Sushil Kumar Singh",
+          "party": "BJP",
+          "constituency": "Aurangabad",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Raj Kumar Singh",
+          "constituency": "Aurangabad",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Abhilasha Sharma (IAS)",
+      "sp": "Upendra Nath Verma (IPS)",
+      "history_hi": "औरंगाबाद बिहार में सौर ऊर्जा के केंद्र के रूप में उभर रहा है। देव सूर्य मंदिर यहां का प्रसिद्ध धार्मिक स्थल है जहां छठ पूजा पर विशाल मेला लगता है। नवाबों के काल में यह क्षेत्र महत्वपूर्ण रहा। एशिया का सबसे बड़ा सौर पार्क यहां स्थापित है।",
+      "history_en": "Aurangabad is emerging as Bihar's solar energy hub, with Asia's largest solar park established here. The Dev Surya Temple is a major religious site, drawing huge crowds during Chhath Puja. The district has historic connections to the Nawabi period.",
+      "tourism": [
+        {
+          "name_hi": "देव सूर्य मंदिर",
+          "name_en": "Dev Surya Temple",
+          "description_hi": "भगवान सूर्य को समर्पित यह प्राचीन मंदिर छठ महापर्व के दौरान लाखों श्रद्धालुओं को आकर्षित करता है।",
+          "description_en": "An ancient temple dedicated to the Sun God, attracting millions of devotees during Chhath Puja — considered one of the holiest Chhath sites in Bihar.",
+          "image_url": "https://picsum.photos/seed/dev-surya/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा (देव मेला), दीपावली, होली",
+      "festivals_en": "Chhath Puja (Dev Fair), Diwali, Holi",
+      "food_hi": "लिट्टी-चोखा, सत्तू, तिलकुट",
+      "food_en": "Litti-Chokha, Sattu, Tilkut",
+      "language_hi": "हिंदी, मगही, भोजपुरी",
+      "language_en": "Hindi, Magahi, Bhojpuri",
+      "main_occupation_hi": "कृषि, सौर ऊर्जा, व्यापार",
+      "main_occupation_en": "Agriculture, Solar Energy, Trade",
+      "agriculture_hi": "धान, गेहूं, दलहन, तेलहन",
+      "agriculture_en": "Paddy, Wheat, Pulses, Oilseeds",
+      "industries_hi": "सौर ऊर्जा, सीमेंट, कृषि आधारित उद्योग",
+      "industries_en": "Solar Energy, Cement, Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Aurangabad+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 24.7539,
+      "lng": 84.3736,
+      "image_url": "https://picsum.photos/seed/aurangabad-bihar/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.2236,24.6039,84.5236,24.9039&layer=mapnik&marker=24.7539,84.3736",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=24.7539,84.3736+(Aurangabad+District+Bihar)"
+    },
+    {
+      "id": "saran",
+      "slug": "saran",
+      "name_hi": "सारण",
+      "name_en": "Saran",
+      "division_hi": "सारण प्रमंडल",
+      "division_en": "Saran Division",
+      "headquarters_hi": "छपरा",
+      "headquarters_en": "Chapra",
+      "area_sq_km": 2641,
+      "population_2011": 3951864,
+      "pin_codes": [
+        "841301",
+        "841302",
+        "841303",
+        "841304",
+        "841305",
+        "841306",
+        "841401",
+        "841411"
+      ],
+      "blocks": [
+        "Amnour",
+        "Baniapur",
+        "Dighwara",
+        "Ekma",
+        "Garkha",
+        "Ishuapur",
+        "Jalalpur",
+        "Manjhi",
+        "Mashrak",
+        "Maker",
+        "Marhowrah",
+        "Nagra",
+        "Panapur",
+        "Parsa",
+        "Revelaganj",
+        "Rivilganj",
+        "Sonepur",
+        "Taraiya"
+      ],
+      "mp": [
+        {
+          "name": "Rajiv Pratap Rudy",
+          "party": "BJP",
+          "constituency": "Saran (Lok Sabha)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Dr. C.N. Gupta",
+          "party": "BJP",
+          "constituency": "Chapra",
+          "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Vaibhava Srivastava (IAS)",
+      "sp": "Roshan Kumar (IPS)",
+      "history_hi": "सारण जिले का मुख्यालय छपरा भारत के पहले राष्ट्रपति डॉ. राजेंद्र प्रसाद की जन्मभूमि है। गंगा, घाघरा और सरयू नदियों के संगम पर स्थित यह जिला ऐतिहासिक और धार्मिक दृष्टि से महत्वपूर्ण है। सोनपुर का विश्व प्रसिद्ध हरिहर क्षेत्र मेला यहां लगता है।",
+      "history_en": "Saran's headquarters Chapra is the birthplace of Dr. Rajendra Prasad, India's first President. Located at the confluence of Ganga, Ghaghra, and Sarayu rivers, the district holds great historical and religious significance. Sonepur's world-famous Harihar Kshetra Fair (Asia's largest cattle fair) is held here.",
+      "tourism": [
+        {
+          "name_hi": "सोनपुर मेला (हरिहर क्षेत्र)",
+          "name_en": "Sonepur Mela (Harihar Kshetra)",
+          "description_hi": "एशिया का सबसे बड़ा पशु मेला — कार्तिक पूर्णिमा पर गंगा-गंडक संगम पर लगने वाला यह मेला सदियों पुराना है।",
+          "description_en": "Asia's largest cattle fair, held at the Ganga-Gandak confluence during Kartik Purnima. This ancient fair draws thousands of traders, tourists, and pilgrims.",
+          "image_url": "https://picsum.photos/seed/sonepur-mela/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "सोनपुर मेला, छठ पूजा, दीपावली, होली",
+      "festivals_en": "Sonepur Mela, Chhath Puja, Diwali, Holi",
+      "food_hi": "लिट्टी-चोखा, सत्तू, मालपुआ, भोजपुरी व्यंजन",
+      "food_en": "Litti-Chokha, Sattu, Malpua, Bhojpuri cuisine",
+      "language_hi": "भोजपुरी, हिंदी",
+      "language_en": "Bhojpuri, Hindi",
+      "main_occupation_hi": "कृषि, व्यापार, सरकारी सेवा",
+      "main_occupation_en": "Agriculture, Trade, Government Service",
+      "agriculture_hi": "धान, गेहूं, मक्का, दलहन",
+      "agriculture_en": "Paddy, Wheat, Maize, Pulses",
+      "industries_hi": "कृषि आधारित उद्योग, परिवहन",
+      "industries_en": "Agro-based Industries, Transportation",
+      "map_embed_url": "https://maps.google.com/maps?q=Saran+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.7796,
+      "lng": 84.7499,
+      "image_url": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.5999,25.6296,84.8999,25.9296&layer=mapnik&marker=25.7796,84.7499",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.7796,84.7499+(Saran+District+Bihar)"
+    },
+    {
+      "id": "siwan",
+      "slug": "siwan",
+      "name_hi": "सीवान",
+      "name_en": "Siwan",
+      "division_hi": "सारण प्रमंडल",
+      "division_en": "Saran Division",
+      "headquarters_hi": "सीवान",
+      "headquarters_en": "Siwan",
+      "area_sq_km": 2219,
+      "population_2011": 3318176,
+      "pin_codes": [
+        "841226",
+        "841227",
+        "841228",
+        "841229",
+        "841230",
+        "841231",
+        "841232",
+        "841233"
+      ],
+      "blocks": [
+        "Barharia",
+        "Basantpur",
+        "Darauli",
+        "Guthni",
+        "Hussainganj",
+        "Lakri Nabiganj",
+        "Maharajganj",
+        "Mairwa",
+        "Nautan",
+        "Pachrukhi",
+        "Raghunathpur",
+        "Siswan",
+        "Siwan",
+        "Zarwal"
+      ],
+      "mp": [
+        {
+          "name": "Kavita Singh",
+          "party": "BJP",
+          "constituency": "Siwan",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Awadh Bihari Chaudhary",
+          "constituency": "Siwan",
+          "party": "RJD",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Vijay Prakash Meena (IAS)",
+      "sp": "Bharat Soni (IPS)",
+      "history_hi": "सीवान मौलाना अबुल कलाम आज़ाद की जन्मभूमि है, जो भारत के पहले शिक्षा मंत्री थे। यह नेपाल सीमा के पास स्थित है। भोजपुरी संस्कृति और परंपराओं का यह महत्वपूर्ण केंद्र है।",
+      "history_en": "Siwan is the birthplace of Maulana Abul Kalam Azad, India's first Education Minister and a prominent freedom fighter. Located near the Nepal border, the district is a significant center of Bhojpuri culture and traditions.",
+      "tourism": [
+        {
+          "name_hi": "दरगाह हज़रत मखदूम साहब",
+          "name_en": "Dargah Hazrat Makhdum Saheb",
+          "description_hi": "प्रसिद्ध सूफी संत की दरगाह जहां हर साल उर्स लगता है और सभी धर्मों के लोग आते हैं।",
+          "description_en": "The dargah of a revered Sufi saint, hosting an annual Urs festival attended by people of all faiths.",
+          "image_url": "https://picsum.photos/seed/siwan-dargah/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, ईद, दीपावली, उर्स",
+      "festivals_en": "Chhath Puja, Eid, Diwali, Urs",
+      "food_hi": "लिट्टी-चोखा, सत्तू, भोजपुरी व्यंजन, सेवई",
+      "food_en": "Litti-Chokha, Sattu, Bhojpuri cuisine, Semai",
+      "language_hi": "भोजपुरी, हिंदी, उर्दू",
+      "language_en": "Bhojpuri, Hindi, Urdu",
+      "main_occupation_hi": "कृषि, परिवहन, व्यापार",
+      "main_occupation_en": "Agriculture, Transportation, Trade",
+      "agriculture_hi": "धान, गेहूं, मक्का, गन्ना",
+      "agriculture_en": "Paddy, Wheat, Maize, Sugarcane",
+      "industries_hi": "चीनी उद्योग, कृषि आधारित उद्योग",
+      "industries_en": "Sugar Industry, Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Siwan+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.2205,
+      "lng": 84.3567,
+      "image_url": "https://picsum.photos/seed/siwan/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.2067,26.0705,84.5067,26.3705&layer=mapnik&marker=26.2205,84.3567",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.2205,84.3567+(Siwan+District+Bihar)"
+    },
+    {
+      "id": "gopalganj",
+      "slug": "gopalganj",
+      "name_hi": "गोपालगंज",
+      "name_en": "Gopalganj",
+      "division_hi": "सारण प्रमंडल",
+      "division_en": "Saran Division",
+      "headquarters_hi": "गोपालगंज",
+      "headquarters_en": "Gopalganj",
+      "area_sq_km": 2033,
+      "population_2011": 2562012,
+      "pin_codes": [
+        "841401",
+        "841402",
+        "841403",
+        "841404",
+        "841405",
+        "841406",
+        "841407",
+        "841408"
+      ],
+      "blocks": [
+        "Barauli",
+        "Bhorey",
+        "Bijaipur",
+        "Gopalganj",
+        "Hathua",
+        "Kuchaikote",
+        "Majhia",
+        "Manjha",
+        "Phulwaria",
+        "Sidhwalia",
+        "Thawe",
+        "Uchkagaon",
+        "Vijaipur"
+      ],
+      "mp": [
+        {
+          "name": "Alok Kumar Suman",
+          "party": "BJP",
+          "constituency": "Gopalganj",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Subhash Singh",
+          "constituency": "Gopalganj",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Sameer Saurabh (IAS)",
+      "sp": "Vinay Tiwari (IPS)",
+      "history_hi": "गोपालगंज जिले में थावे देवी मंदिर प्रसिद्ध है। गंडक नदी यहां से बहती है। यह नेपाल सीमा के पास स्थित है। भोजपुरी संस्कृति का महत्वपूर्ण केंद्र है।",
+      "history_en": "Gopalganj is home to the famous Thawe Devi Temple. The Gandak River flows through the district. Located near the Nepal border, it is an important center of Bhojpuri culture.",
+      "tourism": [
+        {
+          "name_hi": "थावे देवी मंदिर",
+          "name_en": "Thawe Devi Temple",
+          "description_hi": "माँ दुर्गा को समर्पित यह प्रसिद्ध मंदिर बिहार और उत्तर प्रदेश के श्रद्धालुओं के लिए आस्था का केंद्र है।",
+          "description_en": "Dedicated to Goddess Durga, this famous temple draws devotees from Bihar and Uttar Pradesh.",
+          "image_url": "https://picsum.photos/seed/thawe/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "थावे मेला, छठ पूजा, दीपावली, होली",
+      "festivals_en": "Thawe Fair, Chhath Puja, Diwali, Holi",
+      "food_hi": "लिट्टी-चोखा, सत्तू, भोजपुरी व्यंजन",
+      "food_en": "Litti-Chokha, Sattu, Bhojpuri cuisine",
+      "language_hi": "भोजपुरी, हिंदी",
+      "language_en": "Bhojpuri, Hindi",
+      "main_occupation_hi": "कृषि, मत्स्य पालन, व्यापार",
+      "main_occupation_en": "Agriculture, Fishing, Trade",
+      "agriculture_hi": "धान, गेहूं, गन्ना, मक्का",
+      "agriculture_en": "Paddy, Wheat, Sugarcane, Maize",
+      "industries_hi": "चीनी उद्योग, कृषि आधारित उद्योग",
+      "industries_en": "Sugar Industry, Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Gopalganj+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.4678,
+      "lng": 84.4443,
+      "image_url": "https://picsum.photos/seed/gopalganj/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.2943,26.3178,84.5943,26.6178&layer=mapnik&marker=26.4678,84.4443",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.4678,84.4443+(Gopalganj+District+Bihar)"
+    },
+    {
+      "id": "west-champaran",
+      "slug": "west-champaran",
+      "name_hi": "पश्चिम चंपारण",
+      "name_en": "West Champaran",
+      "division_hi": "तिरहुत प्रमंडल",
+      "division_en": "Tirhut Division",
+      "headquarters_hi": "बेतिया",
+      "headquarters_en": "Bettiah",
+      "area_sq_km": 5229,
+      "population_2011": 3935042,
+      "pin_codes": [
+        "845101",
+        "845102",
+        "845103",
+        "845104",
+        "845105",
+        "845106",
+        "845107",
+        "845301"
+      ],
+      "blocks": [
+        "Bagaha",
+        "Bettiah",
+        "Chanpatia",
+        "Gaunaha",
+        "Jogapatti",
+        "Lauriya",
+        "Mainatand",
+        "Nautan",
+        "Piprakothi",
+        "Ramnagar",
+        "Shikarpur",
+        "Sikatia",
+        "Thakrahan"
+      ],
+      "mp": [
+        {
+          "name": "Dr. Sanjay Jaiswal",
+          "party": "BJP",
+          "constituency": "West Champaran (Former State President)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Renu Devi",
+          "party": "BJP",
+          "constituency": "Bettiah (Former Deputy CM)",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Taranjot Singh (IAS)",
+      "sp": "Kumar Gautam (IPS)",
+      "history_hi": "महात्मा गांधी का पहला सत्याग्रह 1917 में चंपारण में नील की खेती करने वाले किसानों के अधिकारों के लिए किया गया था, जिसने स्वतंत्रता आंदोलन को नई दिशा दी। यहां वाल्मीकि टाइगर रिजर्व स्थित है — बिहार का एकमात्र टाइगर रिजर्व। नेपाल सीमा पर स्थित यह जिला प्राकृतिक सुंदरता से भरपूर है।",
+      "history_en": "Mahatma Gandhi launched his first Satyagraha in 1917 in Champaran, fighting for the rights of indigo farmers against British planters — a turning point in India's freedom struggle. The Valmiki Tiger Reserve, Bihar's only Tiger Reserve, is located here. Bordering Nepal, the district is blessed with rich natural beauty.",
+      "tourism": [
+        {
+          "name_hi": "वाल्मीकि टाइगर रिजर्व",
+          "name_en": "Valmiki Tiger Reserve",
+          "description_hi": "बिहार का एकमात्र टाइगर रिजर्व — बाघ, हाथी, गैंडा और 300 से अधिक पक्षी प्रजातियों का आवास।",
+          "description_en": "Bihar's only Tiger Reserve, home to Bengal tigers, elephants, one-horned rhinos, and over 300 bird species. A must-visit for wildlife enthusiasts.",
+          "image_url": "https://picsum.photos/seed/valmiki-tiger/800/400",
+          "image_credit": "Picsum Photos"
+        },
+        {
+          "name_hi": "गांधी संग्रहालय, मोतिहारी",
+          "name_en": "Gandhi Museum, Motihari",
+          "description_hi": "चंपारण सत्याग्रह की याद में बना यह संग्रहालय गांधीजी के पहले आंदोलन की कहानी बताता है।",
+          "description_en": "Built to commemorate the Champaran Satyagraha, this museum narrates the story of Gandhi's first civil disobedience movement in India.",
+          "image_url": "https://picsum.photos/seed/gandhi-museum/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, होली, चंपारण सत्याग्रह दिवस",
+      "festivals_en": "Chhath Puja, Diwali, Holi, Champaran Satyagraha Day",
+      "food_hi": "लिट्टी-चोखा, सत्तू, भोजपुरी व्यंजन, मालपुआ",
+      "food_en": "Litti-Chokha, Sattu, Bhojpuri cuisine, Malpua",
+      "language_hi": "हिंदी, भोजपुरी, थारू",
+      "language_en": "Hindi, Bhojpuri, Tharu (tribal)",
+      "main_occupation_hi": "कृषि, वन उत्पाद, पर्यटन",
+      "main_occupation_en": "Agriculture, Forest Products, Tourism",
+      "agriculture_hi": "धान, गेहूं, गन्ना, जूट, केला",
+      "agriculture_en": "Paddy, Wheat, Sugarcane, Jute, Banana",
+      "industries_hi": "चीनी उद्योग, वन आधारित उद्योग, पर्यटन",
+      "industries_en": "Sugar Industry, Forest-based Industries, Tourism",
+      "map_embed_url": "https://maps.google.com/maps?q=West Champaran+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.8022,
+      "lng": 84.5029,
+      "image_url": "https://picsum.photos/seed/west-champaran/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.3529,26.6522,84.6529,26.9522&layer=mapnik&marker=26.8022,84.5029",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.8022,84.5029+(West Champaran+District+Bihar)"
+    },
+    {
+      "id": "east-champaran",
+      "slug": "east-champaran",
+      "name_hi": "पूर्वी चंपारण",
+      "name_en": "East Champaran",
+      "division_hi": "तिरहुत प्रमंडल",
+      "division_en": "Tirhut Division",
+      "headquarters_hi": "मोतिहारी",
+      "headquarters_en": "Motihari",
+      "area_sq_km": 3968,
+      "population_2011": 5082868,
+      "pin_codes": [
+        "845001",
+        "845002",
+        "845003",
+        "845004",
+        "845005",
+        "845006",
+        "845101",
+        "845104"
+      ],
+      "blocks": [
+        "Adapur",
+        "Areraj",
+        "Banjariya",
+        "Chakia",
+        "Dhaka",
+        "Ghorasahan",
+        "Harsidhi",
+        "Kesaria",
+        "Kotwa",
+        "Mehsi",
+        "Motihari",
+        "Pakridayal",
+        "Patahi",
+        "Phenhara",
+        "Pipra Kothi",
+        "Ramgarhwa",
+        "Sangrampur",
+        "Sugauli",
+        "Turkaulia",
+        "Raxaul"
+      ],
+      "mp": [
+        {
+          "name": "Radha Mohan Singh",
+          "party": "BJP",
+          "constituency": "East Champaran (Former Union Minister)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Pramod Kumar",
+          "party": "BJP",
+          "constituency": "Motihari",
+          "photo_url": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Saurabh Suman Yadav (IAS)",
+      "sp": "Swarn Prabhat (IPS)",
+      "history_hi": "मोतिहारी प्रसिद्ध लेखक जॉर्ज ऑरवेल की जन्मभूमि है। केसरिया स्तूप विश्व का सबसे बड़ा बौद्ध स्तूप माना जाता है। गांधी की चंपारण यात्रा का केंद्र भी यही था। यह नेपाल सीमा पर स्थित है और रक्सौल एक महत्वपूर्ण सीमा शुल्क बंदरगाह है।",
+      "history_en": "Motihari is the birthplace of author George Orwell. The Kesaria Stupa is considered the world's largest Buddhist stupa. Gandhi's Champaran Satyagraha was centered here. The district borders Nepal, with Raxaul being a major India-Nepal border trade point.",
+      "tourism": [
+        {
+          "name_hi": "केसरिया बौद्ध स्तूप",
+          "name_en": "Kesaria Buddhist Stupa",
+          "description_hi": "विश्व का सबसे बड़ा बौद्ध स्तूप माना जाने वाला यह स्तूप गुप्त काल का है और बौद्ध धर्म का महत्वपूर्ण केंद्र है।",
+          "description_en": "Considered the world's largest Buddhist stupa, dating to the Gupta period. This archaeological site is an important Buddhist heritage monument.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Kesariya_stupa.jpg/800px-Kesariya_stupa.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, बुद्ध जयंती, गांधी जयंती",
+      "festivals_en": "Chhath Puja, Diwali, Buddha Jayanti, Gandhi Jayanti",
+      "food_hi": "लिट्टी-चोखा, सत्तू, भोजपुरी व्यंजन",
+      "food_en": "Litti-Chokha, Sattu, Bhojpuri cuisine",
+      "language_hi": "हिंदी, भोजपुरी, मैथिली",
+      "language_en": "Hindi, Bhojpuri, Maithili",
+      "main_occupation_hi": "कृषि, सीमा व्यापार, परिवहन",
+      "main_occupation_en": "Agriculture, Border Trade, Transportation",
+      "agriculture_hi": "धान, गेहूं, गन्ना, मक्का, जूट",
+      "agriculture_en": "Paddy, Wheat, Sugarcane, Maize, Jute",
+      "industries_hi": "चीनी उद्योग, सीमा व्यापार, कृषि आधारित उद्योग",
+      "industries_en": "Sugar Industry, Border Trade, Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=East Champaran+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.6469,
+      "lng": 84.9089,
+      "image_url": "https://picsum.photos/seed/east-champaran/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=84.7589,26.4969,85.0589,26.7969&layer=mapnik&marker=26.6469,84.9089",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.6469,84.9089+(East Champaran+District+Bihar)"
+    },
+    {
+      "id": "sitamarhi",
+      "slug": "sitamarhi",
+      "name_hi": "सीतामढ़ी",
+      "name_en": "Sitamarhi",
+      "division_hi": "तिरहुत प्रमंडल",
+      "division_en": "Tirhut Division",
+      "headquarters_hi": "सीतामढ़ी",
+      "headquarters_en": "Sitamarhi",
+      "area_sq_km": 2294,
+      "population_2011": 3422032,
+      "pin_codes": [
+        "843301",
+        "843302",
+        "843303",
+        "843304",
+        "843305",
+        "843306",
+        "843307",
+        "843308"
+      ],
+      "blocks": [
+        "Bairgania",
+        "Bajpatti",
+        "Bathnaha",
+        "Belsand",
+        "Bokhra",
+        "Choraut",
+        "Dumra",
+        "Majorganj",
+        "Nanpur",
+        "Parsauni",
+        "Parihar",
+        "Pupri",
+        "Riga",
+        "Runnisaidpur",
+        "Sheohar",
+        "Sonbarsa",
+        "Sonbarsa Raj",
+        "Sursand"
+      ],
+      "mp": [
+        {
+          "name": "Devesh Chandra Thakur",
+          "party": "BJP",
+          "constituency": "Sitamarhi",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Dilnawaz Khan",
+          "constituency": "Sitamarhi",
+          "party": "RJD",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Tanay Sultania (IAS)",
+      "sp": "Amit Ranjan (IPS)",
+      "history_hi": "सीतामढ़ी माता सीता की जन्मभूमि मानी जाती है और हिंदुओं के लिए एक पवित्र तीर्थ स्थल है। जनक राजा की राजधानी जनकपुर (नेपाल) इसके पास है। नेपाल सीमा पर स्थित यह जिला मिथिला संस्कृति का हिस्सा है।",
+      "history_en": "Sitamarhi is believed to be the birthplace of Goddess Sita and is a sacred Hindu pilgrimage site. The nearby Janakpur (Nepal), capital of King Janaka, is just across the border. The district is part of the ancient Mithila cultural region.",
+      "tourism": [
+        {
+          "name_hi": "जानकी मंदिर — माता सीता जन्मस्थली",
+          "name_en": "Janaki Temple — Sita's Birthplace",
+          "description_hi": "माता सीता के जन्मस्थान पर बना यह भव्य मंदिर हिंदुओं का एक प्रमुख तीर्थस्थल है जहां लाखों श्रद्धालु आते हैं।",
+          "description_en": "Built at the birthplace of Goddess Sita, this magnificent temple is a major Hindu pilgrimage site drawing millions of devotees.",
+          "image_url": "https://picsum.photos/seed/janaki-mandir/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "विवाह पंचमी, छठ पूजा, जानकी नवमी, राम नवमी",
+      "festivals_en": "Vivah Panchami, Chhath Puja, Janaki Navami, Ram Navami",
+      "food_hi": "थेकुआ, मखाना, दही-चूड़ा, लाई",
+      "food_en": "Thekua, Makhana, Dahi-Chura, Lai",
+      "language_hi": "मैथिली, हिंदी, बज्जिका",
+      "language_en": "Maithili, Hindi, Vajjika",
+      "main_occupation_hi": "कृषि, धार्मिक पर्यटन, व्यापार",
+      "main_occupation_en": "Agriculture, Religious Tourism, Trade",
+      "agriculture_hi": "मखाना, धान, गेहूं, मक्का, जूट",
+      "agriculture_en": "Makhana, Paddy, Wheat, Maize, Jute",
+      "industries_hi": "मखाना प्रसंस्करण, धार्मिक पर्यटन, हस्तशिल्प",
+      "industries_en": "Makhana Processing, Religious Tourism, Handicrafts",
+      "map_embed_url": "https://maps.google.com/maps?q=Sitamarhi+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.5983,
+      "lng": 85.4897,
+      "image_url": "https://picsum.photos/seed/sitamarhi/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.3397,26.4483,85.6397,26.7483&layer=mapnik&marker=26.5983,85.4897",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.5983,85.4897+(Sitamarhi+District+Bihar)"
+    },
+    {
+      "id": "sheohar",
+      "slug": "sheohar",
+      "name_hi": "शिवहर",
+      "name_en": "Sheohar",
+      "division_hi": "तिरहुत प्रमंडल",
+      "division_en": "Tirhut Division",
+      "headquarters_hi": "शिवहर",
+      "headquarters_en": "Sheohar",
+      "area_sq_km": 443,
+      "population_2011": 656916,
+      "pin_codes": [
+        "843329",
+        "843330",
+        "843331",
+        "843332",
+        "843333",
+        "843334"
+      ],
+      "blocks": [
+        "Piprahi",
+        "Purnahiya",
+        "Sheohar",
+        "Tariani Chowk"
+      ],
+      "mp": [
+        {
+          "name": "Rama Devi",
+          "party": "BJP",
+          "constituency": "Sitamarhi",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Dinesh Prasad Singh",
+          "constituency": "Sheohar",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Smt. Pratibha Rani (IAS)",
+      "sp": "Shailendra Singh (IPS)",
+      "history_hi": "शिवहर बिहार का सबसे छोटा जिला (क्षेत्रफल की दृष्टि से) है। 1994 में सीतामढ़ी से अलग होकर यह नया जिला बना। यह मिथिला क्षेत्र का हिस्सा है और नेपाल की सीमा के नजदीक है।",
+      "history_en": "Sheohar is Bihar's smallest district by area, carved out from Sitamarhi in 1994. Part of the Mithila cultural region, it lies close to the Nepal border. Despite its small size, it has a rich cultural heritage.",
+      "tourism": [
+        {
+          "name_hi": "शिवहर का प्राकृतिक सौंदर्य",
+          "name_en": "Natural Beauty of Sheohar",
+          "description_hi": "नेपाल की पहाड़ियों के नजदीक स्थित यह छोटा जिला प्रकृति प्रेमियों को आकर्षित करता है।",
+          "description_en": "This small district near the Nepal hills offers natural beauty and a peaceful rural landscape.",
+          "image_url": "https://picsum.photos/seed/sheohar/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, मधुश्रावणी, विवाह पंचमी",
+      "festivals_en": "Chhath Puja, Madhushravani, Vivah Panchami",
+      "food_hi": "थेकुआ, मखाना, दही-चूड़ा",
+      "food_en": "Thekua, Makhana, Dahi-Chura",
+      "language_hi": "मैथिली, हिंदी",
+      "language_en": "Maithili, Hindi",
+      "main_occupation_hi": "कृषि",
+      "main_occupation_en": "Agriculture",
+      "agriculture_hi": "मखाना, धान, गेहूं, मक्का",
+      "agriculture_en": "Makhana, Paddy, Wheat, Maize",
+      "industries_hi": "कृषि आधारित उद्योग",
+      "industries_en": "Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Sheohar+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.5186,
+      "lng": 85.2974,
+      "image_url": "https://picsum.photos/seed/sheohar/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.1474,26.3686,85.4474,26.6686&layer=mapnik&marker=26.5186,85.2974",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.5186,85.2974+(Sheohar+District+Bihar)"
+    },
+    {
+      "id": "samastipur",
+      "slug": "samastipur",
+      "name_hi": "समस्तीपुर",
+      "name_en": "Samastipur",
+      "division_hi": "दरभंगा प्रमंडल",
+      "division_en": "Darbhanga Division",
+      "headquarters_hi": "समस्तीपुर",
+      "headquarters_en": "Samastipur",
+      "area_sq_km": 2904,
+      "population_2011": 4261566,
+      "pin_codes": [
+        "848101",
+        "848102",
+        "848103",
+        "848113",
+        "848114",
+        "848115",
+        "848116",
+        "848117"
+      ],
+      "blocks": [
+        "Bithan",
+        "Dalsinghsarai",
+        "Hasanpur",
+        "Kalyanpur",
+        "Mohiuddinagar",
+        "Morwa",
+        "Musrigaon",
+        "Patori",
+        "Rosra",
+        "Samastipur",
+        "Shivajinagar",
+        "Singhia",
+        "Tajpur",
+        "Ujiarpur",
+        "Vibhutpur",
+        "Warisnagar"
+      ],
+      "mp": [
+        {
+          "name": "Shambhavi Choudhary",
+          "party": "LJP (Ram Vilas)",
+          "constituency": "Samastipur (Lok Sabha 2024)",
+          "photo_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&auto=format&fit=crop"
+        },
+        {
+          "name": "Nityanand Rai",
+          "party": "BJP",
+          "constituency": "Ujiarpur (Union MoS Home)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Akhtarul Islam Sahin",
+          "party": "RJD",
+          "constituency": "Samastipur",
+          "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Roshan Kushwaha (IAS)",
+      "sp": "Arvind Pratap Singh (IPS)",
+      "history_hi": "समस्तीपुर एक महत्वपूर्ण रेलवे जंक्शन है। यह मिथिला और तिरहुत संस्कृति का मिलन स्थल है। गंडक और बूढ़ी गंडक नदियां यहां से बहती हैं। यह जिला कृषि में उन्नत है।",
+      "history_en": "Samastipur is an important railway junction on the East Central Railway. It is a meeting point of Mithila and Tirhut cultures. The Gandak and Budhi Gandak rivers flow through the district.",
+      "tourism": [
+        {
+          "name_hi": "दरभंगा-समस्तीपुर क्षेत्र के मठ",
+          "name_en": "Ancient Monasteries of the Region",
+          "description_hi": "क्षेत्र के प्राचीन मठ और मंदिर मिथिला संस्कृति का प्रतिनिधित्व करते हैं।",
+          "description_en": "Ancient monasteries and temples of the region represent the rich Mithila cultural heritage.",
+          "image_url": "https://picsum.photos/seed/samastipur/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, सामा-चकेवा, दीपावली",
+      "festivals_en": "Chhath Puja, Sama-Chakeva, Diwali",
+      "food_hi": "मखाना खीर, थेकुआ, दही-चूड़ा",
+      "food_en": "Makhana Kheer, Thekua, Dahi-Chura",
+      "language_hi": "हिंदी, मैथिली, वज्जिका",
+      "language_en": "Hindi, Maithili, Vajjika",
+      "main_occupation_hi": "कृषि, रेलवे, व्यापार",
+      "main_occupation_en": "Agriculture, Railways, Trade",
+      "agriculture_hi": "मखाना, धान, गेहूं, मक्का, गन्ना",
+      "agriculture_en": "Makhana, Paddy, Wheat, Maize, Sugarcane",
+      "industries_hi": "चीनी उद्योग, मखाना प्रसंस्करण, खाद्य उद्योग",
+      "industries_en": "Sugar Industry, Makhana Processing, Food Industry",
+      "map_embed_url": "https://maps.google.com/maps?q=Samastipur+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.8629,
+      "lng": 85.7811,
+      "image_url": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.6311,25.7129,85.9311,26.0129&layer=mapnik&marker=25.8629,85.7811",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.8629,85.7811+(Samastipur+District+Bihar)"
+    },
+    {
+      "id": "supaul",
+      "slug": "supaul",
+      "name_hi": "सुपौल",
+      "name_en": "Supaul",
+      "division_hi": "कोसी प्रमंडल",
+      "division_en": "Kosi Division",
+      "headquarters_hi": "सुपौल",
+      "headquarters_en": "Supaul",
+      "area_sq_km": 2422,
+      "population_2011": 2229076,
+      "pin_codes": [
+        "852101",
+        "852102",
+        "852103",
+        "852104",
+        "852105",
+        "852106",
+        "852107",
+        "852108"
+      ],
+      "blocks": [
+        "Basantpur",
+        "Birpur",
+        "Chhatapur",
+        "Kishanpur",
+        "Marauna",
+        "Nirmali",
+        "Pipra",
+        "Pratapganj",
+        "Raghopur",
+        "Sadar",
+        "Saraigarh Bhaptiyahi",
+        "Simrahaniya",
+        "Supaul",
+        "Trivenignagar"
+      ],
+      "mp": [
+        {
+          "name": "Dileshwar Kamait",
+          "party": "JDU",
+          "constituency": "Supaul",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Bijendra Yadav",
+          "constituency": "Supaul",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Sawan Kumar (IAS)",
+      "sp": "Sarath R S (IPS)",
+      "history_hi": "सुपौल कोसी नदी के किनारे बसा है जिसे 'बिहार का शोक' भी कहा जाता है क्योंकि यह बाढ़ लाती है। 2008 में कोसी नदी ने भीषण बाढ़ लाई थी जो आधुनिक इतिहास की बड़ी प्राकृतिक आपदाओं में से एक थी। यह नेपाल सीमा के पास है।",
+      "history_en": "Supaul is situated along the Kosi River, called 'Bihar's Sorrow' for its devastating floods. The 2008 Kosi floods were one of the worst natural disasters in modern Indian history. Located near the Nepal border, the district has historically been vulnerable to flooding but is resilient in its agricultural heritage.",
+      "tourism": [
+        {
+          "name_hi": "कोसी नदी तट",
+          "name_en": "Kosi River Banks",
+          "description_hi": "कोसी नदी के प्राकृतिक किनारे और आर्द्रभूमि प्रवासी पक्षियों के लिए आश्रय स्थल हैं।",
+          "description_en": "The natural banks and wetlands of the Kosi River serve as habitat for migratory birds and offer scenic natural beauty.",
+          "image_url": "https://picsum.photos/seed/supaul-kosi/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, सामा-चकेवा",
+      "festivals_en": "Chhath Puja, Diwali, Sama-Chakeva",
+      "food_hi": "मछली, मखाना, थेकुआ, दही-चूड़ा",
+      "food_en": "Fish curry, Makhana, Thekua, Dahi-Chura",
+      "language_hi": "मैथिली, हिंदी",
+      "language_en": "Maithili, Hindi",
+      "main_occupation_hi": "कृषि, मत्स्य पालन",
+      "main_occupation_en": "Agriculture, Fishing",
+      "agriculture_hi": "धान, मखाना, जूट, गेहूं",
+      "agriculture_en": "Paddy, Makhana, Jute, Wheat",
+      "industries_hi": "मत्स्य उद्योग, मखाना प्रसंस्करण, जूट",
+      "industries_en": "Fishing Industry, Makhana Processing, Jute",
+      "map_embed_url": "https://maps.google.com/maps?q=Supaul+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.1245,
+      "lng": 86.6074,
+      "image_url": "https://picsum.photos/seed/supaul/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=86.4574,25.9745,86.7574,26.2745&layer=mapnik&marker=26.1245,86.6074",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.1245,86.6074+(Supaul+District+Bihar)"
+    },
+    {
+      "id": "saharsa",
+      "slug": "saharsa",
+      "name_hi": "सहरसा",
+      "name_en": "Saharsa",
+      "division_hi": "कोसी प्रमंडल",
+      "division_en": "Kosi Division",
+      "headquarters_hi": "सहरसा",
+      "headquarters_en": "Saharsa",
+      "area_sq_km": 1702,
+      "population_2011": 1900661,
+      "pin_codes": [
+        "852201",
+        "852202",
+        "852203",
+        "852204",
+        "852205",
+        "852206",
+        "852207",
+        "852208"
+      ],
+      "blocks": [
+        "Banma Itahari",
+        "Kahara",
+        "Mahishi",
+        "Nauhatta",
+        "Patarghat",
+        "Sadar",
+        "Saharsa",
+        "Simri Bakhtiarpur",
+        "Sonbarsa",
+        "Salkhua"
+      ],
+      "mp": [
+        {
+          "name": "Dileshwar Kamait",
+          "party": "JDU",
+          "constituency": "Supaul",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Alok Ranjan Jha",
+          "constituency": "Saharsa",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Deepesh Kumar (IAS)",
+      "sp": "Vikram Sihag (IPS)",
+      "history_hi": "सहरसा कोसी प्रमंडल का मुख्यालय है। यहां महिषी में मां उग्रतारा का प्रसिद्ध शक्तिपीठ है। कोसी नदी के किनारे बसा यह जिला ऐतिहासिक और धार्मिक दृष्टि से महत्वपूर्ण है।",
+      "history_en": "Saharsa is the divisional headquarters of Kosi Division. The famous Ugratara Shakti Peeth at Mahishi is a major pilgrimage site. Located along the Kosi River, the district holds historical and religious importance.",
+      "tourism": [
+        {
+          "name_hi": "महिषी — उग्रतारा शक्तिपीठ",
+          "name_en": "Mahishi — Ugratara Shakti Peeth",
+          "description_hi": "यह प्रसिद्ध शक्तिपीठ माँ उग्रतारा को समर्पित है और बिहार के महत्वपूर्ण धार्मिक स्थलों में से एक है।",
+          "description_en": "Dedicated to Goddess Ugratara, this important Shakti Peeth is one of Bihar's major religious sites, drawing pilgrims from across the region.",
+          "image_url": "https://picsum.photos/seed/mahishi/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "उग्रतारा मेला, छठ पूजा, दीपावली",
+      "festivals_en": "Ugratara Fair, Chhath Puja, Diwali",
+      "food_hi": "मछली, मखाना, दही-चूड़ा, थेकुआ",
+      "food_en": "Fish, Makhana, Dahi-Chura, Thekua",
+      "language_hi": "मैथिली, हिंदी",
+      "language_en": "Maithili, Hindi",
+      "main_occupation_hi": "कृषि, मत्स्य पालन, व्यापार",
+      "main_occupation_en": "Agriculture, Fishing, Trade",
+      "agriculture_hi": "धान, मखाना, जूट, गेहूं",
+      "agriculture_en": "Paddy, Makhana, Jute, Wheat",
+      "industries_hi": "मत्स्य उद्योग, मखाना प्रसंस्करण",
+      "industries_en": "Fishing Industry, Makhana Processing",
+      "map_embed_url": "https://maps.google.com/maps?q=Saharsa+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.8835,
+      "lng": 86.6006,
+      "image_url": "https://picsum.photos/seed/saharsa/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=86.4506,25.7335,86.7506,26.0335&layer=mapnik&marker=25.8835,86.6006",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.8835,86.6006+(Saharsa+District+Bihar)"
+    },
+    {
+      "id": "madhepura",
+      "slug": "madhepura",
+      "name_hi": "मधेपुरा",
+      "name_en": "Madhepura",
+      "division_hi": "कोसी प्रमंडल",
+      "division_en": "Kosi Division",
+      "headquarters_hi": "मधेपुरा",
+      "headquarters_en": "Madhepura",
+      "area_sq_km": 1787,
+      "population_2011": 2001578,
+      "pin_codes": [
+        "852113",
+        "852114",
+        "852115",
+        "852116",
+        "852117",
+        "852118",
+        "852119",
+        "852121"
+      ],
+      "blocks": [
+        "Alamnagar",
+        "Bihariganj",
+        "Chausa",
+        "Gamhariya",
+        "Ghailarh",
+        "Gwalpara",
+        "Kumarkhand",
+        "Madhepura",
+        "Murliganj",
+        "Puraini",
+        "Shankarpur",
+        "Singheshwar",
+        "Udakishunganj"
+      ],
+      "mp": [
+        {
+          "name": "Dileshwar Kamait",
+          "party": "JDU",
+          "constituency": "Supaul",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Chandrasekhar",
+          "constituency": "Madhepura",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Abhishek Ranjan (IAS)",
+      "sp": "Dr. Sandeep Singh (IPS)",
+      "history_hi": "मधेपुरा में श्री सिंघेश्वर महादेव मंदिर प्रसिद्ध है। यह जिला लालू प्रसाद यादव का राजनीतिक गढ़ रहा है। कोसी नदी क्षेत्र में स्थित होने से बाढ़ की समस्या यहां भी है।",
+      "history_en": "Madhepura is home to the famous Singheshwar Mahadev Temple. The district has been a political stronghold historically and is part of the flood-prone Kosi river belt.",
+      "tourism": [
+        {
+          "name_hi": "सिंघेश्वर धाम (महादेव मंदिर)",
+          "name_en": "Singheshwar Dham",
+          "description_hi": "भगवान शिव को समर्पित यह प्रसिद्ध मंदिर श्रावण मास में लाखों श्रद्धालुओं को आकर्षित करता है।",
+          "description_en": "Dedicated to Lord Shiva, this famous temple draws millions of devotees during the Shravan month for the Kanwar Yatra.",
+          "image_url": "https://picsum.photos/seed/singheshwar/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "सावन मेला, छठ पूजा, दीपावली",
+      "festivals_en": "Shravan Fair, Chhath Puja, Diwali",
+      "food_hi": "मछली, मखाना, दही-चूड़ा",
+      "food_en": "Fish, Makhana, Dahi-Chura",
+      "language_hi": "मैथिली, हिंदी",
+      "language_en": "Maithili, Hindi",
+      "main_occupation_hi": "कृषि, मत्स्य पालन",
+      "main_occupation_en": "Agriculture, Fishing",
+      "agriculture_hi": "धान, मखाना, जूट, गेहूं",
+      "agriculture_en": "Paddy, Makhana, Jute, Wheat",
+      "industries_hi": "कृषि आधारित उद्योग, मखाना उद्योग",
+      "industries_en": "Agro-based Industries, Makhana Industry",
+      "map_embed_url": "https://maps.google.com/maps?q=Madhepura+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.9264,
+      "lng": 86.7906,
+      "image_url": "https://picsum.photos/seed/madhepura/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=86.6406,25.7764,86.9406,26.0764&layer=mapnik&marker=25.9264,86.7906",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.9264,86.7906+(Madhepura+District+Bihar)"
+    },
+    {
+      "id": "banka",
+      "slug": "banka",
+      "name_hi": "बांका",
+      "name_en": "Banka",
+      "division_hi": "भागलपुर प्रमंडल",
+      "division_en": "Bhagalpur Division",
+      "headquarters_hi": "बांका",
+      "headquarters_en": "Banka",
+      "area_sq_km": 3020,
+      "population_2011": 2029339,
+      "pin_codes": [
+        "813101",
+        "813102",
+        "813103",
+        "813104",
+        "813105",
+        "813106",
+        "813107",
+        "813108"
+      ],
+      "blocks": [
+        "Amarpur",
+        "Barahat",
+        "Belhar",
+        "Banka",
+        "Bounsai",
+        "Chandan",
+        "Dhuraiya",
+        "Fulliddummar",
+        "Katoria",
+        "Rajoun",
+        "Shambhuganj"
+      ],
+      "mp": [
+        {
+          "name": "Giriraja Singh",
+          "party": "BJP",
+          "constituency": "Begusarai",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Rajan Kumar Singh",
+          "constituency": "Banka",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Anshul Agarwal (IAS)",
+      "sp": "Amitesh Kumar (IPS)",
+      "history_hi": "बांका जिले में मंदार पर्वत स्थित है जिसे समुद्र मंथन की पौराणिक कथा से जोड़ा जाता है। यह जंगलों और पहाड़ियों से भरा जिला है। आदिवासी समुदायों की संस्कृति यहां महत्वपूर्ण है।",
+      "history_en": "Banka is home to Mandar Hill, associated with the mythological story of Samudra Manthan (churning of the cosmic ocean). A hilly, forested district, it has significant tribal communities with rich cultural traditions.",
+      "tourism": [
+        {
+          "name_hi": "मंदार पर्वत",
+          "name_en": "Mandar Hill",
+          "description_hi": "हिंदू पुराणों में समुद्र मंथन के दौरान प्रयुक्त मंदराचल पर्वत — यहां भगवान विष्णु का मंदिर और एक सुंदर तालाब है।",
+          "description_en": "The mythological Mandarachal mountain used as a churning rod during Samudra Manthan. Features a Vishnu temple and a sacred pond at its base.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Mandar_Hill.jpg/800px-Mandar_Hill.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "मंदार महोत्सव, छठ पूजा, दीपावली, सरहुल (आदिवासी)",
+      "festivals_en": "Mandar Festival, Chhath Puja, Diwali, Sarhul (Tribal)",
+      "food_hi": "रेड राइस, माड़ (कांजी), मछली, हंड़िया",
+      "food_en": "Red Rice, Maad (Rice Beer), Fish, Handia (tribal rice beer)",
+      "language_hi": "हिंदी, अंगिका, संथाली (आदिवासी)",
+      "language_en": "Hindi, Angika, Santali (tribal)",
+      "main_occupation_hi": "कृषि, वन उत्पाद, पत्थर उद्योग",
+      "main_occupation_en": "Agriculture, Forest Products, Stone Industry",
+      "agriculture_hi": "धान, गेहूं, मक्का, दलहन",
+      "agriculture_en": "Paddy, Wheat, Maize, Pulses",
+      "industries_hi": "पत्थर उद्योग, वन आधारित उद्योग, हस्तशिल्प",
+      "industries_en": "Stone Industry, Forest-based Industries, Handicrafts",
+      "map_embed_url": "https://maps.google.com/maps?q=Banka+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 24.8858,
+      "lng": 86.922,
+      "image_url": "https://picsum.photos/seed/banka/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=86.7720,24.7358,87.0720,25.0358&layer=mapnik&marker=24.8858,86.9220",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=24.8858,86.9220+(Banka+District+Bihar)"
+    },
+    {
+      "id": "munger",
+      "slug": "munger",
+      "name_hi": "मुंगेर",
+      "name_en": "Munger",
+      "division_hi": "मुंगेर प्रमंडल",
+      "division_en": "Munger Division",
+      "headquarters_hi": "मुंगेर",
+      "headquarters_en": "Munger",
+      "area_sq_km": 1419,
+      "population_2011": 1359054,
+      "pin_codes": [
+        "811201",
+        "811202",
+        "811203",
+        "811204",
+        "811211",
+        "811212",
+        "811213",
+        "811214"
+      ],
+      "blocks": [
+        "Asarganj",
+        "Bariyarpur",
+        "Dharampur",
+        "Haveliya",
+        "Jamalpur",
+        "Mufassil",
+        "Munger",
+        "Sangrampur",
+        "Tetia Bambar"
+      ],
+      "mp": [
+        {
+          "name": "Rajvardhan Azad",
+          "party": "BJP",
+          "constituency": "Munger",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Pranav Kumar Yadav",
+          "constituency": "Munger",
+          "party": "JDU",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Nikhil Dhanraj Nippanikar (IAS)",
+      "sp": "Syed Imran Masood (IPS)",
+      "history_hi": "मुंगेर 'बिहार की योग राजधानी' के रूप में जाना जाता है क्योंकि यहां बिहार योग विद्यालय (Bihar School of Yoga) विश्वप्रसिद्ध है। मुंगेर में बंदूक निर्माण कारखाना भी है। गंगा के किनारे बसा यह ऐतिहासिक शहर मीर कासिम की राजधानी भी रहा था।",
+      "history_en": "Munger is known as the 'Yoga Capital of Bihar', home to the world-famous Bihar School of Yoga founded by Swami Satyananda Saraswati. The city also houses a government gun factory. Situated on the Ganges, Munger was the capital of Mir Qasim and holds significant medieval history.",
+      "tourism": [
+        {
+          "name_hi": "बिहार योग विद्यालय",
+          "name_en": "Bihar School of Yoga",
+          "description_hi": "स्वामी सत्यानंद सरस्वती द्वारा स्थापित यह विश्वप्रसिद्ध योग विद्यालय दुनियाभर के योग साधकों को आकर्षित करता है।",
+          "description_en": "Founded by Swami Satyananda Saraswati, this world-famous yoga school attracts practitioners from across the globe and has been instrumental in spreading yoga internationally.",
+          "image_url": "https://picsum.photos/seed/bihar-yoga/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "योग दिवस (विशाल आयोजन), छठ पूजा, दीपावली",
+      "festivals_en": "International Yoga Day (grand celebration), Chhath Puja, Diwali",
+      "food_hi": "लिट्टी-चोखा, गंगा की मछली, सत्तू",
+      "food_en": "Litti-Chokha, Ganga Fish, Sattu",
+      "language_hi": "हिंदी, अंगिका, मगही",
+      "language_en": "Hindi, Angika, Magahi",
+      "main_occupation_hi": "कृषि, योग केंद्र, व्यापार, शस्त्र उद्योग",
+      "main_occupation_en": "Agriculture, Yoga Centers, Trade, Arms Manufacturing",
+      "agriculture_hi": "धान, गेहूं, मक्का, सब्जियां",
+      "agriculture_en": "Paddy, Wheat, Maize, Vegetables",
+      "industries_hi": "शस्त्र निर्माण (सरकारी), खाद्य प्रसंस्करण, योग उद्योग",
+      "industries_en": "Arms Manufacturing (Govt), Food Processing, Yoga Industry",
+      "map_embed_url": "https://maps.google.com/maps?q=Munger+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.3757,
+      "lng": 86.4744,
+      "image_url": "https://picsum.photos/seed/munger/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=86.3244,25.2257,86.6244,25.5257&layer=mapnik&marker=25.3757,86.4744",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.3757,86.4744+(Munger+District+Bihar)"
+    },
+    {
+      "id": "lakhisarai",
+      "slug": "lakhisarai",
+      "name_hi": "लखीसराय",
+      "name_en": "Lakhisarai",
+      "division_hi": "मुंगेर प्रमंडल",
+      "division_en": "Munger Division",
+      "headquarters_hi": "लखीसराय",
+      "headquarters_en": "Lakhisarai",
+      "area_sq_km": 1228,
+      "population_2011": 1000912,
+      "pin_codes": [
+        "811311",
+        "811312",
+        "811313",
+        "811314",
+        "811315",
+        "811316",
+        "811317",
+        "811318"
+      ],
+      "blocks": [
+        "Halsi",
+        "Lakhisarai",
+        "Manjhaul",
+        "Pipariya",
+        "Ramgarh Chowk",
+        "Surajgarh"
+      ],
+      "mp": [
+        {
+          "name": "Rajiv Ranjan Singh alias Lalan Singh",
+          "party": "JD(U)",
+          "constituency": "Munger (Union Minister Panchayati Raj)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Vijay Kumar Sinha",
+          "party": "BJP",
+          "constituency": "Lakhisarai (Deputy Chief Minister)",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Shailendra Kumar (IAS)",
+      "sp": "Prerna Kumar (IPS)",
+      "history_hi": "लखीसराय में अशोक धाम मंदिर प्रसिद्ध है। यह जिला 1994 में मुंगेर से अलग हुआ। गंगा नदी के किनारे बसा यह जिला कृषि और व्यापार का केंद्र है।",
+      "history_en": "Lakhisarai is home to the famous Ashokdham Temple. Carved out from Munger in 1994, this district along the Ganges is an agricultural and trading hub.",
+      "tourism": [
+        {
+          "name_hi": "अशोक धाम मंदिर",
+          "name_en": "Ashokdham Temple",
+          "description_hi": "माँ काली को समर्पित यह प्रसिद्ध मंदिर भक्तों के लिए आस्था का केंद्र है।",
+          "description_en": "Dedicated to Goddess Kali, this famous temple is a center of faith for devotees from across the region.",
+          "image_url": "https://picsum.photos/seed/ashokdham/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, काली पूजा, दीपावली",
+      "festivals_en": "Chhath Puja, Kali Puja, Diwali",
+      "food_hi": "लिट्टी-चोखा, सत्तू, मछली",
+      "food_en": "Litti-Chokha, Sattu, Fish",
+      "language_hi": "हिंदी, अंगिका",
+      "language_en": "Hindi, Angika",
+      "main_occupation_hi": "कृषि, व्यापार",
+      "main_occupation_en": "Agriculture, Trade",
+      "agriculture_hi": "धान, गेहूं, मक्का",
+      "agriculture_en": "Paddy, Wheat, Maize",
+      "industries_hi": "कृषि आधारित उद्योग",
+      "industries_en": "Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Lakhisarai+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.1764,
+      "lng": 86.0945,
+      "image_url": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.9445,25.0264,86.2445,25.3264&layer=mapnik&marker=25.1764,86.0945",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.1764,86.0945+(Lakhisarai+District+Bihar)"
+    },
+    {
+      "id": "sheikhpura",
+      "slug": "sheikhpura",
+      "name_hi": "शेखपुरा",
+      "name_en": "Sheikhpura",
+      "division_hi": "मुंगेर प्रमंडल",
+      "division_en": "Munger Division",
+      "headquarters_hi": "शेखपुरा",
+      "headquarters_en": "Sheikhpura",
+      "area_sq_km": 689,
+      "population_2011": 634927,
+      "pin_codes": [
+        "811105",
+        "811106",
+        "811107",
+        "811108",
+        "811109",
+        "811110"
+      ],
+      "blocks": [
+        "Ariari",
+        "Barbigha",
+        "Chewara",
+        "Sheikhpura"
+      ],
+      "mp": [
+        {
+          "name": "Arun Kumar",
+          "party": "BJP",
+          "constituency": "Munger",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Ranjeet Kumar",
+          "constituency": "Sheikhpura",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Shekhar Anand (IAS)",
+      "sp": "Himanshu (IPS)",
+      "history_hi": "शेखपुरा बिहार का सबसे कम जनसंख्या वाला जिला है। 1994 में मुंगेर से अलग होकर बना यह नया जिला कृषि प्रधान है।",
+      "history_en": "Sheikhpura is Bihar's least populous district. Carved out from Munger in 1994, this small agricultural district is known for its peaceful rural character.",
+      "tourism": [
+        {
+          "name_hi": "शेखपुरा की प्राकृतिक सुंदरता",
+          "name_en": "Natural Landscape of Sheikhpura",
+          "description_hi": "हरे-भरे खेतों और छोटी पहाड़ियों से घिरा यह जिला प्राकृतिक सौंदर्य का भंडार है।",
+          "description_en": "Surrounded by green fields and small hills, this district offers a serene rural natural landscape.",
+          "image_url": "https://picsum.photos/seed/sheikhpura/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, होली",
+      "festivals_en": "Chhath Puja, Diwali, Holi",
+      "food_hi": "लिट्टी-चोखा, सत्तू, दाल-भात",
+      "food_en": "Litti-Chokha, Sattu, Dal-Bhat",
+      "language_hi": "हिंदी, मगही",
+      "language_en": "Hindi, Magahi",
+      "main_occupation_hi": "कृषि",
+      "main_occupation_en": "Agriculture",
+      "agriculture_hi": "धान, गेहूं, मक्का, दलहन",
+      "agriculture_en": "Paddy, Wheat, Maize, Pulses",
+      "industries_hi": "कृषि आधारित उद्योग",
+      "industries_en": "Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Sheikhpura+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.1396,
+      "lng": 85.8569,
+      "image_url": "https://picsum.photos/seed/sheikhpura/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.7069,24.9896,86.0069,25.2896&layer=mapnik&marker=25.1396,85.8569",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.1396,85.8569+(Sheikhpura+District+Bihar)"
+    },
+    {
+      "id": "jamui",
+      "slug": "jamui",
+      "name_hi": "जमुई",
+      "name_en": "Jamui",
+      "division_hi": "मुंगेर प्रमंडल",
+      "division_en": "Munger Division",
+      "headquarters_hi": "जमुई",
+      "headquarters_en": "Jamui",
+      "area_sq_km": 3099,
+      "population_2011": 1760405,
+      "pin_codes": [
+        "811307",
+        "811308",
+        "811309",
+        "811310",
+        "811311",
+        "811312",
+        "811313",
+        "811314"
+      ],
+      "blocks": [
+        "Barhat",
+        "Chakai",
+        "Gidhaur",
+        "Islamnagar",
+        "Jamui",
+        "Jhajha",
+        "Khaira",
+        "Sono",
+        "Sikandra"
+      ],
+      "mp": [
+        {
+          "name": "Chirag Paswan",
+          "party": "LJP (Ram Vilas)",
+          "constituency": "Hajipur / Jamui (Union Minister)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Shreyasi Singh",
+          "party": "BJP",
+          "constituency": "Jamui (Commonwealth Gold Medalist)",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Navin (IAS)",
+      "sp": "Vishwajeet Dayal (IPS)",
+      "history_hi": "जमुई में जैन धर्म का महत्वपूर्ण तीर्थ स्थल है। जमुई वन्यजीव अभयारण्य यहां है। यह जिला झारखंड की सीमा के पास है और खनिज संपदा से समृद्ध है। प्रसिद्ध पहलवान और राजनेता श्रेयसी सिंह यहां की विधायक हैं।",
+      "history_en": "Jamui has an important Jain pilgrimage site at Lachhuar. The Jamui Wildlife Sanctuary provides habitat for wildlife. Bordering Jharkhand, the district is rich in mineral resources. Shreyasi Singh, a noted athlete and politician, represents the area.",
+      "tourism": [
+        {
+          "name_hi": "जैन तीर्थ — लछुआर",
+          "name_en": "Jain Pilgrimage — Lachhuar",
+          "description_hi": "जैन धर्म का महत्वपूर्ण तीर्थस्थल जहां श्रद्धालु नियमित रूप से आते हैं।",
+          "description_en": "An important Jain pilgrimage site drawing devotees regularly for prayer and meditation.",
+          "image_url": "https://picsum.photos/seed/jamui-jain/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, पर्युषण (जैन), दीपावली",
+      "festivals_en": "Chhath Puja, Paryushana (Jain), Diwali",
+      "food_hi": "लिट्टी-चोखा, सत्तू, अंगिका व्यंजन",
+      "food_en": "Litti-Chokha, Sattu, Angika cuisine",
+      "language_hi": "हिंदी, अंगिका",
+      "language_en": "Hindi, Angika",
+      "main_occupation_hi": "कृषि, खनन, वन उत्पाद",
+      "main_occupation_en": "Agriculture, Mining, Forest Products",
+      "agriculture_hi": "धान, गेहूं, मक्का, दलहन",
+      "agriculture_en": "Paddy, Wheat, Maize, Pulses",
+      "industries_hi": "खनन, कृषि आधारित उद्योग",
+      "industries_en": "Mining, Agro-based Industries",
+      "map_embed_url": "https://maps.google.com/maps?q=Jamui+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 24.9213,
+      "lng": 86.2272,
+      "image_url": "https://picsum.photos/seed/jamui/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=86.0772,24.7713,86.3772,25.0713&layer=mapnik&marker=24.9213,86.2272",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=24.9213,86.2272+(Jamui+District+Bihar)"
+    },
+    {
+      "id": "khagaria",
+      "slug": "khagaria",
+      "name_hi": "खगड़िया",
+      "name_en": "Khagaria",
+      "division_hi": "मुंगेर प्रमंडल",
+      "division_en": "Munger Division",
+      "headquarters_hi": "खगड़िया",
+      "headquarters_en": "Khagaria",
+      "area_sq_km": 1486,
+      "population_2011": 1666886,
+      "pin_codes": [
+        "851204",
+        "851205",
+        "851206",
+        "851207",
+        "851208",
+        "851209",
+        "851210",
+        "851211"
+      ],
+      "blocks": [
+        "Alauli",
+        "Chhatarpur",
+        "Gogri",
+        "Khagaria",
+        "Mansi",
+        "Parbatta"
+      ],
+      "mp": [
+        {
+          "name": "Chandan Kumar Singh",
+          "party": "BJP",
+          "constituency": "Khagaria",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Poonam Devi",
+          "constituency": "Khagaria",
+          "party": "BJP",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Vikram Virkar (IAS)",
+      "sp": "Bhanu Pratap Singh (IPS)",
+      "history_hi": "खगड़िया गंगा, कोसी और बागमती नदियों के संगम के पास स्थित है। बाढ़ से प्रभावित यह जिला मत्स्य पालन के लिए प्रसिद्ध है। यहां का प्राकृतिक जलीय वातावरण अद्वितीय है।",
+      "history_en": "Khagaria is situated near the confluence of Ganga, Kosi, and Bagmati rivers. Frequently affected by floods, the district has developed strong expertise in fishing and aquaculture. The unique aquatic environment supports diverse fish species.",
+      "tourism": [
+        {
+          "name_hi": "गंगा-कोसी संगम तट",
+          "name_en": "Ganga-Kosi Confluence",
+          "description_hi": "तीन नदियों के संगम का यह क्षेत्र प्राकृतिक सुंदरता और मत्स्य संपदा के लिए जाना जाता है।",
+          "description_en": "The confluence area of three rivers is known for its natural beauty and rich aquatic biodiversity.",
+          "image_url": "https://picsum.photos/seed/khagaria-rivers/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, होली",
+      "festivals_en": "Chhath Puja, Diwali, Holi",
+      "food_hi": "मछली, मखाना, दही-चूड़ा",
+      "food_en": "Fish, Makhana, Dahi-Chura",
+      "language_hi": "हिंदी, मैथिली, अंगिका",
+      "language_en": "Hindi, Maithili, Angika",
+      "main_occupation_hi": "मत्स्य पालन, कृषि",
+      "main_occupation_en": "Fishing, Agriculture",
+      "agriculture_hi": "धान, मखाना, जूट",
+      "agriculture_en": "Paddy, Makhana, Jute",
+      "industries_hi": "मत्स्य उद्योग, जूट उद्योग",
+      "industries_en": "Fishing Industry, Jute Industry",
+      "map_embed_url": "https://maps.google.com/maps?q=Khagaria+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.5037,
+      "lng": 86.4777,
+      "image_url": "https://picsum.photos/seed/khagaria/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=86.3277,25.3537,86.6277,25.6537&layer=mapnik&marker=25.5037,86.4777",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.5037,86.4777+(Khagaria+District+Bihar)"
+    },
+    {
+      "id": "begusarai",
+      "slug": "begusarai",
+      "name_hi": "बेगूसराय",
+      "name_en": "Begusarai",
+      "division_hi": "मुंगेर प्रमंडल",
+      "division_en": "Munger Division",
+      "headquarters_hi": "बेगूसराय",
+      "headquarters_en": "Begusarai",
+      "area_sq_km": 1918,
+      "population_2011": 2970541,
+      "pin_codes": [
+        "851101",
+        "851102",
+        "851103",
+        "851104",
+        "851111",
+        "851112",
+        "851113",
+        "851114"
+      ],
+      "blocks": [
+        "Bachhwara",
+        "Baghi",
+        "Bakhri",
+        "Barauni",
+        "Begusarai",
+        "Bhagwanpur",
+        "Birpur",
+        "Cheriya Bariyarpur",
+        "Dandari",
+        "Garhpura",
+        "Mansurchak",
+        "Matihani",
+        "Naokothi",
+        "Sahebpur Kamal",
+        "Samho Akha Kurha",
+        "Teghra"
+      ],
+      "mp": [
+        {
+          "name": "Giriraj Singh",
+          "party": "BJP",
+          "constituency": "Begusarai (Union Minister Textiles)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Kundan Kumar",
+          "party": "BJP",
+          "constituency": "Begusarai",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Richie Pandey (IAS)",
+      "sp": "Maneesh (IPS)",
+      "history_hi": "बेगूसराय को 'बिहार का लेनिन नगर' भी कहा जाता है क्योंकि यहां कभी वामपंथी आंदोलन बहुत मजबूत था। यहां IOCL (इंडियन ऑयल) की बड़ी रिफाइनरी है। कांवर झील पक्षी अभयारण्य यहां का प्रमुख आकर्षण है। बरौनी उर्वरक संयंत्र और थर्मल पावर स्टेशन यहां की प्रमुख औद्योगिक इकाइयां हैं।",
+      "history_en": "Begusarai is nicknamed 'Lenin of Bihar' for its strong leftist political history. It hosts one of India's largest oil refineries (IOCL Barauni). The Kanwar Lake Bird Sanctuary is a major attraction. The Barauni Fertilizer Plant and Thermal Power Station are major industrial units.",
+      "tourism": [
+        {
+          "name_hi": "कांवर झील पक्षी अभयारण्य",
+          "name_en": "Kanwar Lake Bird Sanctuary",
+          "description_hi": "एशिया की सबसे बड़ी ताजे पानी की झीलों में से एक — यहां सर्दियों में हजारों प्रवासी पक्षी आते हैं।",
+          "description_en": "One of Asia's largest freshwater oxbow lakes, this Ramsar wetland site hosts thousands of migratory birds in winter.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Kanwar_Lake.jpg/800px-Kanwar_Lake.jpg",
+          "image_credit": "Wikimedia Commons"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दीपावली, होली, श्रमिक दिवस",
+      "festivals_en": "Chhath Puja, Diwali, Holi, Labour Day (historically significant)",
+      "food_hi": "लिट्टी-चोखा, सत्तू, मछली, मालपुआ",
+      "food_en": "Litti-Chokha, Sattu, Fish, Malpua",
+      "language_hi": "हिंदी, मैथिली, अंगिका",
+      "language_en": "Hindi, Maithili, Angika",
+      "main_occupation_hi": "उद्योग, कृषि, पेट्रोलियम रिफाइनरी",
+      "main_occupation_en": "Industry, Agriculture, Petroleum Refinery",
+      "agriculture_hi": "धान, गेहूं, मक्का, सब्जियां",
+      "agriculture_en": "Paddy, Wheat, Maize, Vegetables",
+      "industries_hi": "IOCL रिफाइनरी, उर्वरक संयंत्र, थर्मल पावर, खाद्य उद्योग",
+      "industries_en": "IOCL Refinery, Fertilizer Plant, Thermal Power, Food Industry",
+      "map_embed_url": "https://maps.google.com/maps?q=Begusarai+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.4182,
+      "lng": 86.1272,
+      "image_url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=85.9772,25.2682,86.2772,25.5682&layer=mapnik&marker=25.4182,86.1272",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.4182,86.1272+(Begusarai+District+Bihar)"
+    },
+    {
+      "id": "purnia",
+      "slug": "purnia",
+      "name_hi": "पूर्णिया",
+      "name_en": "Purnia",
+      "division_hi": "पूर्णिया प्रमंडल",
+      "division_en": "Purnia Division",
+      "headquarters_hi": "पूर्णिया",
+      "headquarters_en": "Purnia",
+      "area_sq_km": 3229,
+      "population_2011": 3273127,
+      "pin_codes": [
+        "854301",
+        "854302",
+        "854303",
+        "854304",
+        "854305",
+        "854306",
+        "854307",
+        "854308"
+      ],
+      "blocks": [
+        "Amour",
+        "Baisa",
+        "Banmankhi",
+        "Bhawanipur",
+        "Bairganiya",
+        "Dhamdaha",
+        "Jalalgarh",
+        "Kasba",
+        "Krityanand Nagar",
+        "Purnia",
+        "Rupauli",
+        "Srinagar"
+      ],
+      "mp": [
+        {
+          "name": "Rajesh Ranjan alias Pappu Yadav",
+          "party": "Independent",
+          "constituency": "Purnia (Lok Sabha 2024)",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Vijay Kumar Khemka",
+          "party": "BJP",
+          "constituency": "Purnia",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Anshul Kumar (IAS)",
+      "sp": "Dr. Shaurya Suman (IPS)",
+      "history_hi": "पूर्णिया पूर्णिया प्रमंडल का मुख्यालय है। यह नेपाल और बांग्लादेश की सीमा के पास है। यहां चाय बागान हैं। यह एक महत्वपूर्ण व्यापारिक केंद्र है। मेला और हाट यहां की परंपरागत व्यापारिक संस्कृति हैं।",
+      "history_en": "Purnia is the divisional headquarters of Purnia Division. Located near the Nepal and Bangladesh borders, it has tea gardens and is an important commercial center. Traditional fairs and weekly markets (haats) are central to the local trading culture.",
+      "tourism": [
+        {
+          "name_hi": "पूर्णिया के चाय बागान",
+          "name_en": "Tea Gardens of Purnia",
+          "description_hi": "दार्जिलिंग के बाद यह क्षेत्र चाय उत्पादन का केंद्र है और यहां के बागान पर्यटकों को आकर्षित करते हैं।",
+          "description_en": "One of the few tea-growing regions in Bihar, these tea gardens offer a scenic experience similar to those in Darjeeling.",
+          "image_url": "https://picsum.photos/seed/purnia-tea/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, दुर्गा पूजा, ईद, दीपावली",
+      "festivals_en": "Chhath Puja, Durga Puja, Eid, Diwali",
+      "food_hi": "लिट्टी-चोखा, मछली, मोमो, सत्तू",
+      "food_en": "Litti-Chokha, Fish, Momo, Sattu",
+      "language_hi": "हिंदी, मैथिली, बंगाली, सूर्यापुरी",
+      "language_en": "Hindi, Maithili, Bengali, Suryapuri",
+      "main_occupation_hi": "कृषि, व्यापार, सीमा व्यापार",
+      "main_occupation_en": "Agriculture, Trade, Border Commerce",
+      "agriculture_hi": "धान, जूट, मक्का, चाय, केला",
+      "agriculture_en": "Paddy, Jute, Maize, Tea, Banana",
+      "industries_hi": "जूट उद्योग, चाय उद्योग, व्यापार",
+      "industries_en": "Jute Industry, Tea Industry, Commerce",
+      "map_embed_url": "https://maps.google.com/maps?q=Purnia+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.7771,
+      "lng": 87.4753,
+      "image_url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=87.3253,25.6271,87.6253,25.9271&layer=mapnik&marker=25.7771,87.4753",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.7771,87.4753+(Purnia+District+Bihar)"
+    },
+    {
+      "id": "kishanganj",
+      "slug": "kishanganj",
+      "name_hi": "किशनगंज",
+      "name_en": "Kishanganj",
+      "division_hi": "पूर्णिया प्रमंडल",
+      "division_en": "Purnia Division",
+      "headquarters_hi": "किशनगंज",
+      "headquarters_en": "Kishanganj",
+      "area_sq_km": 1884,
+      "population_2011": 1690400,
+      "pin_codes": [
+        "855101",
+        "855102",
+        "855103",
+        "855104",
+        "855105",
+        "855106",
+        "855107",
+        "855108"
+      ],
+      "blocks": [
+        "Bahadurganj",
+        "Dighalbank",
+        "Kishanganj",
+        "Kochadhaman",
+        "Pothia",
+        "Terhagachh"
+      ],
+      "mp": [
+        {
+          "name": "Mohammad Jawed",
+          "party": "INC",
+          "constituency": "Kishanganj",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Mohammad Izam Qadreri",
+          "constituency": "Kishanganj",
+          "party": "AIMIM",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Naveen Kumar (IAS)",
+      "sp": "Santosh Kumar (IPS)",
+      "history_hi": "किशनगंज बिहार का सबसे पूर्वी जिला है जो पश्चिम बंगाल, नेपाल और बांग्लादेश की सीमाओं के पास है। यहां चाय बागान हैं। मुस्लिम जनसंख्या यहां अधिक है। यह जिला पूर्वोत्तर भारत का प्रवेश द्वार है।",
+      "history_en": "Kishanganj is Bihar's easternmost district, bordering West Bengal, Nepal, and close to Bangladesh. Known for its tea gardens, it is a culturally diverse district with a significant Muslim population. It serves as a gateway to Northeast India.",
+      "tourism": [
+        {
+          "name_hi": "किशनगंज के चाय बागान",
+          "name_en": "Kishanganj Tea Gardens",
+          "description_hi": "हरे-भरे चाय बागानों से घिरा यह जिला एक अनूठा पर्यटन अनुभव प्रदान करता है।",
+          "description_en": "Surrounded by lush tea gardens, Kishanganj offers a unique tourism experience distinct from the rest of Bihar.",
+          "image_url": "https://picsum.photos/seed/kishanganj-tea/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "ईद, छठ पूजा, दुर्गा पूजा, मुहर्रम",
+      "festivals_en": "Eid, Chhath Puja, Durga Puja, Muharram",
+      "food_hi": "बिरयानी, मछली, मोमो, चाय",
+      "food_en": "Biryani, Fish, Momo (Nepali influence), Tea",
+      "language_hi": "हिंदी, उर्दू, बंगाली, नेपाली",
+      "language_en": "Hindi, Urdu, Bengali, Nepali",
+      "main_occupation_hi": "चाय उत्पादन, कृषि, व्यापार",
+      "main_occupation_en": "Tea Production, Agriculture, Trade",
+      "agriculture_hi": "चाय, धान, मक्का, जूट",
+      "agriculture_en": "Tea, Paddy, Maize, Jute",
+      "industries_hi": "चाय उद्योग, व्यापार, निर्माण",
+      "industries_en": "Tea Industry, Commerce, Construction",
+      "map_embed_url": "https://maps.google.com/maps?q=Kishanganj+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.0738,
+      "lng": 87.9405,
+      "image_url": "https://picsum.photos/seed/kishanganj/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=87.7905,25.9238,88.0905,26.2238&layer=mapnik&marker=26.0738,87.9405",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.0738,87.9405+(Kishanganj+District+Bihar)"
+    },
+    {
+      "id": "araria",
+      "slug": "araria",
+      "name_hi": "अररिया",
+      "name_en": "Araria",
+      "division_hi": "पूर्णिया प्रमंडल",
+      "division_en": "Purnia Division",
+      "headquarters_hi": "अररिया",
+      "headquarters_en": "Araria",
+      "area_sq_km": 2830,
+      "population_2011": 2811569,
+      "pin_codes": [
+        "854311",
+        "854312",
+        "854313",
+        "854314",
+        "854315",
+        "854316",
+        "854317",
+        "854318"
+      ],
+      "blocks": [
+        "Araria",
+        "Bhargama",
+        "Forbesganj",
+        "Jokihat",
+        "Kursakatta",
+        "Narpatganj",
+        "Palasi",
+        "Raniganj",
+        "Sikti"
+      ],
+      "mp": [
+        {
+          "name": "Pradip Kumar Singh",
+          "party": "BJP",
+          "constituency": "Araria",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Shahbuddin",
+          "constituency": "Araria",
+          "party": "RJD",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Vinod Duhan (IAS)",
+      "sp": "Jitendra Kumar (IPS)",
+      "history_hi": "अररिया नेपाल सीमा से लगा जिला है। फारबिसगंज यहां का प्रमुख व्यापारिक केंद्र है। यह जिला 1990 में पूर्णिया से अलग हुआ। पहाड़ी तराई क्षेत्र होने से यहां प्राकृतिक सुंदरता है।",
+      "history_en": "Araria borders Nepal and was carved out from Purnia in 1990. Forbesganj is its major commercial center. The foothills (terai) location gives the district natural beauty and diverse ecology.",
+      "tourism": [
+        {
+          "name_hi": "फारबिसगंज — व्यापारिक केंद्र",
+          "name_en": "Forbesganj — Commercial Hub",
+          "description_hi": "नेपाल सीमा के निकट यह प्रमुख बाजार व्यापारिक गतिविधियों का केंद्र है।",
+          "description_en": "A major market town near the Nepal border, Forbesganj is a bustling commercial center for cross-border trade.",
+          "image_url": "https://picsum.photos/seed/forbesganj/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, ईद, दीपावली, दुर्गा पूजा",
+      "festivals_en": "Chhath Puja, Eid, Diwali, Durga Puja",
+      "food_hi": "मछली, चावल, मोमो, सत्तू",
+      "food_en": "Fish, Rice, Momo, Sattu",
+      "language_hi": "हिंदी, मैथिली, उर्दू, नेपाली",
+      "language_en": "Hindi, Maithili, Urdu, Nepali",
+      "main_occupation_hi": "कृषि, सीमा व्यापार",
+      "main_occupation_en": "Agriculture, Border Trade",
+      "agriculture_hi": "धान, मक्का, जूट, गेहूं",
+      "agriculture_en": "Paddy, Maize, Jute, Wheat",
+      "industries_hi": "जूट उद्योग, सीमा व्यापार, कृषि",
+      "industries_en": "Jute Industry, Border Trade, Agriculture",
+      "map_embed_url": "https://maps.google.com/maps?q=Araria+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 26.1504,
+      "lng": 87.5141,
+      "image_url": "https://picsum.photos/seed/araria/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=87.3641,26.0004,87.6641,26.3004&layer=mapnik&marker=26.1504,87.5141",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=26.1504,87.5141+(Araria+District+Bihar)"
+    },
+    {
+      "id": "katihar",
+      "slug": "katihar",
+      "name_hi": "कटिहार",
+      "name_en": "Katihar",
+      "division_hi": "पूर्णिया प्रमंडल",
+      "division_en": "Purnia Division",
+      "headquarters_hi": "कटिहार",
+      "headquarters_en": "Katihar",
+      "area_sq_km": 3056,
+      "population_2011": 3071029,
+      "pin_codes": [
+        "854101",
+        "854102",
+        "854103",
+        "854104",
+        "854105",
+        "854106",
+        "854107",
+        "854108"
+      ],
+      "blocks": [
+        "Amdabad",
+        "Azmanabad",
+        "Balrampur",
+        "Barari",
+        "Barsoi",
+        "Dandkhora",
+        "Falka",
+        "Hasanganj",
+        "Kadwa",
+        "Katihar",
+        "Korha",
+        "Manihari",
+        "Mansahi",
+        "Pranpur",
+        "Sameli",
+        "Sonbarsa"
+      ],
+      "mp": [
+        {
+          "name": "Dulal Chandra Goswami",
+          "party": "BJP",
+          "constituency": "Katihar",
+          "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop"
+        }
+      ],
+      "mla": [
+        {
+          "name": "Tariq Anwar",
+          "constituency": "Katihar",
+          "party": "INC",
+          "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop"
+        }
+      ],
+      "dm": "Ashutosh Dwivedi (IAS)",
+      "sp": "Parichay Kumar (IPS)",
+      "history_hi": "कटिहार गंगा और कोसी नदियों के संगम पर स्थित एक महत्वपूर्ण रेलवे जंक्शन शहर है। यह पूर्वोत्तर भारत से बिहार को जोड़ने वाला प्रमुख रेलवे केंद्र है। जूट उत्पादन के लिए भी यह जाना जाता है। बांग्लादेश और पश्चिम बंगाल की संस्कृति का प्रभाव यहां दिखता है।",
+      "history_en": "Katihar is an important railway junction city located at the confluence of Ganga and Kosi rivers. It serves as a major rail hub connecting Bihar to Northeast India. Known for jute production, the district shows cultural influences from Bangladesh and West Bengal.",
+      "tourism": [
+        {
+          "name_hi": "गंगा-कोसी संगम",
+          "name_en": "Ganga-Kosi Confluence",
+          "description_hi": "दो महान नदियों का यह संगम धार्मिक और प्राकृतिक दृष्टि से महत्वपूर्ण है।",
+          "description_en": "The confluence of the Ganga and Kosi rivers is a significant religious and natural landmark.",
+          "image_url": "https://picsum.photos/seed/katihar-river/800/400",
+          "image_credit": "Picsum Photos"
+        }
+      ],
+      "festivals_hi": "छठ पूजा, ईद, दुर्गा पूजा, दीपावली",
+      "festivals_en": "Chhath Puja, Eid, Durga Puja, Diwali",
+      "food_hi": "मछली, चावल, रसगुल्ला, पिठा",
+      "food_en": "Fish, Rice, Rasgulla, Pitha (rice cake)",
+      "language_hi": "हिंदी, बंगाली, मैथिली, उर्दू",
+      "language_en": "Hindi, Bengali, Maithili, Urdu",
+      "main_occupation_hi": "कृषि, जूट, रेलवे, व्यापार",
+      "main_occupation_en": "Agriculture, Jute, Railways, Trade",
+      "agriculture_hi": "जूट, धान, मक्का, गेहूं, केला",
+      "agriculture_en": "Jute, Paddy, Maize, Wheat, Banana",
+      "industries_hi": "जूट उद्योग, खाद्य प्रसंस्करण, रेलवे वर्कशॉप",
+      "industries_en": "Jute Industry, Food Processing, Railway Workshop",
+      "map_embed_url": "https://maps.google.com/maps?q=Katihar+District+Bihar+India&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      "lat": 25.5415,
+      "lng": 87.5739,
+      "image_url": "https://picsum.photos/seed/katihar/800/400",
+      "dm_photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop",
+      "sp_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop",
+      "admin_last_updated": "सितंबर 2026 (बिहार सरकार व NIC आधिकारिक पोर्टल अनुसार)",
+      "admin_year": 2026,
+      "osm_embed_url": "https://www.openstreetmap.org/export/embed.html?bbox=87.4239,25.3915,87.7239,25.6915&layer=mapnik&marker=25.5415,87.5739",
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=25.5415,87.5739+(Katihar+District+Bihar)"
+    }
+  ]
+}

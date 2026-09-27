@@ -1,0 +1,22 @@
+{
+  "users": {
+    "9876543210": {
+      "id": "usr-904728",
+      "identifier": "9876543210",
+      "name": "Test User",
+      "home_district": "patna",
+      "joined_at": "2026-09-19T09:01:06.756039+00:00",
+      "bookmarks": []
+    }
+  },
+  "otps": {
+    "9876543210": {
+      "otp": "1234",
+      "expires_at": 1789818890.3216777
+    },
+    "test@example.com": {
+      "otp": "1234",
+      "expires_at": 1789834503.9203894
+    }
+  }
+}

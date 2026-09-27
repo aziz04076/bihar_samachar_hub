@@ -9,6 +9,37 @@
 
 'use strict';
 
+// ─── Centralized Backend API Configuration ─────────────────────────────────────
+// Reads from window.API_BASE (defined in assets/js/config.js) or uses fallback
+const API_BASE = (function() {
+  if (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]')) {
+    return window.API_BASE.replace(/\/+$/, '');
+  }
+  return 'https://[YOUR-BACKEND-URL]/api';
+})();
+
+function getApiUrl(endpoint) {
+  const ep = endpoint.startsWith('/') ? endpoint : '/' + endpoint;
+  if (API_BASE && !API_BASE.includes('[YOUR-BACKEND-URL]')) {
+    return `${API_BASE}${ep}`;
+  }
+  const isDistrict = typeof window !== 'undefined' && /\/district\/|\\district\\|\/district$/i.test(window.location.pathname);
+  return isDistrict ? `..${ep}` : ep;
+}
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = 3500) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    clearTimeout(id);
+    return response;
+  } catch (err) {
+    clearTimeout(id);
+    throw err;
+  }
+}
+
 const NewsHub = {
   // ─── State ─────────────────────────────────────────────────────────────────
   allNews: [],
@@ -39,10 +70,11 @@ const NewsHub = {
           timestamp: new Date().toISOString(),
           referrer: document.referrer || 'direct'
         };
+        const targetUrl = getApiUrl('/analytics/track');
         if (navigator.sendBeacon) {
-          navigator.sendBeacon('/api/analytics/track', JSON.stringify(payload));
+          navigator.sendBeacon(targetUrl, JSON.stringify(payload));
         } else {
-          fetch('/api/analytics/track', {
+          fetch(targetUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),
@@ -62,10 +94,11 @@ const NewsHub = {
           path: window.location.pathname || '/',
           timestamp: new Date().toISOString()
         };
+        const targetUrl = getApiUrl('/analytics/track');
         if (navigator.sendBeacon) {
-          navigator.sendBeacon('/api/analytics/track', JSON.stringify(payload));
+          navigator.sendBeacon(targetUrl, JSON.stringify(payload));
         } else {
-          fetch('/api/analytics/track', {
+          fetch(targetUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),
@@ -79,6 +112,8 @@ const NewsHub = {
   // ─── Progressive Skeleton Shimmer UI ───────────────────────────────────────
   setLoadingState(isLoading) {
     this.isLoading = isLoading;
+    const indicator = document.getElementById('news-loading-indicator');
+    if (indicator) indicator.style.display = isLoading ? 'flex' : 'none';
     const grid = document.getElementById('news-grid');
     if (grid && isLoading && (!this.allNews || this.allNews.length === 0)) {
       grid.innerHTML = this.renderSkeletonGrid(6);
@@ -175,29 +210,44 @@ const NewsHub = {
       let res = null;
       if (window.location.protocol.startsWith('http')) {
         try {
-          res = await fetch(isDistrict ? '../api/news?limit=50' : 'api/news?limit=50');
+          res = await fetchWithTimeout(getApiUrl('/news?limit=50'), {}, 3500);
         } catch (_) {}
       }
-      if (!res || !res.ok) {
-        const path = isDistrict ? '../data/latest-news.json' : 'data/latest-news.json';
-        res = await fetch(path);
-      }
       if (res && res.ok) {
-        const data = await res.json();
-        if (data.news && data.news.length > 0) {
-          this.allNews = data.news;
-          this.applyFilters();
-          this.tickerItems = this.getBreakingNews();
-          this.renderTickerSlide();
-          if (typeof this.initPortalTicker === 'function') {
-            this.initPortalTicker();
+        try {
+          const data = await res.json();
+          if (data && data.news && data.news.length > 0) {
+            this.allNews = data.news;
+          }
+        } catch (_) {}
+      }
+      // If backend API timed out, failed, or returned empty news, immediately load static data
+      if (!this.allNews || this.allNews.length === 0) {
+        const path = isDistrict ? '../data/latest-news.json' : 'data/latest-news.json';
+        const fallbackRes = await fetch(path);
+        if (fallbackRes.ok) {
+          const data = await fallbackRes.json();
+          if (data && data.news && data.news.length > 0) {
+            this.allNews = data.news;
           }
         }
       }
+      // Ultimate fallback: generate flash reports so page is never empty
+      if (!this.allNews || this.allNews.length === 0) {
+        this.allNews = this.generateLiveFlashReports() || [];
+      }
+
+      this.applyFilters();
+      this.tickerItems = this.getBreakingNews();
+      this.renderTickerSlide();
+      if (typeof this.initPortalTicker === 'function') {
+        this.initPortalTicker();
+      }
     } catch (e) {
       console.warn('Local news load error', e);
+    } finally {
+      this.setLoadingState(false);
     }
-    this.setLoadingState(false);
   },
 
   // ─── Real-Time Breaking News Filter (Strictly Last 60-120 Minutes) ───────────
@@ -495,7 +545,7 @@ const NewsHub = {
       // 1. If running on http/https, trigger high-speed local backend sync
       if (window.location.protocol.startsWith('http')) {
         try {
-          const syncRes = await fetch(`/api/sync?_t=${Date.now()}`, { cache: 'no-store' });
+          const syncRes = await fetchWithTimeout(getApiUrl(`/sync?_t=${Date.now()}`), { cache: 'no-store' }, 4000);
           if (syncRes.ok) {
             const syncData = await syncRes.json();
             if (syncData && syncData.added_count > 0) {
@@ -1536,12 +1586,6 @@ const NewsHub = {
 
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
-  },
-
-  setLoadingState(loading) {
-    this.isLoading = loading;
-    const indicator = document.getElementById('news-loading-indicator');
-    if (indicator) indicator.style.display = loading ? 'flex' : 'none';
   }
 };
 window.NewsHub = NewsHub;
@@ -2714,8 +2758,7 @@ NewsHub.checkForLiveNewsUpdate = async function (showToast = true) {
 
     if (window.location.protocol.startsWith('http')) {
       try {
-        const url = isDistrict ? '../api/news?limit=50' : 'api/news?limit=50';
-        res = await fetch(url);
+        res = await fetchWithTimeout(getApiUrl('/news?limit=50'), {}, 4000);
       } catch (_) {}
     }
 
@@ -2846,8 +2889,7 @@ NewsHub.initRealtimeStream = function () {
       NewsHub.eventSource.close();
     }
 
-    const isDistrict = /\/district(\/|\\|\.html|$)/i.test(window.location.pathname);
-    const sseUrl = isDistrict ? '../api/events' : 'api/events';
+    const sseUrl = getApiUrl('/events');
     NewsHub.eventSource = new EventSource(sseUrl);
 
     NewsHub.eventSource.addEventListener('connected', (e) => {
@@ -2892,23 +2934,36 @@ async function loadHomepageNews() {
     let res = null;
     if (window.location.protocol.startsWith('http')) {
       try {
-        const apiUrl = isDistrict ? '../api/news?limit=50' : 'api/news?limit=50';
-        res = await fetch(apiUrl);
+        res = await fetchWithTimeout(getApiUrl('/news?limit=50'), {}, 3500);
       } catch (_) {}
     }
-    if (!res || !res.ok) {
-      const fallbackPath = isDistrict ? '../data/latest-news.json' : 'data/latest-news.json';
-      res = await fetch(fallbackPath);
-    }
     if (res && res.ok) {
-      const data = await res.json();
-      NewsHub.allNews = data.news || [];
-
-      // Seed tracker
-      if (NewsHub.allNews.length > 0) {
-        NewsHub.lastKnownNewsId = NewsHub.allNews[0].id;
-        NewsHub.lastKnownNewsCount = NewsHub.allNews.length;
+      try {
+        const data = await res.json();
+        if (data && data.news && data.news.length > 0) {
+          NewsHub.allNews = data.news;
+        }
+      } catch (_) {}
+    }
+    if (!NewsHub.allNews || NewsHub.allNews.length === 0) {
+      const fallbackPath = isDistrict ? '../data/latest-news.json' : 'data/latest-news.json';
+      const fallbackRes = await fetch(fallbackPath);
+      if (fallbackRes.ok) {
+        const data = await fallbackRes.json();
+        if (data && data.news && data.news.length > 0) {
+          NewsHub.allNews = data.news;
+        }
       }
+    }
+    if (!NewsHub.allNews || NewsHub.allNews.length === 0) {
+      NewsHub.allNews = NewsHub.generateLiveFlashReports() || [];
+    }
+
+    // Seed tracker
+    if (NewsHub.allNews && NewsHub.allNews.length > 0) {
+      NewsHub.lastKnownNewsId = NewsHub.allNews[0].id;
+      NewsHub.lastKnownNewsCount = NewsHub.allNews.length;
+    }
 
       // 1. Initialize Hero Slider
       try { NewsHub.initHeroSlider(); } catch (e) { console.warn('Hero Slider err:', e); }
@@ -2969,7 +3024,6 @@ async function loadHomepageNews() {
 
       // 13. Top Breaking News Ticker
       try { NewsHub.initPortalTicker(); } catch (e) { console.warn('Ticker err:', e); }
-    }
   } catch (e) {
     console.warn('Advanced Homepage news fetch error:', e);
   }
@@ -3115,7 +3169,7 @@ NewsHub.loadArticleComments = async function (newsId) {
   container.innerHTML = '<div style="text-align:center; padding:15px; color:#94A3B8;"><i class="fas fa-spinner fa-spin"></i> टिप्पणियां लोड हो रही हैं...</div>';
 
   try {
-    const res = await fetch(`/api/comments?news_id=${encodeURIComponent(newsId)}`);
+    const res = await fetch(getApiUrl(`/comments?news_id=${encodeURIComponent(newsId)}`));
     if (res.ok) {
       const data = await res.json();
       const comments = data.comments || [];
@@ -3171,7 +3225,7 @@ NewsHub.submitComment = async function (e, newsId) {
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> भेजा जा रहा है...';
 
   try {
-    const res = await fetch('/api/comments', {
+    const res = await fetch(getApiUrl('/comments'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -3203,7 +3257,7 @@ NewsHub.submitComment = async function (e, newsId) {
 
 NewsHub.likeComment = async function (commentId, btnEl) {
   try {
-    const res = await fetch('/api/comments/like', {
+    const res = await fetch(getApiUrl('/comments/like'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ comment_id: commentId })
@@ -3237,7 +3291,7 @@ NewsHub.togglePushNotifications = async function () {
     if (permission === 'granted') {
       // Register subscription with server
       try {
-        await fetch('/api/push/subscribe', {
+        await fetch(getApiUrl('/push/subscribe'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -3436,9 +3490,7 @@ NewsHub.sendAiQuickQuery = function (text) {
 NewsHub.queryAiBackend = async function (query) {
   try {
     if (window.location.protocol.startsWith('http')) {
-      const isDistrict = /\/district\/|\\district\\|\/district$/i.test(window.location.pathname);
-      const apiUrl = isDistrict ? '../api/ai/chat' : 'api/ai/chat';
-      const res = await fetch(apiUrl, {
+      const res = await fetch(getApiUrl('/ai/chat'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

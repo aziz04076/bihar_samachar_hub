@@ -47,8 +47,12 @@ const JobsTracker = (function () {
    */
   async function fetchJobsData() {
     const isDistrict = /\/district(\/|\\|\.html|$)/i.test(window.location.pathname);
+    const apiBase = (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]'))
+      ? window.API_BASE.replace(/\/+$/, '')
+      : '';
     try {
-      const response = await fetch(isDistrict ? '../api/jobs' : 'api/jobs');
+      const apiUrl = apiBase ? `${apiBase}/jobs` : (isDistrict ? '../api/jobs' : 'api/jobs');
+      const response = await fetch(apiUrl);
       if (response.ok) {
         const data = await response.json();
         allItems = data.items || [];

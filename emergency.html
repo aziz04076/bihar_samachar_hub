@@ -214,6 +214,7 @@
   </footer>
 
   <!-- Scripts -->
+  <script src="assets/js/config.js"></script>
   <script src="assets/js/security.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
@@ -225,7 +226,10 @@
 
     async function loadEmergencyData() {
       try {
-        const res = await fetch('/api/emergency');
+        const apiBase = (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]'))
+          ? window.API_BASE.replace(/\/+$/, '')
+          : '/api';
+        const res = await fetch(`${apiBase}/emergency`);
         if (res.ok) {
           emergencyData = await res.json();
         } else {

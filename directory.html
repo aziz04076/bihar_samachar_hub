@@ -209,6 +209,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/config.js"></script>
   <script src="assets/js/security.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
@@ -217,10 +218,11 @@
       escapeHtml: (str) => typeof str === 'string' ? str.replace(/[&<>"'`=/]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;','/':'&#x2F;'}[s]||s)) : (str || '')
     };
     let directoryListings = [];
+    const getDirApiUrl = (ep) => (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]') ? `${window.API_BASE.replace(/\/+$/, '')}${ep}` : ep);
 
     async function loadDirectory() {
       try {
-        const res = await fetch('/api/directory');
+        const res = await fetch(getDirApiUrl('/directory'));
         if (res.ok) {
           const data = await res.json();
           directoryListings = data.listings || [];
@@ -307,7 +309,7 @@
       };
 
       try {
-        const res = await fetch('/api/directory', {
+        const res = await fetch(getDirApiUrl('/directory'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)

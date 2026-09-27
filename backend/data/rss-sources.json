@@ -1,0 +1,144 @@
+{
+  "sources": [
+    {
+      "id": "dainik-bhaskar-bihar",
+      "name_hi": "दैनिक भास्कर बिहार",
+      "name_en": "Dainik Bhaskar Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%A6%E0%A5%88%E0%A4%A8%E0%A4%BF%E0%A4%95+%E0%A4%AD%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%B0+%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://www.bhaskar.com/bihar/",
+      "logo": "assets/images/sources/bhaskar.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "hindustan-bihar",
+      "name_hi": "लाइव हिन्दुस्तान बिहार",
+      "name_en": "Live Hindustan Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%A8+%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://www.livehindustan.com/bihar",
+      "logo": "assets/images/sources/hindustan.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "prabhat-khabar-bihar",
+      "name_hi": "प्रभात खबर बिहार",
+      "name_en": "Prabhat Khabar Bihar",
+      "rss_url": "https://www.prabhatkhabar.com/state/bihar/feed",
+      "website": "https://www.prabhatkhabar.com/state/bihar",
+      "logo": "assets/images/sources/prabhat.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "jagran-bihar",
+      "name_hi": "दैनिक जागरण बिहार",
+      "name_en": "Dainik Jagran Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%A6%E0%A5%88%E0%A4%A8%E0%A4%BF%E0%A4%95+%E0%A4%9C%E0%A4%BE%E0%A4%97%E0%A4%B0%E0%A4%A3+%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://www.jagran.com/bihar",
+      "logo": "assets/images/sources/jagran.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "abp-news-bihar",
+      "name_hi": "ABP न्यूज़ बिहार",
+      "name_en": "ABP News Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=ABP+%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A5%82%E0%A4%9C%E0%A4%BC+%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://www.abplive.com/states/bihar",
+      "logo": "assets/images/sources/abp.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "news18-bihar",
+      "name_hi": "News18 बिहार-झारखंड",
+      "name_en": "News18 Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=News18+%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://hindi.news18.com/bihar/",
+      "logo": "assets/images/sources/news18.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "etv-bharat-bihar",
+      "name_hi": "ETV भारत बिहार",
+      "name_en": "ETV Bharat Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=ETV+%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://www.etvbharat.com/hindi/bihar",
+      "logo": "assets/images/sources/etv.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "navbharat-times-bihar",
+      "name_hi": "नवभारत टाइम्स बिहार",
+      "name_en": "Navbharat Times Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%A8%E0%A4%B5%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4+%E0%A4%9F%E0%A4%BE%E0%A4%87%E0%A4%AE%E0%A5%8D%E0%A4%B8+%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://navbharattimes.indiatimes.com/state/bihar",
+      "logo": "assets/images/sources/nbt.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "aajtak-bihar",
+      "name_hi": "आजतक बिहार",
+      "name_en": "Aaj Tak Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%86%E0%A4%9C%E0%A4%A4%E0%A4%95+%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://www.aajtak.in/bihar",
+      "logo": "assets/images/sources/aajtak.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "google-news-bihar-main",
+      "name_hi": "बिहार राज्य मुख्य बुलेटिन",
+      "name_en": "Bihar State Top Bulletin",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%AC%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0+%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://news.google.com",
+      "logo": "assets/images/sources/bihar.svg",
+      "language": "hi",
+      "category": "bihar_state"
+    },
+    {
+      "id": "patna-central-districts",
+      "name_hi": "पटना व केंद्रीय बिहार ज़िला बुलेटिन",
+      "name_en": "Patna & Central Bihar",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%AA%E0%A4%9F%E0%A4%A8%E0%A4%BE+OR+%E0%A4%97%E0%A4%AF%E0%A4%BE+OR+%E0%A4%A8%E0%A4%BE%E0%A4%B2%E0%A4%82%E0%A4%A6%E0%A4%BE+OR+%E0%A4%AD%E0%A5%8B%E0%A4%9C%E0%A4%AA%E0%A5%81%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://news.google.com",
+      "logo": "assets/images/sources/bihar.svg",
+      "language": "hi",
+      "category": "patna"
+    },
+    {
+      "id": "north-bihar-districts",
+      "name_hi": "उत्तर बिहार (तिरहुत व मिथिलांचल)",
+      "name_en": "North Bihar Tirhut Mithila",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%AE%E0%A5%81%E0%A4%9C%E0%A4%AB%E0%A5%8D%E0%A4%AB%E0%A4%B0%E0%A4%AA%E0%A5%81%E0%A4%B0+OR+%E0%A4%A6%E0%A4%B0%E0%A4%AD%E0%A4%82%E0%A4%97%E0%A4%BE+OR+%E0%A4%AE%E0%A4%A7%E0%A5%81%E0%A4%AC%E0%A4%A8%E0%A5%80+OR+%E0%A4%B8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%80%E0%A4%AA%E0%A5%81%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://news.google.com",
+      "logo": "assets/images/sources/bihar.svg",
+      "language": "hi",
+      "category": "districts"
+    },
+    {
+      "id": "east-bihar-seemanchal",
+      "name_hi": "पूर्वी बिहार (सीमांचल व कोसी)",
+      "name_en": "East Bihar Seemanchal Kosi",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BF%E0%A4%AF%E0%A4%BE+OR+%E0%A4%B8%E0%A4%B9%E0%A4%B0%E0%A4%B8%E0%A4%BE+OR+%E0%A4%95%E0%A4%9F%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B0+OR+%E0%A4%B8%E0%A5%81%E0%A4%AA%E0%A5%8C%E0%A4%B2&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://news.google.com",
+      "logo": "assets/images/sources/bihar.svg",
+      "language": "hi",
+      "category": "districts"
+    },
+    {
+      "id": "south-bihar-anga-magadh",
+      "name_hi": "दक्षिण बिहार (अंग व शाहाबाद)",
+      "name_en": "South Bihar Anga Shahabad",
+      "rss_url": "https://news.google.com/rss/search?q=%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B2%E0%A4%AA%E0%A5%81%E0%A4%B0+OR+%E0%A4%AE%E0%A5%81%E0%A4%82%E0%A4%97%E0%A5%87%E0%A4%B0+OR+%E0%A4%B0%E0%A5%8B%E0%A4%B9%E0%A4%A4%E0%A4%BE%E0%A4%B8+OR+%E0%A4%AC%E0%A5%87%E0%A4%97%E0%A5%82%E0%A4%B8%E0%A4%B0%E0%A4%BE%E0%A4%AF&hl=hi&gl=IN&ceid=IN:hi",
+      "website": "https://news.google.com",
+      "logo": "assets/images/sources/bihar.svg",
+      "language": "hi",
+      "category": "districts"
+    }
+  ]
+}

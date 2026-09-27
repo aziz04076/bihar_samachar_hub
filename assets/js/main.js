@@ -793,8 +793,16 @@ BSH.submitLoginRequest = async function () {
     BSH.authPendingIdentifier = idVal;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> OTP भेजा जा रहा है...';
 
+    const getAuthApiUrl = (ep) => {
+      if (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]')) {
+        return `${window.API_BASE.replace(/\/+$/, '')}${ep}`;
+      }
+      const isDistrict = typeof window !== 'undefined' && /\/district\/|\\district\\|\/district$/i.test(window.location.pathname);
+      return isDistrict ? `..${ep}` : ep;
+    };
+
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch(getAuthApiUrl('/auth/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ identifier: idVal })
@@ -828,8 +836,16 @@ BSH.submitLoginRequest = async function () {
     const nameVal = nameInput.value.trim() || 'पाठक';
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> सत्यापन हो रहा है...';
 
+    const getAuthApiUrl = (ep) => {
+      if (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]')) {
+        return `${window.API_BASE.replace(/\/+$/, '')}${ep}`;
+      }
+      const isDistrict = typeof window !== 'undefined' && /\/district\/|\\district\\|\/district$/i.test(window.location.pathname);
+      return isDistrict ? `..${ep}` : ep;
+    };
+
     try {
-      const res = await fetch('/api/auth/verify', {
+      const res = await fetch(getAuthApiUrl('/auth/verify'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -873,7 +889,11 @@ BSH.updateHomeDistrict = async function (districtId) {
   BSH.currentUser.home_district = districtId;
   localStorage.setItem('bsh_user_profile', JSON.stringify(BSH.currentUser));
   try {
-    await fetch('/api/user/profile', {
+    const ep = '/user/profile';
+    const apiUrl = (typeof window !== 'undefined' && window.API_BASE && !window.API_BASE.includes('[YOUR-BACKEND-URL]'))
+      ? `${window.API_BASE.replace(/\/+$/, '')}${ep}`
+      : (/\/district\/|\\district\\|\/district$/i.test(window.location.pathname) ? `..${ep}` : ep);
+    await fetch(apiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
