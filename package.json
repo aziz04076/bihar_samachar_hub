@@ -1,0 +1,9 @@
+{
+  "name": "bihar-samachar-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bihar Samachar Hub - 38 Districts Hyperlocal Hindi News Portal",
+  "scripts": {
+    "build": "echo 'Static assets ready for deployment'"
+  }
+}
