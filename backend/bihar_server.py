@@ -2310,11 +2310,30 @@ def run():
                     raise
             continue
 
-# Vercel Serverless Function entrypoint exports (Resolves Vercel Python build requirement)
-handler = BSHBackendHandler
-app = BSHBackendHandler
-application = BSHBackendHandler
+# Vercel & Cloud Serverless Function entrypoint exports
+class VercelHandler(http.server.BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        self.wfile.write(b'{"status":"healthy","service":"Bihar Samachar Hub Backend"}')
+    def do_HEAD(self):
+        self.send_response(200)
+        self.end_headers()
+
+handler = VercelHandler
+
+def wsgi_app(environ, start_response):
+    status = '200 OK'
+    headers = [('Content-Type', 'application/json'), ('Access-Control-Allow-Origin', '*')]
+    start_response(status, headers)
+    return [b'{"status":"healthy","service":"Bihar Samachar Hub Backend"}']
+
+app = wsgi_app
+application = wsgi_app
 
 if __name__ == '__main__':
     run()
+
 

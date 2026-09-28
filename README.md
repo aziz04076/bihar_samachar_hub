@@ -72,7 +72,7 @@ flowchart TD
     end
 
     subgraph BACKEND["Backend Compute Tier (Render.com / Python Server)"]
-        HTTP_SERVER["Multi-Threaded HTTP Server (server.py)"]
+        HTTP_SERVER["Multi-Threaded HTTP Server (backend/bihar_server.py)"]
         CORS["Cross-Origin Gatekeeper (CORS Engine)"]
         RATE_LIMIT["Sliding-Window IP Rate Limiter"]
         IN_MEMORY["In-Memory Zero-Disk Cache"]
@@ -295,9 +295,9 @@ bihar_samachar_hub/
 │   └── business-directory.json # Hyperlocal Business & Artisan Directory Data
 │
 ├── backend/                     # 🚀 Standalone Folder for Cloud Backend Deployment (Render)
-│   ├── server.py                # Standalone Multi-Threaded Server & RSS Scraper
+│   ├── bihar_server.py          # Standalone Multi-Threaded Server & RSS Scraper
 │   ├── requirements.txt         # Zero external dependencies (Uses Python Standard Library)
-│   ├── Procfile                 # Process file for Render / Heroku (web: python server.py)
+│   ├── Procfile                 # Process file for Render / Heroku (web: python bihar_server.py)
 │   ├── render.yaml              # Render Infrastructure-as-Code Blueprint
 │   ├── README.md                # Quick Step-by-Step Render Deployment Guide
 │   └── data/                    # Local copy of database files for immediate boot
@@ -342,8 +342,9 @@ cd bihar_samachar_hub
 ```
 
 ### 2. Launch the High-Speed Server
+Run `run.bat` or:
 ```bash
-python server.py
+python backend/bihar_server.py
 ```
 
 ### 3. Open in Browser
@@ -376,7 +377,7 @@ To run the automated 10-minute live news scraper 24x7 in the cloud:
    - **Root Directory**: `backend`
    - **Runtime**: `Python 3`
    - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `python server.py`
+   - **Start Command**: `python bihar_server.py`
    - **Instance Type**: `Free`
    - **Health Check Path**: `/api/health`
 5. Click **Deploy Web Service**.

@@ -25,7 +25,7 @@ In settings ko fill karein:
 | **Root Directory** | `backend` (agar alag backend folder run karna ho) ya blank chhod dein (dono kaam karenge) |
 | **Runtime** | `Python 3` |
 | **Build Command** | `pip install -r requirements.txt` |
-| **Start Command** | `python server.py` |
+| **Start Command** | `python bihar_server.py` |
 | **Instance Type** | `Free` |
 
 > 💡 **Note on PORT**: Render automatically `$PORT` environment variable assign karta hai (jaise 10000). Server code is variable ko automatically detect karke bind kar lega. Aapko koi manually port daalne ki zaroorat nahi hai.

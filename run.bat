@@ -6,6 +6,6 @@ echo   Opening http://localhost:8080/ in your browser...
 echo ============================================================
 echo.
 start http://localhost:8080/
-python backend\server.py
+python backend\bihar_server.py
 pause
 
