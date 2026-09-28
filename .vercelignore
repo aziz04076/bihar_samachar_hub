@@ -1,0 +1,18 @@
+# Vercel Ignore File
+# Prevents Vercel from treating standalone Python backend files as serverless entrypoints
+
+# Python Backend (Deployed on Render.com)
+server.py
+backend/
+requirements.txt
+Procfile
+render.yaml
+*.py
+__pycache__/
+*.pyc
+
+# Local Backups & Scratch
+backups/
+scratch/
+*.log
+*.pdf

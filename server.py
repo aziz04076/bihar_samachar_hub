@@ -2308,6 +2308,11 @@ def run():
                     raise
             continue
 
+# Vercel Serverless Function entrypoint exports (Resolves Vercel Python build requirement)
+handler = BSHBackendHandler
+app = BSHBackendHandler
+application = BSHBackendHandler
+
 if __name__ == '__main__':
     run()
 
