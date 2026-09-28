@@ -302,10 +302,6 @@ bihar_samachar_hub/
 │   ├── README.md                # Quick Step-by-Step Render Deployment Guide
 │   └── data/                    # Local copy of database files for immediate boot
 │
-├── server.py                    # Root Multi-Threaded Server (for Local Dev or Root Deploy)
-├── requirements.txt             # Root Python specification
-├── Procfile                     # Root Process file
-├── render.yaml                  # Root Render blueprint specification
 ├── vercel.json                  # Vercel Clean URL Rewrites, CORS & Cache Headers
 ├── sw.js                        # Service Worker for Offline PWA Support
 └── manifest.json                # Web App Manifest for Mobile Installation
@@ -377,6 +373,7 @@ To run the automated 10-minute live news scraper 24x7 in the cloud:
 3. Select your repository: `aziz04076/bihar_samachar_hub`.
 4. Configure the settings:
    - **Name**: `bihar-samachar-backend`
+   - **Root Directory**: `backend`
    - **Runtime**: `Python 3`
    - **Build Command**: `pip install -r requirements.txt`
    - **Start Command**: `python server.py`

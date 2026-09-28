@@ -38,6 +38,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 PORT = int(os.environ.get('PORT', 8080))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.abspath(os.path.join(BASE_DIR, '..'))
+WEB_DIR = PARENT_DIR if os.path.exists(os.path.join(PARENT_DIR, 'index.html')) else BASE_DIR
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 BACKUP_DIR = os.path.join(BASE_DIR, 'backups')
 os.makedirs(BACKUP_DIR, exist_ok=True)
@@ -552,7 +554,7 @@ class BSHBackendHandler(http.server.SimpleHTTPRequestHandler):
     })
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=BASE_DIR, **kwargs)
+        super().__init__(*args, directory=WEB_DIR, **kwargs)
 
     def handle(self):
         try:
@@ -687,7 +689,7 @@ class BSHBackendHandler(http.server.SimpleHTTPRequestHandler):
         clean_path = path.lstrip('/')
         if not clean_path or clean_path.endswith('/'):
             clean_path += 'index.html'
-        full_filepath = os.path.join(BASE_DIR, clean_path.replace('/', os.sep))
+        full_filepath = os.path.join(WEB_DIR, clean_path.replace('/', os.sep))
         return self.serve_static_file(full_filepath)
 
     def read_json_body(self):
@@ -787,7 +789,7 @@ class BSHBackendHandler(http.server.SimpleHTTPRequestHandler):
 
     def serve_static_file(self, full_path):
         # ─── Path Traversal Security Check ───
-        real_base = os.path.realpath(BASE_DIR)
+        real_base = os.path.realpath(WEB_DIR)
         real_path = os.path.realpath(full_path)
         if not real_path.startswith(real_base) or '..' in full_path:
             self.send_response(403)
